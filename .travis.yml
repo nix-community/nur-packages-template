@@ -1,0 +1,23 @@
+language: nix
+
+sudo: false
+
+env:
+  global:
+    - CACHIX_CACHE=
+    - NUR_REPO=<YOUR_NUR_REPO_NAME_HERE>
+
+install:
+ - nix --version
+ - travis_retry nix-channel --update
+ - if [ -n "${CACHIX_CACHE}" ]; then nix-env -if https://github.com/cachix/cachix/tarball/master --substituters https://cachix.cachix.org --trusted-public-keys cachix.cachix.org-1:eWNHQldwUO7G2VkjpnjDbWwy4KQ/HNxht7H4SSoMckM=; fi
+ - if [ -n "${CACHIX_CACHE}" ]; then cachix use "${CACHIX_CACHE}"; fi
+
+script:
+ - export outs=$(nix-build non-broken.nix)
+ - echo Produced $outs
+
+after_success:
+  - if [ -n "${CACHIX_CACHE}" ]; then cachix push "${CACHIX_CACHE}" $outs; fi
+  - curl -XPOST "https://nur-update.herokuapp.com/update?repo=${NUR_REPO}"
+
