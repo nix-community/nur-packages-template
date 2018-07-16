@@ -11,6 +11,8 @@
      attribute, or travis (and consequently caching) will fail!
 3. Add your NUR repo name and your cachix repo name (optional) to
    [.travis.yml](./.travis.yml)
+   * If you use cachix you should also add your cache's private key to travis'
+     protected env variables
 4. Enable travis for your repo
 5. Change your travis and cachix names on the README template section and delete
    the rest
