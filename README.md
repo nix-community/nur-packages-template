@@ -14,6 +14,8 @@
    * If you use cachix you should also add your cache's private key to travis'
      protected env variables
 4. Enable travis for your repo
+   * You can add a cron job in the repository settings on travis to keep your
+     cachix cache fresh
 5. Change your travis and cachix names on the README template section and delete
    the rest
 6. [Add yourself to NUR](https://github.com/nix-community/NUR#how-to-add-your-own-repository)
