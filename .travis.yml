@@ -14,7 +14,7 @@ install:
  - if [ -n "${CACHIX_CACHE}" ]; then cachix use "${CACHIX_CACHE}"; fi
 
 script:
- - export outs=$(nix-build non-broken.nix)
+ - outs=$(nix-build non-broken.nix)
  - echo Produced $outs
 
 after_success:
