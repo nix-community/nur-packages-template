@@ -1,6 +1,6 @@
 {
   # Add your NixOS modules here
   #
-  # my-module = import ./my-module;
+  # my-module = ./my-module;
 }
 
