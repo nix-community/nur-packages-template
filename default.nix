@@ -8,14 +8,11 @@
 
 { pkgs ? import <nixpkgs> {} }:
 
-{
-  # The `lib`, `modules`, and `overlay` names are special
+let
   lib = import ./lib { inherit pkgs; }; # functions
-  modules = import ./modules; # NixOS modules
-  overlays = import ./overlays; # nixpkgs overlays
-
-  example-package = pkgs.callPackage ./pkgs/example-package { };
-  # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
-  # ...
-}
-
+  modules = import ./modules;           # NixOS modules
+  overlays = import ./overlays;         # nixpkgs overlays
+in {
+  # The `lib`, `modules`, and `overlay` names are special
+  inherit lib modules overlays;
+} // (lib.recCallPackage ./pkgs)
