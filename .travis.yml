@@ -11,10 +11,7 @@ matrix:
   include:
     - env: NIX_CHANNEL=https://nixos.org/channels/nixpkgs-unstable
     - env: NIX_CHANNEL=https://nixos.org/channels/nixos-unstable
-    - env: NIX_CHANNEL=https://nixos.org/channels/nixos-18.03
-  # cachix will be introduced in 18.09, so we just allow a failure for now
-  allow_failures:
-    - env: NIX_CHANNEL=https://nixos.org/channels/nixos-18.03
+    - env: NIX_CHANNEL=https://nixos.org/channels/nixos-18.09
 
 install:
  - nix --version
