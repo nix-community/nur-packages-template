@@ -1,6 +1,6 @@
-# This file filters out all the broken packages from your package set.
-# It's what gets built by CI, so if you correctly mark broken packages as
-# broken your CI will not try to build them and the non-broken packages will
+# This file filters out all the unbuildable packages from your package set.
+# It's what gets built by CI, so if you correctly mark broken/unfree packages
+# as such your CI will not try to build them and the buildable packages will
 # be added to the cache.
 { pkgs ? import <nixpkgs> {} }:
 
