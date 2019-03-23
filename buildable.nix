@@ -16,8 +16,8 @@ let
       )
     );
   isReserved = n: builtins.elem n ["lib" "overlays" "modules"];
-  isBroken = p: ({ meta.broken = false; } // p).meta.broken;
-  isFree = p: ({ meta.license.free = true; } // p).meta.license.free;
+  isBroken = p: p.meta.broken or false;
+  isFree = p: p.meta.license.free or true;
 in filterSet
      (n: !(isReserved n)) # filter out non-packages
      (p: (builtins.isAttrs p)
