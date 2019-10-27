@@ -1,0 +1,28 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-yaml
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: local
+    hooks:
+    -  id: nixpkgs-fmt
+       name: nixpkgs-fmt
+       description: Format nix code with nixpkgs-fmt.
+       language: system
+       entry: nixpkgs-fmt
+       args: ['--check']
+       files: \.nix$
+       minimum_pre_commit_version: 1.18.0
+       exclude: >
+         (?x)^(
+             nix/sources.nix|
+             test_data/.*
+         )$
