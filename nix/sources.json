@@ -1,4 +1,30 @@
 {
+    "fish-kubectl-completions": {
+        "branch": "master",
+        "description": "kubectl completions for fish shell",
+        "homepage": "",
+        "owner": "evanlucas",
+        "repo": "fish-kubectl-completions",
+        "rev": "dbcd150a1c7b4b96da8c63b654de43bf8271c2f1",
+        "sha256": "15f7nn96n3pg2c92dm71lynmy8d8ijqzihjkbvfkx5sc7nvcmf5j",
+        "type": "builtin-tarball",
+        "url": "https://github.com/evanlucas/fish-kubectl-completions/archive/dbcd150a1c7b4b96da8c63b654de43bf8271c2f1.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
+        "version": "dbcd150a1c7b4b96da8c63b654de43bf8271c2f1"
+    },
+    "fish-pure": {
+        "branch": "master",
+        "description": "Port of the `pure` ZSH prompt to Fish 🐟",
+        "homepage": "",
+        "owner": "rafaelrinaldi",
+        "repo": "pure",
+        "rev": "339a7b2ba1f0fc767f1d4b6a8ade2b6255ef1923",
+        "sha256": "1ki1wh2lcdpbnsa2msl5w2fi7gi5l725vj01b4s3dc69761q49xn",
+        "type": "tarball",
+        "url": "https://github.com/rafaelrinaldi/pure/archive/339a7b2ba1f0fc767f1d4b6a8ade2b6255ef1923.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
+        "version": "v2.1.8"
+    },
     "niv": {
         "branch": "master",
         "description": "Easy dependency management for Nix projects",
