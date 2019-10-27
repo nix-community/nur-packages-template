@@ -1,0 +1,30 @@
+name: Check
+on: [pull_request]
+
+jobs:
+  linters:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: cachix/install-nix-action@v3
+      - run: nix-channel --add https://nixos.org/channels/nixos-unstable nixpkgs
+      - run: nix-channel --update
+      - run: nix-shell --run "pre-commit run -a"
+
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        channel:
+          - "https://nixos.org/channels/nixos-19.09"
+          - "https://nixos.org/channels/nixos-unstable"
+          - "https://nixos.org/channels/nixpkgs-unstable"
+    steps:
+      - uses: actions/checkout@v1
+      - uses: cachix/install-nix-action@v3
+      - run: nix-channel --add ${{ matrix.channel }} nixpkgs
+      - run: nix-channel --update
+      - run: nix eval -f default.nix 'lib'
+      - run: nix eval -f default.nix 'modules'
+      - run: nix eval -f default.nix 'overlays'
+      - run: nix-build ci.nix -A buildOutputs
