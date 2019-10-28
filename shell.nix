@@ -7,11 +7,12 @@ let
   nixpkgs-fmt = if (hasAttrByPath [ "unstable" "nixpkgs-fmt" ] pkgs) then pkgs.unstable.nixpkgs-fmt else (import sources.nixpkgs-fmt {});
   env = pkgs.buildEnv {
     name = "all-packages";
-    paths = with pkgs.lib; collect isDerivation (pkgs.callPackages ./non-broken.nix { inherit pkgs; });
+    paths = (import ./ci.nix { inherit pkgs; }).buildPkgs;
   };
 in
 pkgs.mkShell {
   buildInputs = with pkgs; [
+    direnv
     env
     gitAndTools.pre-commit
     niv

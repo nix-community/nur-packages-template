@@ -17,7 +17,10 @@ let
 
   isReserved = n: n == "lib" || n == "overlays" || n == "modules";
   isDerivation = p: isAttrs p && p ? type && p.type == "derivation";
-  isBuildable = p: !(p.meta.broken or false) && p.meta.license.free or true;
+  isBroken = p: p.meta.broken or false;
+  isLicensed = p: (p.meta.license.free or true || pkgs.config.allowUnfree or false);
+  isPlatformMatch = p: !(hasAttr "platforms" p.meta) || pkgs.lib.any (pkgs.lib.meta.platformMatch pkgs.stdenv.hostPlatform) p.meta.platforms;
+  isBuildable = p: !(isBroken p) && isLicensed p && isPlatformMatch p;
   isCacheable = p: !(p.preferLocalBuild or false);
   shouldRecurseForDerivations = p: isAttrs p && p.recurseForDerivations or false;
 
@@ -29,7 +32,7 @@ let
     let
       f = p:
         if shouldRecurseForDerivations p then flattenPkgs p
-        else if isDerivation p then [p]
+        else if isDerivation p then [ p ]
         else [];
     in
       concatMap f (attrValues s);
@@ -40,10 +43,16 @@ let
 
   nurPkgs =
     flattenPkgs
-    (listToAttrs
-    (map (n: nameValuePair n nurAttrs.${n})
-    (filter (n: !isReserved n)
-    (attrNames nurAttrs))));
+      (
+        listToAttrs
+          (
+            map (n: nameValuePair n nurAttrs.${n})
+              (
+                filter (n: !isReserved n)
+                  (attrNames nurAttrs)
+              )
+          )
+      );
 
 in
 

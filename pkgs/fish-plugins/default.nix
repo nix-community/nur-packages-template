@@ -1,12 +1,10 @@
-{ pkgs, stdenv, lib, newScope, recurseIntoAttrs, sources }:
-
-stdenv.lib.makeScope newScope (
+{ pkgs, lib, newScope, recurseIntoAttrs, sources }:
+lib.makeScope newScope (
   self: with self; let
-    callPackages = lib.callPackagesWith (pkgs // self // { inherit sources; });
+    packagePlugin = callPackage ./package-plugin.nix {};
+    callPackages = lib.callPackagesWith (pkgs // self // { inherit sources packagePlugin; });
   in
     {
-      packagePlugin = callPackage ./package-plugin.nix {};
-
       completions = recurseIntoAttrs (callPackages ./completions {});
 
       pure = packagePlugin rec {

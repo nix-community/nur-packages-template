@@ -1,7 +1,6 @@
-{ stdenv, newScope, sources }:
-
-stdenv.lib.makeScope newScope (
+{ lib, newScope, sources, packagePlugin }:
+lib.makeScope newScope (
   self: with self; {
-    kubectl = callPackage ./kubectl.nix { inherit sources; };
+    kubectl = callPackage ./kubectl.nix { inherit packagePlugin sources; };
   }
 )
