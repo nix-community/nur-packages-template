@@ -2,9 +2,9 @@
 with pkgs.lib;
 let
   # until 20.03 try to use unstable or upstream version
-  niv = if (hasAttrByPath [ "unstable" "niv" ] pkgs) then pkgs.unstable.niv else (import sources.niv {}).niv;
+  niv = if (hasPrefix "0.2." pkgs.haskellPackages.niv.version) then pkgs.haskellPackages.niv else if (hasAttrByPath [ "unstable" "haskellPackages" "niv" ] pkgs) then pkgs.unstable.haskellPackages.niv else (import sources.niv {}).niv;
   # until 20.03 try to use unstable or upstream version
-  nixpkgs-fmt = if (hasAttrByPath [ "unstable" "nixpkgs-fmt" ] pkgs) then pkgs.unstable.nixpkgs-fmt else (import sources.nixpkgs-fmt {});
+  nixpkgs-fmt = if (hasPrefix "0.6." pkgs.nixpkgs-fmt.version) then pkgs.nixpkgs-fmt else if (hasAttrByPath [ "unstable" "nixpkgs-fmt" ] pkgs) then pkgs.unstable.nixpkgs-fmt else (import sources.nixpkgs-fmt {});
   env = pkgs.buildEnv {
     name = "all-packages";
     paths = (import ./ci.nix { inherit pkgs; }).buildPkgs;
