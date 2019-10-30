@@ -49,6 +49,32 @@
         "url": "https://github.com/nix-community/nixpkgs-fmt/archive/e36492b8f6ec954d95e5cc8958e72be425402f17.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "vim-bbye": {
+        "branch": "master",
+        "description": "Delete buffers and close files in Vim without closing your windows or messing up your layout. Like Bclose.vim, but rewritten and well maintained.",
+        "homepage": "http://www.vim.org/scripts/script.php?script_id=4664",
+        "owner": "moll",
+        "repo": "vim-bbye",
+        "rev": "25ef93ac5a87526111f43e5110675032dbcacf56",
+        "sha256": "0dlifpbd05fcgndpkgb31ww8p90pwdbizmgkkq00qkmvzm1ik4y4",
+        "type": "tarball",
+        "url": "https://github.com/moll/vim-bbye/archive/25ef93ac5a87526111f43e5110675032dbcacf56.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
+        "version": "v1.0.1"
+    },
+    "vim-sideways": {
+        "branch": "master",
+        "description": "A Vim plugin to move function arguments (and other delimited-by-something items) left and right.",
+        "homepage": "http://www.vim.org/scripts/script.php?script_id=4171",
+        "owner": "AndrewRadev",
+        "repo": "sideways.vim",
+        "rev": "1265cf654f91fb1536cdaf72ebe5360ba9b902db",
+        "sha256": "1g91jgkfqkjrw4n2jyqfjzvs1gydk24p55j5l9l46p2g5q6ch1mj",
+        "type": "tarball",
+        "url": "https://github.com/AndrewRadev/sideways.vim/archive/1265cf654f91fb1536cdaf72ebe5360ba9b902db.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
+        "version": "v0.3.0"
+    },
     "winbox-bin": {
         "sha256": "0npfz8ijkchwcpfhkfvgfgynhq46fyi3wzm39jp2s6jc2sbffk29",
         "type": "file",
