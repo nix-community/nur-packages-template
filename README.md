@@ -18,4 +18,7 @@ TODO: write how to setup
   - completions
     - kubectl
   - pure theme
-- Mikrotik's Winbox
+- Vim plugins
+  - vim-bbye
+  - vim-sideways
+- Winbox (via Wine)
