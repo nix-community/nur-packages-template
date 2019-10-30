@@ -7,6 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: cachix/install-nix-action@v3
+      - run: sudo sh -c 'echo "substituters = https://cache.nixos.org/ https://knopki-nixexprs.cachix.org" >> /etc/nix/nix.conf'
+      - run: sudo sh -c 'echo "trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= knopki-nixexprs.cachix.org-1:8POFjWFaXKqJSn+KzEGuBmRyFnB19QFkm62zbjo9eto=" >> /etc/nix/nix.conf'
       - run: nix-channel --add https://nixos.org/channels/nixos-unstable nixpkgs
       - run: nix-channel --update
       - run: nix-shell --run "pre-commit run -a"
