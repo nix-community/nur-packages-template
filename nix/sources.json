@@ -1,4 +1,17 @@
 {
+    "LS_COLORS": {
+        "branch": "master",
+        "description": "A collection of LS_COLORS definitions; needs your contribution!",
+        "homepage": "",
+        "owner": "trapd00r",
+        "repo": "LS_COLORS",
+        "rev": "332d7a18696057e21f5acd9bb885acffbe798bd4",
+        "sha256": "08mga3jg1f3zsspx0hlgywlabwq07qp5qk1lgjz8rawj62zmqqrf",
+        "type": "tarball",
+        "url": "https://github.com/trapd00r/LS_COLORS/archive/332d7a18696057e21f5acd9bb885acffbe798bd4.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
+        "version": "332d7a18696057e21f5acd9bb885acffbe798bd4"
+    },
     "fish-kubectl-completions": {
         "branch": "master",
         "description": "kubectl completions for fish shell",
