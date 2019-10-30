@@ -8,9 +8,14 @@ TODO: write how to setup
 
 ## Contents
 
-- Packages
-  - Fish plugins
-    - completions
-      - kubectl
-    - pure theme
-  - Mikrotik's Winbox
+### NixOS modules
+
+- nix
+
+### Packages
+
+- Fish Shell plugins
+  - completions
+    - kubectl
+  - pure theme
+- Mikrotik's Winbox
