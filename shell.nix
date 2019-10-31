@@ -18,5 +18,6 @@ pkgs.mkShell {
     niv
     nixpkgs-fmt
     stdenv
+    vgo2nix
   ];
 }

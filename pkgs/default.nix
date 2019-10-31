@@ -6,6 +6,7 @@ lib.makeScope newScope (
     rec {
       fishPlugins = recurseIntoAttrs (callPackages ./fish-plugins {});
       lsColors = callPackages ./ls-colors.nix {};
+      kube-score = callPackages ./kube-score {};
       vimPlugins = recurseIntoAttrs (callPackages ./vim-plugins.nix {});
       winbox-bin = callPackages ./winbox {};
       winbox = winbox-bin;
