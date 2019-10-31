@@ -2,7 +2,7 @@
     "LS_COLORS": {
         "branch": "master",
         "description": "A collection of LS_COLORS definitions; needs your contribution!",
-        "homepage": "",
+        "homepage": "https://github.com/trapd00r/LS_COLORS",
         "owner": "trapd00r",
         "repo": "LS_COLORS",
         "rev": "332d7a18696057e21f5acd9bb885acffbe798bd4",

@@ -1,11 +1,13 @@
-{ sources, runCommand, packagePlugin }:
-
+{ lib, sources, runCommand, packagePlugin }:
+with lib;
 let
-  name = "kubectl";
-  version = sources.fish-kubectl-completions.version;
+  mySrc = sources.fish-kubectl-completions;
+
+  name = "fish-kubectl-completions";
+  version = mySrc.version;
 
   src = runCommand "fish-completion-${name}-${version}-src" {
-    src = "${sources.fish-kubectl-completions}/completions/kubectl.fish";
+    src = "${mySrc}/completions/kubectl.fish";
   } ''
     mkdir -p $out/completions
     cp $src $_/${name}.fish
@@ -14,4 +16,8 @@ in
 packagePlugin {
   inherit src;
   name = "${name}-completion-${version}";
+  meta = {
+    inherit (mySrc) description homepage;
+    license = licenses.mit;
+  };
 }

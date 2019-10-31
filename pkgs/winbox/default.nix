@@ -1,7 +1,7 @@
 { stdenv, fetchurl, pkgs, makeDesktopItem, makeWrapper, lib, sources, ... }:
 with lib;
 let
-  source = sources.winbox-bin;
+  src = sources.winbox-bin;
   description = "Winbox is a small utility that allows administration of MikroTik RouterOS using a fast and simple GUI";
   meta = with stdenv.lib; {
     inherit description;
@@ -26,9 +26,9 @@ let
 in
 stdenv.mkDerivation rec {
   inherit meta;
+  inherit src;
+  inherit (src) version;
   name = "winbox-bin-${version}";
-  version = source.version;
-  src = source;
   preferLocalBuild = true;
   nativeBuildInputs = with pkgs; [ makeWrapper ];
   buildInputs = with pkgs; [ wine ];
