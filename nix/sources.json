@@ -44,10 +44,10 @@
         "homepage": "https://kube-score.com",
         "owner": "zegl",
         "repo": "kube-score",
-        "rev": "0524575abeb7c50da4dc87e3e465274caf52265b",
-        "sha256": "0cnpza8a13z572qrl67y4sm2g39fdv8y9h49mnql4zdcmhgsvlsi",
+        "rev": "bdb07f1e3d5ff8a2c2c1b4086d68d5ec7f739432",
+        "sha256": "19gpmksnfj801wj69x4z5s33kn2c4y7ddis3kdwd2bmma00vnrkm",
         "type": "tarball",
-        "url": "https://github.com/zegl/kube-score/archive/0524575abeb7c50da4dc87e3e465274caf52265b.tar.gz",
+        "url": "https://github.com/zegl/kube-score/archive/bdb07f1e3d5ff8a2c2c1b4086d68d5ec7f739432.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "version": "v0.7.1"
     },
