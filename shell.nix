@@ -8,6 +8,7 @@ let
 in
 pkgs.mkShell {
   buildInputs = with pkgs; [
+    dep2nix
     direnv
     gitAndTools.pre-commit
     niv

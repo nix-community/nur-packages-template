@@ -51,6 +51,19 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
         "version": "v0.7.1"
     },
+    "kustomize1": {
+        "branch": "master",
+        "description": "Customization of kubernetes YAML configurations",
+        "homepage": "https://sigs.k8s.io/kustomize",
+        "owner": "kubernetes-sigs",
+        "repo": "kustomize",
+        "rev": "383b3e798b7042f8b7431f93e440fb85631890a3",
+        "sha256": "1z78d5j2w78x4ks4v745050g2ffmirj03v7129dib2lfhfjra8aj",
+        "type": "tarball",
+        "url": "https://github.com/kubernetes-sigs/kustomize/archive/383b3e798b7042f8b7431f93e440fb85631890a3.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz",
+        "version": "v1.0.10"
+    },
     "niv": {
         "branch": "master",
         "description": "Easy dependency management for Nix projects",
