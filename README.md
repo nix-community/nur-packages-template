@@ -18,6 +18,7 @@ TODO: write how to setup
   - completions
     - kubectl
   - pure theme
+- kube-score
 - Vim plugins
   - vim-bbye
   - vim-sideways
