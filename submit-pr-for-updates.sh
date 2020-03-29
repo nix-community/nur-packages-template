@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e
+set -x
 
 git clone git@github.com:$TRAVIS_REPO_SLUG.git nur-packages
 
