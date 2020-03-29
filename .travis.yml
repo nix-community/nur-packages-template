@@ -4,14 +4,15 @@ sudo: false
 
 env:
   global:
-    - CACHIX_CACHE=
-    - NUR_REPO=<YOUR_NUR_REPO_NAME_HERE>
+    - CACHIX_CACHE=jeremiehuchet
+    - NUR_REPO=jeremiehuchet
 
 matrix:
   include:
     - env: NIX_CHANNEL=https://nixos.org/channels/nixpkgs-unstable
     - env: NIX_CHANNEL=https://nixos.org/channels/nixos-unstable
     - env: NIX_CHANNEL=https://nixos.org/channels/nixos-19.09
+    - env: NIX_CHANNEL=https://nixos.org/channels/nixos-20.03
 
 install:
  - nix --version
