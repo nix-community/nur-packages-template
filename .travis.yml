@@ -3,19 +3,23 @@ env:
   global:
   - GIT_SSH_COMMAND="ssh -i $PWD/id_rsa"
   - secure: XMJqMivPRlJhT12/XuTPcwYSmILy71YJq7bL8Bq5biW6rO1RHcp9/Rrvy5yBeathDdPCdtyXZ3wSHHNElHBwEQWuvANuXi/KLwGYUZG6zcqgPhuSxUyA4mjCaJpWBFjh9Y99kn6+qHtcl7dXFroMXiUSwFsPQDZSfSF8XIxnemeGNkx8XCwX99WB/PuE/tI85WAdZm+BHsJKk+asxx5iOibPXYYN87wB0ctuXRKWiAW3goX43YwWH23onq5Uiqo7s6HfP7V0iJO0o/03karu4tKiUujZpE/Ygrdqco59ZGOkN7NYS3IBNFlFQyhdIxHS4FQorbWqaRuraRvSI6knQEUV/c0wHcxp6ywHavahfhAuZn/5oaOkmYEU3M+Ib4R5TIpwknbR4nDS0csJG5gB/QevXcA2TbryKj1181lWolDZ4GoX+u8GLmHVBjirAiKKdLY7wR2RKRk3uLh28A04rV1/hSOKE06r1Csu0g/f5n2n6Li5yZLf7npOLJjWxQlrzi0xAYUncjv1A08W2LqKD0orkQu79oxhjuxzSTP3Hm7Y0xAch81wdX0lLU0s6B0ND6PjOe0dNn077goXEFBbZ1z3v2Sdn/bb9xSWiQ54DZL49Qox6UfRhMJGUhMzCRz5Hpa+Ivlh8XPwJ+58gYHynPFps1nK8EVAN8H3pNQks5c=
+  - secure: oPHy3BaZLRD42BTF4LxluFzs5ey9xwy/k/WdqCMI6k+Y3gfmK/9Y549uF7nhdQzDNyoBtayhgKKOEztuPPm7CX3se1/w5gNbaLDWtTAHAko4b0yT9UvfV8Zp5cJameIvp6+qM7enaf7AIVRSil4GJJiObb3EgEDGAz/vplOWq6lqqxWqcxuykmU8Kt2vzRGEAM3ZA+WDp/yIMucmryCuhulZCuBKN0hiVN+IwlUNzlfwSXXkoRbJwvgJMS9W3zxe5LLvZlezuUlY0b7YjGK8nWnRBSuUb/38vZ7Q3Z2BCi6WzVW88v+2p9n14rqEpfwJQ+HgbmhTUyxUb8j+vHQoeVfBCtu8FPA19irqkbMPzyE2BvbYnESvDhwwtHx3GJUgIkjKVWGkM9jphFo46fB0L+ISCUMFGJCrRZziEgVvkUGGp02rS/1dxkAYadZbJudocfKR1dDfWQbypmpZTqRfIROQE7SRyp/8AKRb3mTilDbiCS6V95Szf/ltKdvjcNS9vclK5/oGLQi9eKdpkiI7sxJLCSk4wUFbDUL+7V7pz7/corV/Y5LanHCugMdEbve+s5+CmluVzu6BZKcRp8x0PqVjhDQ/f36xoAxFW1uwDpSLQ1CB6j7dNNLaiEf3qZGvZ5nJ8ynAVfjcixHxTXa3BJxHgTFcptQrCwbgqiRxOs8=
 
 before_script:
 # configure git
-- git config user.name "Travis CI"
-- git config user.email "travis-ci@users.noreply.github.com"
-# configure ssh to use github
+- git config user.name "CI Robot"
+- git config user.email "jeremiehuchet-ci@users.noreply.github.com"
+
+# configure git to use ssh
 - echo $secret_key | base64 -d | gpg --passphrase-fd 0 --output id_rsa id_rsa.gpg 1> /dev/null 2>/dev/null
 - echo "github.com ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==" > $HOME/.ssh/known_hosts
 - chmod 600 "$HOME/.ssh/known_hosts" id_rsa
-- nix-shell --command true # pre-install dependencies
+
+# pre-install dependencies
+- nix-shell --command true
 
 script:
-- nix-shell --command ./submit-pr-for-updates.sh
+- nix-shell --command ./update-all.sh
 
 after_script:
 - rm -v id_rsa

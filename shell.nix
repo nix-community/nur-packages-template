@@ -3,5 +3,5 @@
 with pkgs;
 stdenv.mkDerivation {
   name = "auto-update";
-  buildInputs = [ gnupg nodePackages.node2nix ];
+  buildInputs = [ gnupg gitAndTools.hub nodePackages.node2nix ];
 }
