@@ -1,7 +1,7 @@
 {
   "name": "now",
-  "version": "17.1.0",
+  "version": "17.1.1",
   "dependencies": {
-    "now": "17.1.0"
+    "now": "17.1.1"
   }
 }
