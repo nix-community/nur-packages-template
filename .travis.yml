@@ -1,0 +1,12 @@
+env:
+  global:
+    secure: TtTy7qkL2XyMdMGIeyONbPXq5qL1huW+fQT3NG0fgOu3Q+GVgzMS+1/m7dvEt5Yfc1aaidTfKCSJlt4q6fKZFQx6FrOzi8P/vaad02V2VvEV0Sb1wKplDchUzUwteLnyfUmMHnMxcwBT6C40SGyf1xEL7+Amd2eOnnrWxmLaPBCNyEewcpilqb8OyaOGNUb5JA0JEuaIAAN/fZBHi/9JWdO3mjdb27c0U3+RaeMw8ZFeHQR8bwUPGswvdLkJDLC3yxhIdQcc2XkxBX6MNoUu6g08TW654a/GjbUj2kUyznBO7Y0JwRtlo5NeyQbsQq9PoXqML55nt0Jzp1lDCJW1Ze1I/DKaxvV3qnkNVgtvXa1scBIqB32I0YchNscFcc+bxfHRZaTS2G7oNZx3xEg8qc7DqLYFeKQ6Qf2LxY2nse0/1QEVlHFbuvq+jjJUXSguB37VAswIeii1JSfpogfF8UTjQ91774Ll3Wee+60vtM1AxUJQ5NPjdWVBjfMX2Zfm9pnFqiFEHfyuM4XQpzXrTTbO2iiwN8HZVhpyZIZngcwxIT9CPpgPa23j36nAUmIb8DEamxnrA7tP5z8EbMGfB4P8q6oMhDeXjH3GJ1K3uEvvGffAxmZa9/bNX/4W1cbsbhbi/cVONDgmQwrNju3gYajYgXtaFvhjLrssSe1tKfE=
+before_script:
+- git config user.name "Travis CI"
+- git config user.email "travis-ci@users.noreply.github.com"
+- echo $secret_key | gpg --passphrase-fd 0 id_rsa.gpg 1> /dev/null 2>/dev/null
+- echo "Host github.com\n    IdentityFile $PWD/id_rsa" >> $HOME/.ssh/config
+script:
+- nix-shell --command ./submit-pr-for-updates.sh
+after_script:
+- rm -v id_rsa
