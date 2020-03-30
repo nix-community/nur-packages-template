@@ -14,6 +14,7 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
+  bazarr = pkgs.callPackage ./pkgs/bazarr { };
   ccat = pkgs.callPackage ./pkgs/ccat { };
   gitmoji-cli = (pkgs.callPackage ./pkgs/node-packages/gitmoji-cli { }).package;
   now = (pkgs.callPackage ./pkgs/node-packages/now { }).package;
