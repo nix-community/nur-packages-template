@@ -35,4 +35,5 @@ sed -i "s/src = \.\/\.;$/src = sources.\"$pname-$latest_version\".src;/" node-pa
 
 # commit changes to git
 git checkout -b "$pname-$latest_version"
-git commit -a -m "⬆️ now $old_version → $latest_version"
+git add .
+git commit -m "⬆️ $pname $old_version → $latest_version"
