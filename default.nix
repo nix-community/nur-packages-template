@@ -17,5 +17,6 @@
   ccat = pkgs.callPackage ./pkgs/ccat { };
   gitmoji-cli = (pkgs.callPackage ./pkgs/node-packages/gitmoji-cli { }).package;
   now = (pkgs.callPackage ./pkgs/node-packages/now { }).package;
+  rofimoji = pkgs.callPackage ./pkgs/rofimoji { };
 }
 
