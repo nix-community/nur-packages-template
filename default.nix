@@ -17,6 +17,7 @@
   bazarr = pkgs.callPackage ./pkgs/bazarr { };
   ccat = pkgs.callPackage ./pkgs/ccat { };
   gitmoji-cli = (pkgs.callPackage ./pkgs/node-packages/gitmoji-cli { }).package;
+  nix-direnv = pkgs.callPackage ./pkgs/nix-direnv { };
   now = (pkgs.callPackage ./pkgs/node-packages/now { }).package;
   pyrandr = pkgs.callPackage ./pkgs/pyrandr { };
   rofimoji = pkgs.callPackage ./pkgs/rofimoji { };
