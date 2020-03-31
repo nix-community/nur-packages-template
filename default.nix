@@ -18,7 +18,7 @@ rec {
   libcint = pkgs.callPackage ./pkgs/libraries/libcint { };
   xcfun = pkgs.callPackage ./pkgs/libraries/xcfun { };
 
-  python3Packages = {
+  python3Packages = pkgs.recurseIntoAttrs {
     pyscf = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pyscf { inherit libcint xcfun; };
   };
 
