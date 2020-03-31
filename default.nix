@@ -16,5 +16,6 @@
 
   # New/unstable packages below
   libcint = pkgs.callPackage ./pkgs/libraries/libcint { };
+  xcfun = pkgs.callPackage ./pkgs/libraries/xcfun { };
 }
 
