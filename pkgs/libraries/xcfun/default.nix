@@ -46,6 +46,6 @@ stdenv.mkDerivation rec {
     homepage = "https://xcfun.readthedocs.io/en/latest/";
     downloadPage = "https://github.com/dftlibs/xcfun/releases";
     license = licenses.mpl20;
-    maintainers = with maintainers; [ drewrisinger ];
+    # maintainers = with maintainers; [ drewrisinger ];
   };
 }

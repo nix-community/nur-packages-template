@@ -52,6 +52,6 @@ stdenv.mkDerivation rec {
     homepage = "http://wiki.sunqm.net/libcint";
     downloadPage = "https://github.com/sunqm/libcint";
     license = licenses.bsd2;
-    maintainers = with maintainers; [ drewrisinger ];
+    # maintainers = with maintainers; [ drewrisinger ];
   };
 }
