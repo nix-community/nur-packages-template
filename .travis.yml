@@ -4,8 +4,8 @@ sudo: false
 
 env:
   global:
-    - CACHIX_CACHE=
-    - NUR_REPO=<YOUR_NUR_REPO_NAME_HERE>
+    - CACHIX_CACHE=drewrisinger
+    - NUR_REPO=drewrisinger
 
 matrix:
   include:
