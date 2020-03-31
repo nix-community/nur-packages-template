@@ -36,9 +36,8 @@ stdenv.mkDerivation rec {
   # TODO: tests are very quick. check it actually does something.
   doCheck = true;
   checkPhase = ''
-    # set path for finding libxc.so for tests
-    export LD_LIBRARY_PATH=/build/source/build
-    ctest --progress
+    # set path for finding libxcfun.so for tests
+    LD_LIBRARY_PATH=$out/lib:$LD_LIBRARY_PATH ctest --progress ctest --progress
   '';
 
   meta = with stdenv.lib; {
