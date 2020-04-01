@@ -19,6 +19,7 @@ rec {
   xcfun = pkgs.callPackage ./pkgs/libraries/xcfun { };
 
   python3Packages = pkgs.recurseIntoAttrs {
+    nose-timer = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/nose-timer { };
     pyscf = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pyscf { inherit libcint xcfun; };
   };
 
