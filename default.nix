@@ -24,7 +24,7 @@ rec {
   python3Packages = pkgs.recurseIntoAttrs rec {
     nose-timer = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/nose-timer { };
     pyscf = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pyscf { inherit libcint xcfun; };
-    pygsti = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pygsti { inherit nose-timer; };
+    pygsti = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pygsti { inherit cvxpy nose-timer; };
 
     # Following are in Nixpkgs, just not made it to release yet.
     cvxpy = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/cvxpy { inherit ecos osqp ; inherit (python3Packages) scs; };

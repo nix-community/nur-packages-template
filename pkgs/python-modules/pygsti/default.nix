@@ -23,6 +23,7 @@
 , pyzmq
 # Check Inputs
 , coverage
+, cvxpy
 , nose
 , rednose
 , nose-timer
@@ -70,19 +71,19 @@ buildPythonPackage rec {
     substituteInPlace setup.py --replace "use_scm_version=custom_version" "version='${version}'"
   '';
 
-  extraCheckInputs = [
-    coverage
-    cvxopt
-    # cvxpy # TODO: in nixpkgs/master, not in release yet.
-    cython
-    matplotlib
-    mpi4py
-    msgpack
-    pandas
-    psutil
-    pyzmq
-    jinja2
-  ];
+  # extraCheckInputs = [
+  #   coverage
+  #   cvxopt
+  #   cvxpy # TODO: in nixpkgs/master, not in release yet.
+  #   cython
+  #   matplotlib
+  #   mpi4py
+  #   msgpack
+  #   pandas
+  #   psutil
+  #   pyzmq
+  #   jinja2
+  # ];
 
   pythonImportsCheck = [
     "pygsti"
@@ -98,7 +99,7 @@ buildPythonPackage rec {
     "pygsti.tools"
   ];
 
-  checkInputs = [ nose nose-timer rednose ];
+  checkInputs = [ nose nose-timer rednose cvxpy ];
   dontUseSetuptoolsCheck = true;
 
   # Run tests from temp directory to avoid nose finding un-cythonized code
@@ -110,7 +111,7 @@ buildPythonPackage rec {
   checkPhase = ''
     runHook preCheck
 
-    SKIP_CVXPY=1 nosetests test/unit --detailed-errors
+    nosetests test/unit -v --detailed-errors
 
     runHook postCheck
   '';
