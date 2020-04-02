@@ -14,6 +14,9 @@ rec {
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
+  # Packages/updates accepted to nixpkgs/master, but need the update
+  lib-scs = pkgs.callPackage ./pkgs/libraries/scs { };
+
   # New/unstable packages below
   libcint = pkgs.callPackage ./pkgs/libraries/libcint { };
   xcfun = pkgs.callPackage ./pkgs/libraries/xcfun { };
@@ -22,6 +25,9 @@ rec {
     nose-timer = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/nose-timer { };
     pyscf = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pyscf { inherit libcint xcfun; };
     pygsti = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pygsti { inherit nose-timer; };
+
+    # Following are in Nixpkgs, just not made it to release yet.
+    scs = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/scs { scs = lib-scs; };
   };
 
 }
