@@ -27,6 +27,7 @@ rec {
     pygsti = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pygsti { inherit nose-timer; };
 
     # Following are in Nixpkgs, just not made it to release yet.
+    ecos = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/ecos { };
     scs = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/scs { scs = lib-scs; };
   };
 
