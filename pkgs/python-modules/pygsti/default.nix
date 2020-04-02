@@ -1,35 +1,45 @@
 { lib
 , buildPythonPackage
 , fetchFromGitHub
-, isPy27
+, pythonOlder
 # Python dependencies
-, setuptools_scm
 , cython
+, deap
+, ipython
+, notebook
 , numpy
 , plotly
 , ply
 , scipy
-, deap
-, notebook
-, ipython
+, setuptools_scm
 # Other/Optional Python dependencies
 , cvxopt
+, jinja2
 , matplotlib
 , mpi4py
 , msgpack
 , pandas
 , psutil
 , pyzmq
-, jinja2
 # Check Inputs
 , coverage
-# , pytestCheckHook
 , nose
 , rednose
 , nose-timer
-, python
 }:
 
+let
+  optionalPackages = [
+    deap
+    ipython
+    jinja2
+    mpi4py
+    matplotlib
+    msgpack
+    notebook
+    pandas
+  ];
+in
 buildPythonPackage rec {
   pname = "pygsti";
   version = "0.9.9.1";
@@ -42,7 +52,7 @@ buildPythonPackage rec {
     sha256 = "1c028xfn3bcjfvy2wcnm1p6k986271ygn755zxw4w72y1br808zd";
   };
 
-  disabled = isPy27;
+  disabled = pythonOlder "3.5";
 
   buildInputs = [
     cython
@@ -54,28 +64,16 @@ buildPythonPackage rec {
     plotly
     ply
     scipy
-  ];
-
-  optionalPackages = [
-    mpi4py
-    deap
-    pandas
-    matplotlib
-    jinja2
-    ipython
-    notebook
-    msgpack
-  ];
+  ] ++ optionalPackages;
 
   postPatch = ''
-    export SRC_DIR=$(pwd)
     substituteInPlace setup.py --replace "use_scm_version=custom_version" "version='${version}'"
   '';
 
   extraCheckInputs = [
     coverage
     cvxopt
-    # cvxpy
+    # cvxpy # TODO: in nixpkgs/master, not in release yet.
     cython
     matplotlib
     mpi4py
@@ -102,24 +100,28 @@ buildPythonPackage rec {
 
   checkInputs = [ nose nose-timer rednose ];
   dontUseSetuptoolsCheck = true;
-  # pytestFlagsArray = [
-  #   "--rootdir=$SRC_DIR/test/unit"
-  # ];
+
+  # Run tests from temp directory to avoid nose finding un-cythonized code
   preCheck = ''
-    ls $SRC_DIR/test/unit
+    export TESTDIR=$(mktemp -d)
+    cp -r test/ $TESTDIR
+    pushd $TESTDIR
   '';
   checkPhase = ''
     runHook preCheck
 
-    nosetests test/unit
+    SKIP_CVXPY=1 nosetests test/unit --detailed-errors
 
     runHook postCheck
   '';
+  postCheck = ''
+    popd
+  '';
 
   meta = with lib; {
-    description = "TODO";
-    homepage = "";
-    downloadPage = "";
+    description = "A python implementation of quantum Gate Set Tomography";
+    homepage = "http://www.pygsti.info";
+    downloadPage = "https://www.github.com/pyGSTio/pyGSTi/releases";
     license = licenses.asl20;
     # maintainers = with maintainers; [ drewrisinger ];
   };
