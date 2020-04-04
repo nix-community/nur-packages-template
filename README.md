@@ -12,8 +12,6 @@
    * Library functions, modules and overlays go in the respective directories
 3. Add your NUR repo name and your cachix repo name (optional) to
    [.travis.yml](./.travis.yml)
-   * If you use cachix you should also add your cache's private key to travis'
-     protected env variables
 4. Enable travis for your repo
    * You can add a cron job in the repository settings on travis to keep your
      cachix cache fresh
