@@ -22,5 +22,4 @@
   pyrandr = pkgs.callPackage ./pkgs/pyrandr { };
   rofi-bookmarks = pkgs.callPackage ./pkgs/rofi-bookmarks { };
   rofimoji = pkgs.callPackage ./pkgs/rofimoji { };
-  webtorrent-cli = pkgs.callPackage ./pkgs/node-packages/webtorrent-cli { };
 }
