@@ -20,5 +20,6 @@
   nix-direnv = pkgs.callPackage ./pkgs/nix-direnv { };
   now = (pkgs.callPackage ./pkgs/node-packages/now { }).package;
   pyrandr = pkgs.callPackage ./pkgs/pyrandr { };
+  rofi-bookmarks = pkgs.callPackage ./pkgs/rofi-bookmarks { };
   rofimoji = pkgs.callPackage ./pkgs/rofimoji { };
 }
