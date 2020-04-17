@@ -8,14 +8,17 @@
 
 { pkgs ? import <nixpkgs> {} }:
 
+let
+  python3AppPackages = pkgs.recurseIntoAttrs rec {
+    bundlewrap = pkgs.python3.pkgs.callPackage ./pkgs/development/python-modules/bundlewrap { };
+  };
+in
 {
   # The `lib`, `modules`, and `overlay` names are special
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  example-package = pkgs.callPackage ./pkgs/example-package { };
-  # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
-  # ...
+  bundlewrap = pkgs.python3.pkgs.toPythonApplication python3AppPackages.bundlewrap;
 }
 
