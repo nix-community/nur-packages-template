@@ -8,15 +8,20 @@
 
 { pkgs ? import <nixpkgs> {} }:
 
-rec {
+let
+  maintainers = pkgs.lib.maintainers // import ./maintainers.nix;
+  mylib = pkgs.lib // { maintainers = maintainers; };
+in
+let
+  python3AppPackages = pkgs.recurseIntoAttrs rec {
+    bundlewrap = pkgs.python3.pkgs.callPackage ./pkgs/development/python-modules/bundlewrap { lib = mylib; };
+  };
+in
+{
   # The `lib`, `modules`, and `overlay` names are special
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
-
-  python3AppPackages = pkgs.recurseIntoAttrs rec {
-    bundlewrap = pkgs.python3.pkgs.callPackage ./pkgs/development/python-modules/bundlewrap { };
-  };
 
   bundlewrap = pkgs.python3.pkgs.toPythonApplication python3AppPackages.bundlewrap;
 }
