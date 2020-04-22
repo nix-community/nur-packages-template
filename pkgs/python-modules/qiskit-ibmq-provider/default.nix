@@ -77,6 +77,9 @@ buildPythonPackage rec {
     "test_non_auth_url"
     "test_non_auth_url_with_hub"
   ];
+  # Ensure run from source dir, not all versions of pytestcheckhook run from proper dir
+  preCheck = "pushd $TMP/$sourceRoot";
+  postCheck = "popd";
 
   # Skip tests that rely on internet access (mostly to IBM Quantum Experience cloud).
   # Options defined in qiskit.terra.test.testing_options.py::get_test_options

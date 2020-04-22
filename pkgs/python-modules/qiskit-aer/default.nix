@@ -81,7 +81,7 @@ buildPythonPackage rec {
     # Tests include a compiled "circuit" which is auto-built in $HOME
     export HOME=$(mktemp -d)
     # move tests b/c by default try to find (missing) cython-ized code in /build/source dir
-    cp -r test $HOME
+    cp -r $TMP/$sourceRoot/test $HOME
 
     # Add qiskit-aer compiled files to cython include search
     pushd $HOME
@@ -95,7 +95,7 @@ buildPythonPackage rec {
     homepage = "https://qiskit.org/aer";
     downloadPage = "https://github.com/QISKit/qiskit-aer/releases";
     license = licenses.asl20;
-    maintainers = with maintainers; [ drewrisinger ];
+    # maintainers = with maintainers; [ drewrisinger ];
     # Doesn't build on aarch64 (libmuparserx issue).
     # Can fix by building muparserx from source (https://github.com/beltoforion/muparserx)
     # or in future updates (e.g. Raspberry Pi enabled via https://github.com/Qiskit/qiskit-aer/pull/651 & https://github.com/Qiskit/qiskit-aer/pull/660)

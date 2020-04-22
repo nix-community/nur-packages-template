@@ -79,6 +79,8 @@ buildPythonPackage rec {
     "qiskit.ml"
     "qiskit.optimization"
   ];
+  preCheck = "pushd $TMP/$sourceRoot";
+  postCheck = "popd";
   pytestFlagsArray = [
     # Disabled b/c missing pyscf
     "--ignore=test/chemistry/test_qeom_ee.py"

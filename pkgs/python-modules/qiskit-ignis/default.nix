@@ -42,7 +42,11 @@ buildPythonPackage rec {
   # Tests
   pythonImportsCheck = [ "qiskit.ignis" ];
   dontUseSetuptoolsCheck = true;
-  preCheck = ''export HOME=$TMPDIR'';
+  preCheck = ''
+    export HOME=$TMPDIR
+    pushd $TMP/$sourceRoot
+  '';
+  postCheck = "popd";
   checkInputs = [
     ddt
     pytestCheckHook
