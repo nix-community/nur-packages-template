@@ -1,0 +1,27 @@
+--- a/src/nm-ssh-service.c	2020-04-23 11:04:55.652595116 +0200
++++ b/src/nm-ssh-service.c	2020-04-23 11:18:02.112658518 +0200
+@@ -663,6 +663,7 @@
+ nm_find_ssh (void)
+ {
+ 	static const char *ssh_binary_paths[] = {
++		"@openssh@/bin/ssh",
+ 		"/usr/bin/ssh",
+ 		"/bin/ssh",
+ 		"/usr/local/bin/ssh",
+@@ -684,6 +685,7 @@
+ nm_find_sshpass (void)
+ {
+ 	static const char *sshpass_binary_paths[] = {
++		"@sshpass@/bin/sshpass",
+ 		"/usr/bin/sshpass",
+ 		"/bin/sshpass",
+ 		"/usr/local/bin/sshpass",
+@@ -1542,7 +1544,7 @@
+ 	if (debug)
+ 		g_message ("nm-ssh-service (version " DIST_VERSION ") starting...");
+ 
+-	if (system ("/sbin/modprobe tun") == -1)
++	if (system ("@kmod@/bin/modprobe tun") == -1)
+ 		exit (EXIT_FAILURE);
+ 
+ 	plugin = nm_ssh_plugin_new (bus_name);

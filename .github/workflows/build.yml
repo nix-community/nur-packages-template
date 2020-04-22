@@ -28,9 +28,9 @@ jobs:
         cachixName:
           - jeremiehuchet
         nixPath:
+          - nixpkgs=channel:nixos-20.09
           - nixpkgs=channel:nixos-unstable
           - nixpkgs=channel:nixpkgs-unstable
-          - nixpkgs=channel:nixos-20.03
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
