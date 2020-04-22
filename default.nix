@@ -59,13 +59,25 @@ rec {
     pylatexenc = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pylatexenc { };
     retworkx = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/retworkx { isPy38 = false; };
 
-    # Qiskit proper
-    qiskit-terra = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/qiskit-terra { inherit dill fastjsonschema marshmallow marshmallow-polyfield python-constraint pylatexenc retworkx; };
-    qiskit-aer = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/qiskit-aer { inherit cvxpy qiskit-terra; inherit (python3Packages) pybind11; };
-    qiskit-ignis = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/qiskit-ignis { inherit qiskit-aer qiskit-terra; };
-    qiskit-aqua = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/qiskit-aqua { inherit docplex fastdtw qiskit-aer qiskit-ignis qiskit-terra; };
-    qiskit-ibmq-provider = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/qiskit-ibmq-provider { inherit arrow ipyvuetify pproxy qiskit-terra; };
-    qiskit = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/qiskit { inherit qiskit-aer qiskit-terra qiskit-ignis qiskit-aqua qiskit-ibmq-provider ; };
+    # Qiskit proper, build order
+    qiskit-terra = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/qiskit-terra {
+      inherit fastjsonschema marshmallow-polyfield python-constraint pylatexenc retworkx;
+    };
+    qiskit-aer = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/qiskit-aer {
+      inherit cvxpy qiskit-terra;
+    };
+    qiskit-ignis = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/qiskit-ignis {
+      inherit qiskit-aer qiskit-terra;
+    };
+    qiskit-aqua = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/qiskit-aqua {
+      inherit dlx docplex fastdtw qiskit-aer qiskit-ignis qiskit-terra;
+    };
+    qiskit-ibmq-provider = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/qiskit-ibmq-provider {
+      inherit ipyvuetify pproxy qiskit-terra;
+    };
+    qiskit = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/qiskit {
+      inherit qiskit-aer qiskit-terra qiskit-ignis qiskit-aqua qiskit-ibmq-provider;
+    };
   };
 
 }
