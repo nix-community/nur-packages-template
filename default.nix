@@ -6,13 +6,16 @@
 # commands such as:
 #     nix-build -A mypackage
 
-{ pkgs ? import <nixpkgs> {} }:
+{ rawpkgs ? import <nixpkgs> {} }:
 
 rec {
   # The `lib`, `modules`, and `overlay` names are special
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
+
+  # NOTE: default pkgs to updated versions as required by qiskit
+  pkgs = rawpkgs.appendOverlays [ overlays.qiskit-updates ];
 
   # Packages/updates accepted to nixpkgs/master, but need the update
   lib-scs = pkgs.callPackage ./pkgs/libraries/scs { };
@@ -42,12 +45,6 @@ rec {
     osqp = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/osqp { };
     scs = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/scs { scs = lib-scs; };
 
-    # Following are in nixpkgs, but need more recent version
-    arrow = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/arrow { };
-    dill = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/dill { };
-    marshmallow = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/marshmallow { };
-    pybind11 = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pybind11 { };
-
     # Qiskit new packages or updates over what's in nixpkgs, in rough build order. All exist in nixpkgs, but only as of ~20.03
     dlx = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/dlx { };
     docloud = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/docloud { };
@@ -56,7 +53,7 @@ rec {
     fastjsonschema = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/fastjsonschema { };
     ipyvue = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/ipyvue { };
     ipyvuetify = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/ipyvuetify { inherit ipyvue; };
-    marshmallow-polyfield = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/marshmallow-polyfield { inherit marshmallow ; };
+    marshmallow-polyfield = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/marshmallow-polyfield { };
     pproxy = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pproxy { };
     python-constraint = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/python-constraint { };
     pylatexenc = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pylatexenc { };
