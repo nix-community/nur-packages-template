@@ -6,7 +6,7 @@
 # commands such as:
 #     nix-build -A mypackage
 
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> { } }:
 
 {
   # The `lib`, `modules`, and `overlay` names are special
@@ -22,4 +22,5 @@
   pyrandr = pkgs.callPackage ./pkgs/pyrandr { };
   rofi-bookmarks = pkgs.callPackage ./pkgs/rofi-bookmarks { };
   rofimoji = pkgs.callPackage ./pkgs/rofimoji { };
+  webtorrent-cli = pkgs.callPackage ./pkgs/node-packages/webtorrent-cli/fixed.nix { };
 }
