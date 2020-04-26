@@ -28,3 +28,7 @@ after_success:
 - if [ -n "${CACHIX_CACHE}" ]; then nix-build ci.nix -A cacheOutputs | cachix push "${CACHIX_CACHE}"; fi
 - if [ "cron" != "${TRAVIS_EVENT_TYPE}" -a "false" = "${TRAVIS_PULL_REQUEST}" -a "master" = "${TRAVIS_BRANCH}" ]; then
       curl -XPOST "https://nur-update.herokuapp.com/update?repo=${NUR_REPO}"; fi
+notifications:
+  email:
+    recipient:
+      - secure: "pZffkOZ/V9GAFbV9LT6/0fzboztsCWaOR0h9EFBYLPS5cH6fdN9rRyn4d45YOWk7AhaRZK+JaxNxJH8dDnQbJgMrjdst467BrQJCpF5cpeSCwRxxhs6l7GAESI+cOpNoRCAKJBZckOU9YJO70wYnzcizWx1goyMde1PY5p2iX7vU81hQ9n3JjDXFi6DyjBmdSDeF+eO7qnVwP8UzPtOuMQxK4tBNnu5XxEVxcl2Ut5Hw84MEX3jwCDrlpKq/dwVVHvKfqZECfemO+JZKPxu/vTWZw7n3RYoNwZHXOR6rulOv/nrAoQzDGdi3mGgA4eEVWN4S3eEoykf9/D8Cp96UnEvMipEJ5Bn5DLTSls0VTsaAz7BC0xPmOAlRyEsYapfl94LgoJTrLBHHY02rTv/24HPsjUmflbEjew6qPWijXCIvgbzKMogQqf6RFjuGvblUBAlcLTVNW2hUJlghE+hr/alnmvmUh3Inaq45HLBuje4GMREUCBTCIoF5RgJEUj24VGHELEasod5c7vEp5GbjjdrTZeUsem536CIGTgSiZIYELk029/l7PkEq/UsB3yKKqt23xbFO4HZQYLW5xR9fvFE6REi2AADRV7EvrtO6FUTPsg3IEhs+coj03OXmKslFOJFo9hDylV45IjK6yzFFNY3b+N0e89dcw9iJW/7zgYU="      
