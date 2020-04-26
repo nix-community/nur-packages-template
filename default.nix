@@ -18,6 +18,7 @@
   ccat = pkgs.callPackage ./pkgs/ccat { };
   gitmoji-cli = pkgs.callPackage ./pkgs/node-packages/gitmoji-cli/fixed.nix { };
   nix-direnv = pkgs.callPackage ./pkgs/nix-direnv { };
+  notracking = pkgs.callPackage ./pkgs/notracking { };
   now = pkgs.callPackage ./pkgs/node-packages/now/fixed.nix { };
   pyrandr = pkgs.callPackage ./pkgs/pyrandr { };
   rofi-bookmarks = pkgs.callPackage ./pkgs/rofi-bookmarks { };
