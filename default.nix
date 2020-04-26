@@ -24,4 +24,5 @@
   rofimoji = pkgs.callPackage ./pkgs/rofimoji { };
   webtorrent-cli =
     pkgs.callPackage ./pkgs/node-packages/webtorrent-cli/fixed.nix { };
+  yaml2json = pkgs.callPackage ./pkgs/yaml2json { };
 }
