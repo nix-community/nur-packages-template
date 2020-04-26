@@ -18,8 +18,9 @@ let
     name = "now";
     packageName = "now";
     version = "18.0.0";
-    src = sources."now-18.0.0".src;
+    src = ./.;
     dependencies = [
+      sources."now-18.0.0"
     ];
     buildInputs = globalBuildInputs;
     meta = {
