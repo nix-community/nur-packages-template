@@ -7,8 +7,8 @@ env:
 
 before_script:
 # configure git
-- git config user.name "CI Robot"
-- git config user.email "62848146+jeremiehuchet-ci@users.noreply.github.com"
+- git config --global user.name "CI Robot"
+- git config --global user.email "62848146+jeremiehuchet-ci@users.noreply.github.com"
 
 # configure git to use ssh
 - echo $secret_key | base64 -d | gpg --passphrase-fd 0 --output id_rsa id_rsa.gpg 1> /dev/null 2>/dev/null
