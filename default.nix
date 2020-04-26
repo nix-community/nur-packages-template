@@ -16,11 +16,12 @@
 
   bazarr = pkgs.callPackage ./pkgs/bazarr { };
   ccat = pkgs.callPackage ./pkgs/ccat { };
-  gitmoji-cli = (pkgs.callPackage ./pkgs/node-packages/gitmoji-cli { }).package;
+  gitmoji-cli = pkgs.callPackage ./pkgs/node-packages/gitmoji-cli/fixed.nix { };
   nix-direnv = pkgs.callPackage ./pkgs/nix-direnv { };
-  now = (pkgs.callPackage ./pkgs/node-packages/now { }).package;
+  now = pkgs.callPackage ./pkgs/node-packages/now/fixed.nix { };
   pyrandr = pkgs.callPackage ./pkgs/pyrandr { };
   rofi-bookmarks = pkgs.callPackage ./pkgs/rofi-bookmarks { };
   rofimoji = pkgs.callPackage ./pkgs/rofimoji { };
-  webtorrent-cli = pkgs.callPackage ./pkgs/node-packages/webtorrent-cli/fixed.nix { };
+  webtorrent-cli =
+    pkgs.callPackage ./pkgs/node-packages/webtorrent-cli/fixed.nix { };
 }
