@@ -527,6 +527,15 @@ let
         sha1 = "f02ad0259a0921cd199ff21ce1b09e0f6b4e3929";
       };
     };
+    "is-docker-2.0.0" = {
+      name = "is-docker";
+      packageName = "is-docker";
+      version = "2.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/is-docker/-/is-docker-2.0.0.tgz";
+        sha512 = "pJEdRugimx4fBMra5z2/5iRdZ63OhYV0vr0Dwm5+xtW4D1FvRkB8hamMIhnWfyJeDdyr/aa7BDyNbtG38VxgoQ==";
+      };
+    };
     "is-file-1.0.0" = {
       name = "is-file";
       packageName = "is-file";
@@ -545,13 +554,13 @@ let
         sha1 = "e479c80858df0c1b11ddda6940f96011fcda4a9a";
       };
     };
-    "is-wsl-1.1.0" = {
+    "is-wsl-2.1.1" = {
       name = "is-wsl";
       packageName = "is-wsl";
-      version = "1.1.0";
+      version = "2.1.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/is-wsl/-/is-wsl-1.1.0.tgz";
-        sha1 = "1f16e4aa22b04d1336b66188a66af3c600c3a66d";
+        url = "https://registry.npmjs.org/is-wsl/-/is-wsl-2.1.1.tgz";
+        sha512 = "umZHcSrwlDHo2TGMXv0DZ8dIUGunZ2Iv68YZnrmCiBPkZ4aaOhtv7pXJKeki9k3qJ3RJr0cDyitcl5wEH3AYog==";
       };
     };
     "isarray-1.0.0" = {
@@ -824,13 +833,13 @@ let
         sha1 = "583b1aa775961d4b113ac17d9c50baef9dd76bd1";
       };
     };
-    "open-6.4.0" = {
+    "open-7.0.3" = {
       name = "open";
       packageName = "open";
-      version = "6.4.0";
+      version = "7.0.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/open/-/open-6.4.0.tgz";
-        sha512 = "IFenVPgF70fSm1keSd2iDBIDIBZkroLeuffXq+wKTzTJlBpesFWojV9lb8mzOfaAzM1sr7HQHuO0vtV0zYekGg==";
+        url = "https://registry.npmjs.org/open/-/open-7.0.3.tgz";
+        sha512 = "sP2ru2v0P290WFfv49Ap8MF6PkzGNnGlAwHweB4WR4mr5d2d0woiCluUeJ218w7/+PmoBy9JmYgD5A4mLcWOFA==";
       };
     };
     "package-json-versionify-1.0.4" = {
@@ -1400,13 +1409,13 @@ let
         sha512 = "+w6JaqGKZBZHVrYLmG2VDuRLZlUhQrkLXw0/nw3VKV4aloICWGwBKzjLclXmexUhnqeVzZjCRIQgSZ8+YmgJUQ==";
       };
     };
-    "webtorrent-cli-3.0.0" = {
+    "webtorrent-cli-3.0.5" = {
       name = "webtorrent-cli";
       packageName = "webtorrent-cli";
-      version = "3.0.0";
+      version = "3.0.5";
       src = fetchurl {
-        url = "https://registry.npmjs.org/webtorrent-cli/-/webtorrent-cli-3.0.0.tgz";
-        sha512 = "ktehmMXkJbM1gnlPxiiVbTYq0rQHLs+U/A/3pXNt0vIYjHgzsydooejwHZlmL7vxdfZAaSHilbkBDRgWW071rA==";
+        url = "https://registry.npmjs.org/webtorrent-cli/-/webtorrent-cli-3.0.5.tgz";
+        sha512 = "+CZvxl0xfjAtWXvJhhcX0W/do/j97KnJCbUwvKPJHQDqfHYAsJE6PZGGLqOlumFvSes+Q7ptVOoA1205lVJfTw==";
       };
     };
     "winreg-1.2.4" = {
@@ -1458,7 +1467,7 @@ let
   args = {
     name = "webtorrent-cli";
     packageName = "webtorrent-cli";
-    version = "3.0.0";
+    version = "3.0.5";
     src = ./.;
     dependencies = [
       sources."addr-to-ip-port-1.5.1"
@@ -1549,9 +1558,10 @@ let
       sources."ip-set-1.0.2"
       sources."ipaddr.js-1.9.1"
       sources."is-ascii-1.0.0"
+      sources."is-docker-2.0.0"
       sources."is-file-1.0.0"
       sources."is-typedarray-1.0.0"
-      sources."is-wsl-1.1.0"
+      sources."is-wsl-2.1.1"
       sources."isarray-1.0.0"
       sources."junk-3.1.0"
       sources."k-bucket-5.0.0"
@@ -1585,7 +1595,7 @@ let
       sources."node-ssdp-2.9.1"
       sources."on-finished-2.3.0"
       sources."once-1.4.0"
-      sources."open-6.4.0"
+      sources."open-7.0.3"
       sources."package-json-versionify-1.0.4"
       sources."parse-numeric-range-0.0.2"
       (sources."parse-torrent-7.1.2" // {
@@ -1683,7 +1693,7 @@ let
           sources."simple-get-3.1.0"
         ];
       })
-      sources."webtorrent-cli-3.0.0"
+      sources."webtorrent-cli-3.0.5"
       sources."winreg-1.2.4"
       sources."wrappy-1.0.2"
       sources."ws-7.2.5"
