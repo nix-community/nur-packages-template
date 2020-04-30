@@ -36,7 +36,7 @@
 
 buildPythonPackage rec {
   pname = "qiskit-terra";
-  version = "0.13.0";
+  version = "0.14.0";
 
   disabled = pythonOlder "3.5";
 
@@ -44,7 +44,7 @@ buildPythonPackage rec {
     owner = "Qiskit";
     repo = pname;
     rev = version;
-    sha256 = "03fgqmyahgmkf5dbw19n9c1v8p4kmpk50wxhhc8435cclvs26x9j";
+    sha256 = "0p1x6ncac1n0g8yqx69h8bwq7kaphjscz9i6772rrz6r73dbz40k";
   };
 
   nativeBuildInputs = [ cython ];
