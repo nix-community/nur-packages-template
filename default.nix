@@ -40,6 +40,7 @@ rec {
       };
     });
     pubchempy = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pubchempy { };
+    openfermion = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/openfermion { inherit pubchempy; };
 
     # Following have been PR'd to Nixpkgs, just not made it to release yet.
     cirq = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/cirq { pythonProtobuf = pkgs.python3.pkgs.protobuf; };
