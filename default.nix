@@ -39,6 +39,7 @@ rec {
         sha256 = "1dp6w5rh6kddxa5hp3kr249xnmbjpn6jdrpppsbm4hrfw9yh6hjw";
       };
     });
+    pubchempy = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pubchempy { };
 
     # Following have been PR'd to Nixpkgs, just not made it to release yet.
     cirq = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/cirq { pythonProtobuf = pkgs.python3.pkgs.protobuf; };
