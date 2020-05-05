@@ -3,5 +3,6 @@
   #
   # my-overlay = import ./my-overlay;
   qiskit-updates = import ./qiskit-deps.nix;
+  cirq-updates = import ./cirq-deps.nix;
 }
 
