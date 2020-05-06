@@ -43,6 +43,8 @@ rec {
     openfermion = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/openfermion { inherit pubchempy; };
     openfermion-cirq = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/openfermion-cirq { inherit cirq openfermion; };
 
+    pyvisa = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pyvisa { };
+
     # Following have been PR'd to Nixpkgs, just not made it to release yet.
     cirq = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/cirq { pythonProtobuf = pkgs.python3.pkgs.protobuf; };
     cvxpy = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/cvxpy { inherit ecos osqp scs; };
