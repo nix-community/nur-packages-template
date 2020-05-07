@@ -2,7 +2,6 @@
   # Add your overlays here
   #
   # my-overlay = import ./my-overlay;
-  qiskit-updates = import ./qiskit-deps.nix;
-  cirq-updates = import ./cirq-deps.nix;
+  python-updates = import ./python-updates.nix;
 }
 

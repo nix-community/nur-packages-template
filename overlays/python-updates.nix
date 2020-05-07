@@ -2,7 +2,6 @@ self: super:
 
 rec {
   # TODO: expand to python37, py38, py3
-  # TODO: guard against regression. Condition: if oldAttrs.version < version || (if does not exist py-super.name)
 
   # overlay the most-updated version of these python packages over the default package set.
   # Needed to allow building on e.g. nixpkgs-19.09
@@ -17,6 +16,14 @@ rec {
           localPyPackage;
     in
     {
+      # Qiskit updates/dependencies
+      arrow = overrideSuperVersionIfNewer py-super.arrow (py-super.callPackage ../pkgs/python-modules/arrow { });
+      dill = overrideSuperVersionIfNewer py-super.dill (py-super.callPackage ../pkgs/python-modules/dill { });
+      marshmallow = overrideSuperVersionIfNewer py-super.marshmallow (py-super.callPackage ../pkgs/python-modules/marshmallow { });
+      pybind11 = overrideSuperVersionIfNewer py-super.pybind11 (py-super.callPackage ../pkgs/python-modules/pybind11 { });
+      scipy = overrideSuperVersionIfNewer py-super.scipy (py-super.callPackage ../pkgs/python-modules/scipy { });
+
+      # Cirq updates/dependencies
       google_api_core = overrideSuperVersionIfNewer py-super.google_api_core (py-super.callPackage ../pkgs/python-modules/google_api_core { });
       googleapis_common_protos = overrideSuperVersionIfNewer py-super.googleapis_common_protos (py-super.callPackage ../pkgs/python-modules/googleapis_common_protos { });
     };
