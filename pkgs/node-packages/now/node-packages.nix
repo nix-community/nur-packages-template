@@ -4,23 +4,23 @@
 
 let
   sources = {
-    "now-18.0.0" = {
+    "now-19.0.0" = {
       name = "now";
       packageName = "now";
-      version = "18.0.0";
+      version = "19.0.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/now/-/now-18.0.0.tgz";
-        sha512 = "MVskFV3xH1hMkpTewPCb3p0SQ17hL7EI1Zb+Ij2wYiRV3X0a6G91GdE2vvFlhsK6rhRHKHZnDQkZ0AnkpnfzHA==";
+        url = "https://registry.npmjs.org/now/-/now-19.0.0.tgz";
+        sha512 = "UdDMAGMI1rfjM9AF8QaJDlst3W7v/CMjlK9uiB4H6CX396ynxeLNes5YW3gXYT4FLqxI64/AAN+SFgOQ2rW2uw==";
       };
     };
   };
   args = {
     name = "now";
     packageName = "now";
-    version = "18.0.0";
+    version = "19.0.0";
     src = ./.;
     dependencies = [
-      sources."now-18.0.0"
+      sources."now-19.0.0"
     ];
     buildInputs = globalBuildInputs;
     meta = {
