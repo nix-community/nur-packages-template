@@ -2,16 +2,13 @@
 
 with stdenvNoCC;
 
-mkDerivation {
-  name = "rofi-bookmarks";
 
-  src = fetchFromGitHub {
-    owner = "jeremiehuchet";
-    repo = "rofi-bookmarks";
-    rev = "master";
-    sha512 =
-      "256kdd6k77bqz6lj712j6l5mf1fwsjk806hvxk2wvwrc1v8i9dyz35cg3ny7ki5hi1p46lib7x6mf1qdfq2c3nd0bhlcs0cznjdc5fv";
-  };
+let github = lib.importJSON ./github.json;
+in mkDerivation {
+  pname = "rofi-bookmarks";
+  version = github.ref;
+
+  src = fetchFromGitHub { inherit (github) owner repo rev sha256; };
 
   buildInputs = [ nodejs-12_x ];
 
@@ -30,6 +27,5 @@ mkDerivation {
     license = licenses.mit;
     homepage = "https://github.com/jeremiehuchet/rofi-bookmarks";
     platforms = platforms.all;
-    maintainers = with maintainers; [ ];
   };
 }

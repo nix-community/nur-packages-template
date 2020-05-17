@@ -1,17 +1,10 @@
 { lib, python37, python3Packages, fetchFromGitHub, git, unrar, ffmpeg }:
 
-python3Packages.buildPythonApplication rec {
-  pname = "bazarr";
-  version = "0.8.4.2";
-  name = "${pname}-${version}";
+let github = lib.importJSON ./github.json;
+in python3Packages.buildPythonApplication rec {
+  name = "bazarr-${github.ref}";
 
-  src = fetchFromGitHub {
-    owner = "morpheus65535";
-    repo = pname;
-    rev = "v${version}";
-    sha512 =
-      "0q4smpf2g0m2dqxhp76hlxf02l4x9gnnhig0f525a2chcs8pn34d97h3in9b93nx465mf8x9wplaglfi9px4r9v8xzanqaskrj2m5lq";
-  };
+  src = fetchFromGitHub { inherit (github) owner repo rev sha256; };
 
   dontBuild = true;
   doCheck = false;
@@ -43,6 +36,5 @@ python3Packages.buildPythonApplication rec {
     license = licenses.gpl3;
     homepage = "https://bazarr.media";
     platforms = platforms.all;
-    maintainers = [ ];
   };
 }

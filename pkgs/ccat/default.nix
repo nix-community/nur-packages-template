@@ -23,6 +23,5 @@ mkDerivation rec {
     license = licenses.mit;
     homepage = "https://github.com/jingweno/ccat";
     platforms = [ "x86_64-linux" ];
-    maintainers = with maintainers; [ ];
   };
 }
