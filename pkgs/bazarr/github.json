@@ -1,7 +1,7 @@
 {
-    "owner": "morpheus65535",
-    "repo": "bazarr",
-    "rev": "fd339b5fffa14e0e92b9d8aa7ad3de91c3e7698b",
-    "sha256": "0k39y5pkb8lsp2kjkij58md9px2diniaxa9xg9s2ayiq3zsw4rqk",
-    "ref": "v0.8.4.2"
+  "owner": "morpheus65535",
+  "repo": "bazarr",
+  "rev": "5dcd8353081eec6b0657e6a327533662601a713a",
+  "sha256": "1r36l91gmx4k7znn99cb7icnylik603zgdjx3bxzqnkagnv34s72",
+  "ref": "v0.8.4.3"
 }
