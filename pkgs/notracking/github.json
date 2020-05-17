@@ -1,7 +1,7 @@
 {
-    "owner": "notracking",
-    "repo": "hosts-blocklists",
-    "ref": "master",
-    "rev": "34ece229063c155bcb705f199541e85c5e801ae9",
-    "sha256": "1sxp7lqgxn5z4ci2lq0s6jf3y4c6zx1w9x81rr6kf196bf3nyrp6"
+  "owner": "notracking",
+  "repo": "hosts-blocklists",
+  "rev": "e8150f5d25b722dce0b06dedd6b6ecd2d2eada1a",
+  "sha256": "1rxiz74dk1myirxx33lgay9a609d969jg08zjbbfpmfmrdfy9aan",
+  "ref": "master"
 }
