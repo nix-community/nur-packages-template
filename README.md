@@ -25,4 +25,15 @@ Search: <https://nix-community.github.io/nur-search/repos/wamserma/>
 
 ## How to use?
 
+Launch directly:  
+```
+nix run -f "https://github.com/wamserma/nur-packages/archive/master.tar.gz" bundlewrap --command bw --version
+```
+
+One-off install (example):  
+```
+nix-env -f "https://github.com/wamserma/nur-packages/archive/master.tar.gz" -iA bundlewrap
+```
+
+Persistent:
 [see here](https://github.com/nix-community/NUR/blob/master/README.md)
