@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/wamserma/nur-packages.svg?branch=master)](https://travis-ci.org/wamserma/nur-packages)
 [![Cachix Cache](https://img.shields.io/badge/cachix-wamserma-blue.svg)](https://wamserma.cachix.org)
 
-Want you own? I used [this template](https://github.com/nix-community/nur-packages-template).
+Want your own? I used [this template](https://github.com/nix-community/nur-packages-template).
 
 ## What's here?
 
