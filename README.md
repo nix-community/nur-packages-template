@@ -18,6 +18,11 @@ Search: <https://nix-community.github.io/nur-search/repos/wamserma/>
 
 + [bundlewrap](https://bundlewrap.org/) a lightweight, python-based alternative to Ansible
 
+### Security Tools
+
++ [bandit](https://github.com/PyCQA/bandit) a static code analysis tool designed to find common security issues in Python code
+(without self tests due to their depndecy hell)
+
 ## How to use?
 
 [see here](https://github.com/nix-community/NUR/blob/master/README.md)
