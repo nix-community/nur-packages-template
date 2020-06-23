@@ -44,8 +44,10 @@
 let
   generated = import ./default.nix { inherit pkgs system; };
   info = generated.args;
+  renamedpkg = generated.package.overrideAttrs
+    (old: { name = "${info.name}-${info.version}"; });
   selfpkg = generated.sources."${info.name}-${info.version}";
-in generated.package.override {
+in renamedpkg.override {
   src = selfpkg.src;
   dependencies = lib.remove selfpkg info.dependencies;
 }
