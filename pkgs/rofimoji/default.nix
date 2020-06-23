@@ -1,32 +1,23 @@
-{ stdenvNoCC, lib, fetchurl, rofi, xdotool, xsel, python3, makeWrapper }:
+{ lib, python3Packages, fetchFromGitHub, rofi, xdotool, xsel }:
 
-with stdenvNoCC;
+with python3Packages;
 
-mkDerivation rec {
+let github = lib.importJSON ./github.json;
+in buildPythonApplication rec {
   pname = "rofimoji";
-  version = "3.0.0";
+  version = "4.1.0";
 
-  src = fetchurl {
-    url = "https://git.teknik.io/matf/${pname}/archive/${version}.tar.gz";
-    sha512 =
-      "016k8n4hc01305v5qpifg6bxz9gra045q9rj2n6648gnnh84mmb41hzrjpyqrl3mpzv28wyiw56b4fag187pkzf3y508lsxfay9f6s0";
+  src = fetchFromGitHub {
+    inherit (github) owner repo rev sha256;
   };
 
-  dontBuild = true;
+  propagatedBuildInputs = [ pyxdg ConfigArgParse rofi xdotool xsel ];
 
-  nativeBuildInputs = [ makeWrapper ];
-
-  buildInputs = [ python3 rofi ];
-
-  installPhase = ''
-    install -D rofimoji.py $out/bin/rofimoji
-    wrapProgram $out/bin/rofimoji \
-      --prefix PATH : ${lib.makeBinPath [ xdotool xsel ]}
-  '';
+  doCheck = false;
 
   meta = with lib; {
-    homepage = "https://git.teknik.io/matf/rofimoji";
-    description = "A simple emoji picker for rofi with multi-selection";
+    homepage = "https://github.com/fdw/rofimoji";
+    description = "A simple emoji and character picker for rofi 😁";
     license = licenses.mit;
     platforms = platforms.all;
     maintainers = [ ];
