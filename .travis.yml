@@ -1,4 +1,5 @@
 language: nix
+nix: 2.3.6
 env:
   global:
   - GIT_SSH_COMMAND="ssh -i $PWD/id_rsa"
