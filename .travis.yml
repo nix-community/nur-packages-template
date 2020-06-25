@@ -1,5 +1,5 @@
 language: nix
-nix: 2.3.4  # current as of June 8, 2020
+nix: 2.3.6  # current as of June 25, 2020
 
 sudo: false
 
