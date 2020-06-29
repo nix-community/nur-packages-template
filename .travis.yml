@@ -14,6 +14,9 @@ matrix:
   - env: NIX_CHANNEL=https://nixos.org/channels/nixos-20.03
 install:
 - nix --version
+# for cachix we need travis to be a trusted nix user
+- echo "trusted-users = $USER" | sudo tee -a /etc/nix/nix.conf
+- sudo systemctl restart nix-daemon
 - if [ -n "${CACHIX_CACHE}" ]; then travis_retry nix-channel --update; fi
 - if [ -n "${CACHIX_CACHE}" ]; then nix-env -iA cachix -f https://cachix.org/api/v1/install; fi
 - if [ -n "${CACHIX_CACHE}" ]; then cachix use "${CACHIX_CACHE}"; fi
@@ -31,4 +34,4 @@ after_success:
 notifications:
   email:
     recipient:
-      - secure: "pZffkOZ/V9GAFbV9LT6/0fzboztsCWaOR0h9EFBYLPS5cH6fdN9rRyn4d45YOWk7AhaRZK+JaxNxJH8dDnQbJgMrjdst467BrQJCpF5cpeSCwRxxhs6l7GAESI+cOpNoRCAKJBZckOU9YJO70wYnzcizWx1goyMde1PY5p2iX7vU81hQ9n3JjDXFi6DyjBmdSDeF+eO7qnVwP8UzPtOuMQxK4tBNnu5XxEVxcl2Ut5Hw84MEX3jwCDrlpKq/dwVVHvKfqZECfemO+JZKPxu/vTWZw7n3RYoNwZHXOR6rulOv/nrAoQzDGdi3mGgA4eEVWN4S3eEoykf9/D8Cp96UnEvMipEJ5Bn5DLTSls0VTsaAz7BC0xPmOAlRyEsYapfl94LgoJTrLBHHY02rTv/24HPsjUmflbEjew6qPWijXCIvgbzKMogQqf6RFjuGvblUBAlcLTVNW2hUJlghE+hr/alnmvmUh3Inaq45HLBuje4GMREUCBTCIoF5RgJEUj24VGHELEasod5c7vEp5GbjjdrTZeUsem536CIGTgSiZIYELk029/l7PkEq/UsB3yKKqt23xbFO4HZQYLW5xR9fvFE6REi2AADRV7EvrtO6FUTPsg3IEhs+coj03OXmKslFOJFo9hDylV45IjK6yzFFNY3b+N0e89dcw9iJW/7zgYU="      
+      - secure: "pZffkOZ/V9GAFbV9LT6/0fzboztsCWaOR0h9EFBYLPS5cH6fdN9rRyn4d45YOWk7AhaRZK+JaxNxJH8dDnQbJgMrjdst467BrQJCpF5cpeSCwRxxhs6l7GAESI+cOpNoRCAKJBZckOU9YJO70wYnzcizWx1goyMde1PY5p2iX7vU81hQ9n3JjDXFi6DyjBmdSDeF+eO7qnVwP8UzPtOuMQxK4tBNnu5XxEVxcl2Ut5Hw84MEX3jwCDrlpKq/dwVVHvKfqZECfemO+JZKPxu/vTWZw7n3RYoNwZHXOR6rulOv/nrAoQzDGdi3mGgA4eEVWN4S3eEoykf9/D8Cp96UnEvMipEJ5Bn5DLTSls0VTsaAz7BC0xPmOAlRyEsYapfl94LgoJTrLBHHY02rTv/24HPsjUmflbEjew6qPWijXCIvgbzKMogQqf6RFjuGvblUBAlcLTVNW2hUJlghE+hr/alnmvmUh3Inaq45HLBuje4GMREUCBTCIoF5RgJEUj24VGHELEasod5c7vEp5GbjjdrTZeUsem536CIGTgSiZIYELk029/l7PkEq/UsB3yKKqt23xbFO4HZQYLW5xR9fvFE6REi2AADRV7EvrtO6FUTPsg3IEhs+coj03OXmKslFOJFo9hDylV45IjK6yzFFNY3b+N0e89dcw9iJW/7zgYU="
