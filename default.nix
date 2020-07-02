@@ -17,6 +17,7 @@
   bazarr = pkgs.callPackage ./pkgs/bazarr { };
   ccat = pkgs.callPackage ./pkgs/ccat { };
   gitmoji-cli = pkgs.callPackage ./pkgs/node-packages/gitmoji-cli/fixed.nix { };
+  jfrog-cli = pkgs.callPackage ./pkgs/jfrog-cli { };
   nix-direnv = pkgs.callPackage ./pkgs/nix-direnv { };
   notracking = pkgs.callPackage ./pkgs/notracking { };
   now = pkgs.callPackage ./pkgs/node-packages/now/fixed.nix { };
