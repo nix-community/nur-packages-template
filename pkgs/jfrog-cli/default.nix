@@ -9,4 +9,5 @@ in buildGoPackage {
   goDeps = ./godeps.nix;
   # remove testsdata dir because it uses unreferenced dependencies
   preConfigure = "rm -rf testsdata";
+  preInstall = "mv -v ./go/bin/jfrog-cli ./go/bin/jfrog";
 }
