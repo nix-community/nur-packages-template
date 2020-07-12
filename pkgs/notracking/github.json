@@ -1,8 +1,8 @@
 {
   "owner": "notracking",
   "repo": "hosts-blocklists",
-  "rev": "93432600dd3fc45433e64ef28420d0440643ac99",
-  "sha256": "1b00f6rnpfm924aqjq6lqib0pm85bx4vc4bnfksf62qbycd9y8z8",
+  "rev": "6d20d419941010582edf4e1628c40485b4b8233a",
+  "sha256": "0vk2yh56gk128mrzdxmmixs8l55sya7x1mwqigcw9hqsfjhlcizp",
   "fetchSubmodules": false,
   "ref": "master"
 }
