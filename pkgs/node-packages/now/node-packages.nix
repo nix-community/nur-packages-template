@@ -4,49 +4,49 @@
 
 let
   sources = {
-    "@types/node-14.0.13" = {
+    "@types/node-14.0.22" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "14.0.13";
+      version = "14.0.22";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-14.0.13.tgz";
-        sha512 = "rouEWBImiRaSJsVA+ITTFM6ZxibuAlTuNOCyxVbwreu6k6+ujs7DfnU9o+PShFhET78pMBl3eH+AGSI5eOTkPA==";
+        url = "https://registry.npmjs.org/@types/node/-/node-14.0.22.tgz";
+        sha512 = "emeGcJvdiZ4Z3ohbmw93E/64jRzUHAItSHt8nF7M4TGgQTiWqFVGB8KNpLGFmUHmHLvjvBgFwVlqNcq+VuGv9g==";
       };
     };
-    "@vercel/build-utils-2.4.0" = {
+    "@vercel/build-utils-2.4.1" = {
       name = "_at_vercel_slash_build-utils";
       packageName = "@vercel/build-utils";
-      version = "2.4.0";
+      version = "2.4.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/build-utils/-/build-utils-2.4.0.tgz";
-        sha512 = "VRXMLBPDcpFUHQMgHdgYHBl9SRwqNFb43tgkMdTYaNml2HgqlLNvNuINKlqwB2/Q/tARIWcm4jmPKR0gu1CaEQ==";
+        url = "https://registry.npmjs.org/@vercel/build-utils/-/build-utils-2.4.1.tgz";
+        sha512 = "DgRvs0u5ZLQyeVztZWEbEtGeq1PsquJ4BfGQ9pu3w3vPuk1Znbxhrha55Kqc8Zo5YTWBEudQh5OlxA7ZYCjqPQ==";
       };
     };
-    "@vercel/go-1.1.2" = {
+    "@vercel/go-1.1.3" = {
       name = "_at_vercel_slash_go";
       packageName = "@vercel/go";
-      version = "1.1.2";
+      version = "1.1.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/go/-/go-1.1.2.tgz";
-        sha512 = "1k7w6gY2Uj4DVqvvqm5VXZZeCqmzV5Fw3T3hjfgt13WVXPVwYfXf50ya4VvwpF9/IEvXpAhXLRcHD7ZTCMoXKA==";
+        url = "https://registry.npmjs.org/@vercel/go/-/go-1.1.3.tgz";
+        sha512 = "ydW8jA4wtx781BbaCB/BDuC+NO6aqUVbkqFhltVVFeUjYRxL3Uyh35dWwSbT/d9Kgw3xorLTb3m/gAyFwjoHVw==";
       };
     };
-    "@vercel/next-2.6.7" = {
+    "@vercel/next-2.6.11" = {
       name = "_at_vercel_slash_next";
       packageName = "@vercel/next";
-      version = "2.6.7";
+      version = "2.6.11";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/next/-/next-2.6.7.tgz";
-        sha512 = "zzcalT/TRpI7EH4glRqhD09jkeGqbjZ4JbiOkCdwTAMJDme8bf6wsYffBGu92DLv/2zDFPLj0EcNsGVhb7bk0w==";
+        url = "https://registry.npmjs.org/@vercel/next/-/next-2.6.11.tgz";
+        sha512 = "bUHhQoR72iG0RUwGUEuQZVVDI09+wLL5ADBbRFudQq9xg1kCYBlQ/6l3MyFif2IuZq5b/OPQ++XX0qtUzeLlJQ==";
       };
     };
-    "@vercel/node-1.7.1" = {
+    "@vercel/node-1.7.2" = {
       name = "_at_vercel_slash_node";
       packageName = "@vercel/node";
-      version = "1.7.1";
+      version = "1.7.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/node/-/node-1.7.1.tgz";
-        sha512 = "Lp6l3526xQ/srCqkXE9/E+gykAcpM/vut4zFo5NA9+syGxZt1nlVAznhNVkgsSW4mbRIE67KIfi7SII55dW7uw==";
+        url = "https://registry.npmjs.org/@vercel/node/-/node-1.7.2.tgz";
+        sha512 = "XV5lrLC+K/cxsaFj8H2OoGu1zliOqnxcrOnPInI8HmQjR/Tztt+0nzgpt+7sx8wXcrib0Nu7lK303jP7VjSETw==";
       };
     };
     "@vercel/python-1.2.2" = {
@@ -58,22 +58,22 @@ let
         sha512 = "+rHfbjJaySdac59Oa11a7/nZzpXC98Kqw5tPh8DT1I5OG8YTfgJnwgfBoytZOAZZQBcggoJspnjAd+wGVCoVXw==";
       };
     };
-    "@vercel/ruby-1.2.2" = {
+    "@vercel/ruby-1.2.3" = {
       name = "_at_vercel_slash_ruby";
       packageName = "@vercel/ruby";
-      version = "1.2.2";
+      version = "1.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/ruby/-/ruby-1.2.2.tgz";
-        sha512 = "5kKFNS84EvjHRI/umZqL31KdyvoWO05qbIeR3YHHJBCPSBIUlGimM0Wx7OsdAK+TMDzpWszBF/6bgk//KpmYbg==";
+        url = "https://registry.npmjs.org/@vercel/ruby/-/ruby-1.2.3.tgz";
+        sha512 = "WvtImWLdIo4bB0f2Pgc+P7KdgVVsPSMEVEtk4ZJnKkhU7IsCn/UnlovOsZeP6Qw/Bwqv84KrNm+nNRte648aew==";
       };
     };
-    "@vercel/static-build-0.17.3" = {
+    "@vercel/static-build-0.17.5" = {
       name = "_at_vercel_slash_static-build";
       packageName = "@vercel/static-build";
-      version = "0.17.3";
+      version = "0.17.5";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/static-build/-/static-build-0.17.3.tgz";
-        sha512 = "Xf4b6AEVl5EnTSecG0p9hwi3F4MuvwsYyGmvhbNfoV5c8T4Q9gPgTY0f738OAUv1f81DdzRXcgijK4rFQ1ysTQ==";
+        url = "https://registry.npmjs.org/@vercel/static-build/-/static-build-0.17.5.tgz";
+        sha512 = "pZpIgm22BbscfH3qJUBgTZf0RNQO/sh2AORsu9aF70QXeU2B2n9wvpz+K8oiTTXjdNdFSidfMUX+PZZc1OPx+Q==";
       };
     };
     "arg-4.1.3" = {
@@ -112,13 +112,13 @@ let
         sha512 = "s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==";
       };
     };
-    "now-19.1.1" = {
+    "now-19.1.2" = {
       name = "now";
       packageName = "now";
-      version = "19.1.1";
+      version = "19.1.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/now/-/now-19.1.1.tgz";
-        sha512 = "rRnPdv0yH+/bn2KaqS8XnPcUz0d762t9dGtPOQhX60kN5i8JT2ms3fW8hJ30Y3ziO2EBqHQdGyYcj9Mt3jcMdQ==";
+        url = "https://registry.npmjs.org/now/-/now-19.1.2.tgz";
+        sha512 = "S6lGmpPVkHZLKrCUDXfMjpgYfxZUYbjqUsDVRi1g9dejS4/PtO0KbTuSgw/9QtThg8W1EoF7q82U7uBBUsxf6Q==";
       };
     };
     "source-map-0.6.1" = {
@@ -170,22 +170,22 @@ let
   args = {
     name = "now";
     packageName = "now";
-    version = "19.1.1";
+    version = "19.1.2";
     src = ./.;
     dependencies = [
-      sources."@types/node-14.0.13"
-      sources."@vercel/build-utils-2.4.0"
-      sources."@vercel/go-1.1.2"
-      sources."@vercel/next-2.6.7"
-      sources."@vercel/node-1.7.1"
+      sources."@types/node-14.0.22"
+      sources."@vercel/build-utils-2.4.1"
+      sources."@vercel/go-1.1.3"
+      sources."@vercel/next-2.6.11"
+      sources."@vercel/node-1.7.2"
       sources."@vercel/python-1.2.2"
-      sources."@vercel/ruby-1.2.2"
-      sources."@vercel/static-build-0.17.3"
+      sources."@vercel/ruby-1.2.3"
+      sources."@vercel/static-build-0.17.5"
       sources."arg-4.1.3"
       sources."buffer-from-1.1.1"
       sources."diff-4.0.2"
       sources."make-error-1.3.6"
-      sources."now-19.1.1"
+      sources."now-19.1.2"
       sources."source-map-0.6.1"
       sources."source-map-support-0.5.19"
       sources."ts-node-8.9.1"
