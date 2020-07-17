@@ -44,6 +44,7 @@ rec {
     pubchempy = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pubchempy { };
     openfermion = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/openfermion { inherit pubchempy; };
     openfermion-cirq = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/openfermion-cirq { inherit cirq openfermion; };
+    setuptools-rust = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/setuptools-rust { };
 
     # VISA & Lab Instrument control
     pyvisa = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pyvisa { };
