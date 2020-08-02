@@ -13,7 +13,7 @@ in python3Packages.buildPythonApplication rec {
 
   installPhase = ''
     mkdir -p $out/bin $out/share/bazarr/bin/Linux/x86_64/{UnRAR,ffprobe}
-    cp -r bazarr libs libs2 libs3 static views ___init__.py bazarr.py $out/share/bazarr
+    cp -r bazarr libs static views ___init__.py bazarr.py $out/share/bazarr
 
     # morpheus65535 distributes binaries in its release.
     # The bazarr app search for thoses binaries at a predefined path. To avoid using
