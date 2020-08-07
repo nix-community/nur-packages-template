@@ -23,6 +23,7 @@ rec {
   # New/unstable packages below
   # libcint = pkgs.callPackage ./pkgs/libraries/libcint { };
   # xcfun = pkgs.callPackage ./pkgs/libraries/xcfun { };
+  muparserx = pkgs.callPackage ./pkgs/libraries/muparserx { };
 
   python3Packages = pkgs.recurseIntoAttrs rec {
     # New packages NOT in NixOS/nixpkgs (and likely never will be)
@@ -80,7 +81,7 @@ rec {
       inherit fastjsonschema marshmallow-polyfield python-constraint pylatexenc retworkx;
     };
     qiskit-aer = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/qiskit-aer {
-      inherit cvxpy qiskit-terra;
+      inherit cvxpy qiskit-terra muparserx;
     };
     qiskit-ignis = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/qiskit-ignis {
       inherit qiskit-aer qiskit-terra;
