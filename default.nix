@@ -76,6 +76,10 @@ rec {
     pylatexenc = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pylatexenc { };
     retworkx = pkgs.python3.pkgs.toPythonModule (pkgs.python3.pkgs.callPackage ./pkgs/python-modules/retworkx { });
 
+    # Needs added to nixpkgs
+    multitasking = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/multitasking { };
+    yfinance = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/yfinance { inherit multitasking; };
+
     # Qiskit proper, build order
     qiskit-terra = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/qiskit-terra {
       inherit fastjsonschema marshmallow-polyfield python-constraint pylatexenc retworkx;
