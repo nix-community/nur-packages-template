@@ -16,6 +16,7 @@
 , qiskit-terra
 , quandl
 , scikitlearn
+, yfinance
   # Check Inputs
 , ddt
 , pytestCheckHook
@@ -24,7 +25,7 @@
 
 buildPythonPackage rec {
   pname = "qiskit-aqua";
-  version = "0.7.3";
+  version = "0.7.5";
 
   disabled = pythonOlder "3.5";
 
@@ -33,7 +34,7 @@ buildPythonPackage rec {
     owner = "Qiskit";
     repo = "qiskit-aqua";
     rev = version;
-    sha256 = "04zcnrc0vi6dfjahp1019h2ngdgi7l7jvfs9aw0y306nd9g6qgjc";
+    sha256 = "19sdv7lnc4b1c86rd1dv7pjpi8cmrpzbv7nav0fb899ki8ldqdwq";
   };
 
   # Optional packages: pyscf (see below NOTE) & pytorch. Can install via pip/nix if needed.
@@ -51,6 +52,7 @@ buildPythonPackage rec {
     qiskit-ignis
     quandl
     scikitlearn
+    yfinance
   ];
 
   # *** NOTE ***
@@ -103,10 +105,6 @@ buildPythonPackage rec {
     "--ignore=test/chemistry/test_qeom_ee.py"
     "--ignore=test/chemistry/test_qeom_vqe.py"
     "--ignore=test/chemistry/test_vqe_uccsd_adapt.py"
-
-    # Disabled b/c taking too many log lines in Travis
-    "--disable-warnings"
-    # "--durations=25"
   ];
   disabledTests = [
     # TODO: broken for some reason on nixpkgs~19.09. Works on 20.03, just disabling it here for my NUR version.
