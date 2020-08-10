@@ -53,10 +53,7 @@ buildPythonPackage rec {
   ];
   disabledTests = [
     "test_tensored_meas_cal_on_circuit" # Flaky test, occasionally returns result outside bounds
-  ];
-  pytestFlagsArray = [
-    # Disabled b/c taking too many log lines in Travis
-    "--disable-warnings"
+    "test_qv_fitter"  # execution hangs, ran for several minutes
   ];
 
   meta = with lib; {

@@ -115,6 +115,10 @@ buildPythonPackage rec {
     # Disabled due to missing pyscf
     "test_validate" # test/chemistry/test_inputparser.py
 
+    # Online tests
+    "test_exchangedata"
+    "test_yahoo"
+
     # Disabling slow tests > 10 seconds
     "TestVQE"
     "TestVQC"
@@ -126,7 +130,6 @@ buildPythonPackage rec {
     "TestQGAN"
     "test_evaluate_qasm_mode"
     "test_measurement_error_mitigation_auto_refresh"
-    "test_exchangedata"
     "test_wikipedia"
     "test_shor_factoring_1__15___qasm_simulator____3__5__"
     "test_readme_sample"
@@ -145,6 +148,7 @@ buildPythonPackage rec {
     "test_oh"
     "test_confidence_intervals_00001"
     "test_eoh"
+    "test_qasm_5"
   ];
 
   meta = with lib; {
