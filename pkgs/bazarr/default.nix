@@ -12,13 +12,13 @@ in python3Packages.buildPythonApplication rec {
   propagatedBuildInputs = with python3Packages; [ lxml git unrar ffmpeg ];
 
   installPhase = ''
-    mkdir -p $out/bin $out/share/bazarr/bin/Linux/x86_64/{UnRAR,ffprobe}
+    mkdir -p $out/bin $out/share/bazarr/bin/Linux/x86_64/{unrar,ffprobe}
     cp -r bazarr libs static views ___init__.py bazarr.py $out/share/bazarr
 
     # morpheus65535 distributes binaries in its release.
     # The bazarr app search for thoses binaries at a predefined path. To avoid using
     # the distributed versions, we link to the one installed in the nix store.
-    ln -rs ${unrar}/bin/unrar $out/share/bazarr/bin/Linux/x86_64/UnRAR/unrar
+    ln -rs ${unrar}/bin/unrar $out/share/bazarr/bin/Linux/x86_64/unrar/unrar
     ln -rs ${ffmpeg}/bin/ffprobe $out/share/bazarr/bin/Linux/x86_64/ffprobe/ffprobe
 
     cat - <<EOF > $out/bin/bazarr
