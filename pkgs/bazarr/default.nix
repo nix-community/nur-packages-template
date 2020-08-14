@@ -9,7 +9,7 @@ in python3Packages.buildPythonApplication rec {
   dontBuild = true;
   doCheck = false;
 
-  propagatedBuildInputs = with python3Packages; [ lxml git unrar ffmpeg ];
+  propagatedBuildInputs = with python3Packages; [ lxml git numpy unrar ffmpeg ];
 
   installPhase = ''
     mkdir -p $out/bin $out/share/bazarr/bin/Linux/x86_64/{unrar,ffprobe}
@@ -23,7 +23,8 @@ in python3Packages.buildPythonApplication rec {
 
     cat - <<EOF > $out/bin/bazarr
     #!/bin/sh
-    os.environ['GIT_PYTHON_GIT_EXECUTABLE'] = "${git}/bin/git"
+    export PYTHONPATH=${python37.pkgs.makePythonPath propagatedBuildInputs}
+    export GIT_PYTHON_GIT_EXECUTABLE="${git}/bin/git"
     exec ${python37}/bin/python $out/share/bazarr/bazarr.py \$*
     EOF
     chmod +x $out/bin/bazarr
