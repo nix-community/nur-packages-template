@@ -51,7 +51,7 @@ rustPlatform.buildRustPackage rec {
   '';
 
   # Called checkPhase for compatibility, but must be run after install (as installCheckPhase)
-  checkPhase = ''
+  installCheckPhase = ''
     pytest --import-mode=append
   '';
 
