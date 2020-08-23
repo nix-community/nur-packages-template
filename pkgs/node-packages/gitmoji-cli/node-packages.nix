@@ -616,13 +616,13 @@ let
         sha512 = "nBF+F1rAZVCu/p7rjzgA+Yb4lfYXrpl7a6VmJrU8wF9I1CKvP/QwPNZHnOlwbTkY6dvtFIzFMSyQXbLoTQPRpA==";
       };
     };
-    "gitmoji-cli-3.2.9" = {
+    "gitmoji-cli-3.2.10" = {
       name = "gitmoji-cli";
       packageName = "gitmoji-cli";
-      version = "3.2.9";
+      version = "3.2.10";
       src = fetchurl {
-        url = "https://registry.npmjs.org/gitmoji-cli/-/gitmoji-cli-3.2.9.tgz";
-        sha512 = "JbZk22H0CSR1QEHKKTxIOTTp3NH+kDhUvlNM+zRIifayjJrzwuE4TcktBRNZJ0lWGDYU5mpQM/XkyjTP9k95tg==";
+        url = "https://registry.npmjs.org/gitmoji-cli/-/gitmoji-cli-3.2.10.tgz";
+        sha512 = "IVwhdySPQyHTfImCGllphBqHZtDWGnphjZG4EhkKtJY98b69sbaRU8PRO+XEC0rutbb5Gf0oCHvM3QswtAVCeQ==";
       };
     };
     "global-dirs-2.0.1" = {
@@ -922,13 +922,13 @@ let
         sha1 = "5b1f397afc75d677bde8bcfc0e47e1f9a3d9a898";
       };
     };
-    "json-parse-better-errors-1.0.2" = {
-      name = "json-parse-better-errors";
-      packageName = "json-parse-better-errors";
-      version = "1.0.2";
+    "json-parse-even-better-errors-2.3.0" = {
+      name = "json-parse-even-better-errors";
+      packageName = "json-parse-even-better-errors";
+      version = "2.3.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz";
-        sha512 = "mrqyZKfX5EhL7hvqcV6WG1yYjnjeuYDzDhhcAAUrq8Po85NBQBJP+ZDUT75qZQ98IkUoBqdkExkukOU7Ts2wrw==";
+        url = "https://registry.npmjs.org/json-parse-even-better-errors/-/json-parse-even-better-errors-2.3.0.tgz";
+        sha512 = "o3aP+RsWDJZayj1SbHNQAI8x0v3T3SKiGoZlNYfbUP1S3omJQ6i9CnqADqkSPaOAxwua4/1YWx5CM7oiChJt2Q==";
       };
     };
     "json-schema-traverse-0.4.1" = {
@@ -1273,13 +1273,13 @@ let
         sha512 = "k3bdm2n25tkyxcjSKzB5x8kfVxlMdgsbPr0GkZcwHsLpba6cBjqCt1KlcChKEvxHIcTB1FVMuwoijZ26xex5MQ==";
       };
     };
-    "parse-json-5.0.1" = {
+    "parse-json-5.1.0" = {
       name = "parse-json";
       packageName = "parse-json";
-      version = "5.0.1";
+      version = "5.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/parse-json/-/parse-json-5.0.1.tgz";
-        sha512 = "ztoZ4/DYeXQq4E21v169sC8qWINGpcosGv9XhTDvg9/hWvx/zrFkc9BiWxR58OJLHGk28j5BL0SDLeV2WmFZlQ==";
+        url = "https://registry.npmjs.org/parse-json/-/parse-json-5.1.0.tgz";
+        sha512 = "+mi/lmVVNKFNVyLXV31ERiy2CY5E1/F6QtJFEzoChPRwwngMNXRDQ9GJ5WdE2Z2P4AujsOi0/+2qHID68KwfIQ==";
       };
     };
     "path-exists-3.0.0" = {
@@ -1871,7 +1871,7 @@ let
   args = {
     name = "gitmoji-cli";
     packageName = "gitmoji-cli";
-    version = "3.2.9";
+    version = "3.2.10";
     src = ./.;
     dependencies = [
       sources."@babel/code-frame-7.10.4"
@@ -1961,7 +1961,7 @@ let
       sources."find-up-3.0.0"
       sources."fuse.js-6.4.1"
       sources."get-stream-5.2.0"
-      sources."gitmoji-cli-3.2.9"
+      sources."gitmoji-cli-3.2.10"
       sources."global-dirs-2.0.1"
       (sources."got-9.6.0" // {
         dependencies = [
@@ -2008,7 +2008,7 @@ let
       sources."isexe-2.0.0"
       sources."js-tokens-4.0.0"
       sources."json-buffer-3.0.0"
-      sources."json-parse-better-errors-1.0.2"
+      sources."json-parse-even-better-errors-2.3.0"
       sources."json-schema-traverse-0.4.1"
       sources."json-schema-typed-7.0.3"
       sources."keyv-3.1.0"
@@ -2066,7 +2066,7 @@ let
           sources."semver-6.3.0"
         ];
       })
-      sources."parse-json-5.0.1"
+      sources."parse-json-5.1.0"
       sources."path-exists-4.0.0"
       sources."path-key-3.1.1"
       sources."path-parse-1.0.6"
