@@ -19,14 +19,14 @@
 
 buildPythonPackage rec {
   pname = "pyscf";
-  version = "1.7.2";
+  version = "1.7.4";
 
   # must download from GitHub to get the Cmake & C source files
   src = fetchFromGitHub {
     owner = "pyscf";
     repo = pname;
     rev = "v${version}";
-    sha256 = "1zfrg15f1lsnsibqr614wflg1imnrq81smhqb29vhxvmf0js8z6w";
+    sha256 = "1hagkx0g4hpr9xgi95pz446x8jifvkin1yvbwyd1hq219nnvwwqf";
   };
 
   disabled = isPy27;
@@ -45,6 +45,7 @@ buildPythonPackage rec {
     ln -s ${lib.getDev xcfun}/include/xc.h ./pyscf/lib/deps/include/xcfun.h
     ln -s ${lib.getLib xcfun}/lib/libxc.so ./pyscf/lib/deps/lib/libxcfun.so
     substituteInPlace pyscf/rt/__init__.py --replace "from tdscf import *" "from pyscf.tdscf import *"
+    substituteInPlace setup.py --replace "scipy<1.5" "scipy"
   '';
 
   cmakeFlags = [
@@ -55,12 +56,8 @@ buildPythonPackage rec {
     "-DENABLE_XCFUN=1"
   ];
   # Configure CMake to build C files in pyscf/lib. Python build expects files in ./pyscf/lib/build
-  preConfigure = ''
-    pushd pyscf/lib
-  '';
-  postConfigure = ''
-    popd
-  '';
+  preConfigure = "pushd pyscf/lib";
+  postConfigure = "popd";
 
   # Build C dependencies, then build python package.
   preBuild = ''
@@ -91,9 +88,6 @@ buildPythonPackage rec {
   # Tests take about 30 mins to run
   # dftd3 disabled (requires additional library). If you want to enable it, look at pyscf #532
   preCheck = ''
-    # HACK: Move compiled libraries to test dir so pyscf import mechanism can find them
-    # cp ./dist/tmpbuild/pyscf/pyscf/lib/*.so ./pyscf/lib/
-
     # Set config used by tests to ensure reproducibility
     echo 'pbc_tools_pbc_fft_engine = "NUMPY"' > pyscf/pyscf_config.py
     export OMP_NUM_THREADS=1
@@ -112,6 +106,7 @@ buildPythonPackage rec {
       --exclude-dir=shciscf \
       --exclude-dir=nao \
       --exclude-dir=cornell_shci \
+      --exclude-dir=pbc/grad
       --exclude-dir=xianci \
       --exclude=test_bz \
       --exclude=h2o_vdz \
@@ -125,6 +120,8 @@ buildPythonPackage rec {
       --exclude=skip \
       --exclude=call_in_background \
       --exclude=libxc_cam_beta_bug \
+      --exclude=test_finite_diff_rks_eph \
+      --exclude=test_finite_diff_uks_eph \
       --ignore-files=test_kuccsd_supercell_vs_kpts\.py \
       --ignore-files=test_kccsd_ghf\.py \
       --ignore-files=test_h_.*\.py \
@@ -146,7 +143,9 @@ buildPythonPackage rec {
       --ignore-files=test_ksproxy_ks\.py \
       --ignore-files=test_kproxy_ks\.py \
       --ignore-files=test_kproxy_hf\.py \
-      --ignore-files=test_kgw_slow\.py
+      --ignore-files=test_kgw_slow\.py \
+      --exclude-test=test_cache_xc_kernel \
+      --exclude-test=test_race_condition_skip
 
     # NOTE: disables below test_proxy.py are manually added to get it to pass in Nix, and are NOT in the upstream Travis config
 
@@ -163,7 +162,6 @@ buildPythonPackage rec {
     homepage = "http://www.pyscf.org/";
     downloadPage = "https://github.com/pyscf/pyscf/releases";
     license = licenses.asl20;
-    broken = true;
-    # maintainers = with maintainers; [ drewrisinger ];
+    maintainers = with maintainers; [ drewrisinger ];
   };
 }
