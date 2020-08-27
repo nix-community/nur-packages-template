@@ -16,7 +16,7 @@
 
 buildPythonPackage rec {
   pname = "cvxpy";
-  version = "1.1.4";
+  version = "1.1.5";
 
   disabled = pythonOlder "3.5";
 
@@ -24,7 +24,7 @@ buildPythonPackage rec {
     owner = "cvxgrp";
     repo = "cvxpy";
     rev = "v${version}";
-    sha256 = "1mhcg3w4zbxq458yv1pc90x5xwmbmwx2h7a2j9nm7r1ylaakjk5r";
+    sha256 = "00rdfs1py2k26j23hm4vbjd30j2dyn5icjnljcf794hc402qy7i3";
   };
 
   propagatedBuildInputs = [
