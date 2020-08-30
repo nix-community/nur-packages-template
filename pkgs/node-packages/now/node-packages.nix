@@ -31,76 +31,58 @@ let
         sha512 = "rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==";
       };
     };
-    "@types/node-14.0.26" = {
+    "@types/node-14.6.2" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "14.0.26";
+      version = "14.6.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-14.0.26.tgz";
-        sha512 = "W+fpe5s91FBGE0pEa0lnqGLL4USgpLgs4nokw16SrBBco/gQxuua7KnArSEOd5iaMqbbSHV10vUDkJYJJqpXKA==";
+        url = "https://registry.npmjs.org/@types/node/-/node-14.6.2.tgz";
+        sha512 = "onlIwbaeqvZyniGPfdw/TEhKIh79pz66L1q06WUQqJLnAb6wbjvOtepLYTGHTqzdXgBYIE3ZdmqHDGsRsbBz7A==";
       };
     };
-    "@vercel/build-utils-2.4.2" = {
+    "@vercel/build-utils-2.5.1" = {
       name = "_at_vercel_slash_build-utils";
       packageName = "@vercel/build-utils";
-      version = "2.4.2";
+      version = "2.5.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/build-utils/-/build-utils-2.4.2.tgz";
-        sha512 = "9KymcPgUYkPxt4VK7HepM7yWN1ZUt3XzNKn5ECkGhHAHF31rmr9gEGlZZlq5KcXPsBps4A/BOuSBwK8EFOXP/w==";
+        url = "https://registry.npmjs.org/@vercel/build-utils/-/build-utils-2.5.1.tgz";
+        sha512 = "689ov8fGrgVnLwPbJUvgUKdSTseZiOMobR4XoZjmSmeF8+gaOpycsdGuVFzNtdFneUiQWO/k5AkY5diZj8fNgg==";
       };
     };
-    "@vercel/go-1.1.4" = {
+    "@vercel/go-1.1.6" = {
       name = "_at_vercel_slash_go";
       packageName = "@vercel/go";
-      version = "1.1.4";
+      version = "1.1.6";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/go/-/go-1.1.4.tgz";
-        sha512 = "HAUFjs+K/MkPrRuUwK3/2TIDAJP582b1pBNHrq1DGp8mOft/xKYIiOVh6h9PHxOeFRPCdwB3bPaAovj6jSVCZw==";
+        url = "https://registry.npmjs.org/@vercel/go/-/go-1.1.6.tgz";
+        sha512 = "swA2crS08fkPmw4UkR9yjmoL8FOCzuNHLFDqj8oM1V9ni610ibJ7Xk57jI8uyS7bTecQVh8VUxihb+SF0GT+aw==";
       };
     };
-    "@vercel/next-2.6.13" = {
-      name = "_at_vercel_slash_next";
-      packageName = "@vercel/next";
-      version = "2.6.13";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/next/-/next-2.6.13.tgz";
-        sha512 = "ZF2+wy7J1okgF984AR3nBV/u0DqsDK+TFe2U5ucPUrM9pFlVdWi88FZY2OTrH0ke5dgGXanJQlfW28PvlOAUbA==";
-      };
-    };
-    "@vercel/node-1.7.3" = {
+    "@vercel/node-1.8.1" = {
       name = "_at_vercel_slash_node";
       packageName = "@vercel/node";
-      version = "1.7.3";
+      version = "1.8.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/node/-/node-1.7.3.tgz";
-        sha512 = "bENPZRdmOSlHn4eZpfps1nZtwVuQbZj5vgt2FKa1gT/Uiy3zo5BPB+ANINNC+qcCXHxUdS50XKB2m4VvtVLY1w==";
+        url = "https://registry.npmjs.org/@vercel/node/-/node-1.8.1.tgz";
+        sha512 = "vQsYMrulghMaHEKbqxJCQPfHrGEBmYmQMLYrx+m8kolKDq1LQDWFx2MRh4DyMnGfYSoYoW5PI2HP7NAfbEjzmg==";
       };
     };
-    "@vercel/python-1.2.2" = {
+    "@vercel/python-1.2.3" = {
       name = "_at_vercel_slash_python";
       packageName = "@vercel/python";
-      version = "1.2.2";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/python/-/python-1.2.2.tgz";
-        sha512 = "+rHfbjJaySdac59Oa11a7/nZzpXC98Kqw5tPh8DT1I5OG8YTfgJnwgfBoytZOAZZQBcggoJspnjAd+wGVCoVXw==";
-      };
-    };
-    "@vercel/ruby-1.2.3" = {
-      name = "_at_vercel_slash_ruby";
-      packageName = "@vercel/ruby";
       version = "1.2.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/ruby/-/ruby-1.2.3.tgz";
-        sha512 = "WvtImWLdIo4bB0f2Pgc+P7KdgVVsPSMEVEtk4ZJnKkhU7IsCn/UnlovOsZeP6Qw/Bwqv84KrNm+nNRte648aew==";
+        url = "https://registry.npmjs.org/@vercel/python/-/python-1.2.3.tgz";
+        sha512 = "DJRvL6bmt4m0xrkzSKUbP8mK57YSDdTBWoo0JYyXq/o2golQrv/wQTalbNchd4P8NhVL3mZuk/1JNYuv5u1rKQ==";
       };
     };
-    "@vercel/static-build-0.17.6" = {
-      name = "_at_vercel_slash_static-build";
-      packageName = "@vercel/static-build";
-      version = "0.17.6";
+    "@vercel/ruby-1.2.4" = {
+      name = "_at_vercel_slash_ruby";
+      packageName = "@vercel/ruby";
+      version = "1.2.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/static-build/-/static-build-0.17.6.tgz";
-        sha512 = "zSyNyXwH3RPd0owiwaS2yv+js3Rwi/0y6BOiWLr6mkqkDe7YRIYsYrX7GD08Hx5Na6f1RnmnHCneTyzBXpuuBg==";
+        url = "https://registry.npmjs.org/@vercel/ruby/-/ruby-1.2.4.tgz";
+        sha512 = "g19vrrmJ4MTJCRB/bvx8DahIsml1iPn7wsdHf5k3QVN6lT0dlDILSBwpERC4hqzndimaApsmWOfjYtY9/L6+tQ==";
       };
     };
     "ansi-align-3.0.0" = {
@@ -355,13 +337,13 @@ let
         sha512 = "GMat4EJ5161kIy2HevLlr4luNjBgvmj413KaQA7jt4V8B4RDsfpHk7WQ9GVqfYyyx8OS/L66Kox+rJRNklLK7w==";
       };
     };
-    "get-stream-5.1.0" = {
+    "get-stream-5.2.0" = {
       name = "get-stream";
       packageName = "get-stream";
-      version = "5.1.0";
+      version = "5.2.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/get-stream/-/get-stream-5.1.0.tgz";
-        sha512 = "EXr1FOzrzTfGeL0gQdeFEvOMm2mzMOglyiOXSTpPC+iAjAKftbr3jpCMWynogwYnM+eSj9sHGc6wjIcDvYiygw==";
+        url = "https://registry.npmjs.org/get-stream/-/get-stream-5.2.0.tgz";
+        sha512 = "nBF+F1rAZVCu/p7rjzgA+Yb4lfYXrpl7a6VmJrU8wF9I1CKvP/QwPNZHnOlwbTkY6dvtFIzFMSyQXbLoTQPRpA==";
       };
     };
     "global-dirs-2.0.1" = {
@@ -616,13 +598,13 @@ let
         sha512 = "2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==";
       };
     };
-    "now-19.2.0" = {
+    "now-20.1.0" = {
       name = "now";
       packageName = "now";
-      version = "19.2.0";
+      version = "20.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/now/-/now-19.2.0.tgz";
-        sha512 = "YNdDQ7MEaRAiwPtdNFk1ACu0gnbnZFLoWX7f4fpwhp/Zsups64vncFpLWkXihKJpNnofQiviruJbv0AVZYJuuA==";
+        url = "https://registry.npmjs.org/now/-/now-20.1.0.tgz";
+        sha512 = "RojyvdioMVE5u+Oa+/E97bJ2OT8w1NZsrt4eBqeKQRB+XJ2DsVS0nor9PXy7oJkCXKJhdmhWoTFsBPVuIsKADQ==";
       };
     };
     "once-1.4.0" = {
@@ -805,13 +787,13 @@ let
         sha1 = "3c531942e908c2697c0ec344858c286c7ca0a60a";
       };
     };
-    "supports-color-7.1.0" = {
+    "supports-color-7.2.0" = {
       name = "supports-color";
       packageName = "supports-color";
-      version = "7.1.0";
+      version = "7.2.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/supports-color/-/supports-color-7.1.0.tgz";
-        sha512 = "oRSIpR8pxT1Wr2FquTNnGet79b3BWljqOuoW/h4oBhxJ/HUbX5nX6JSruTkvXDCFMwDPvsaTTbvMLKZWSy0R5g==";
+        url = "https://registry.npmjs.org/supports-color/-/supports-color-7.2.0.tgz";
+        sha512 = "qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==";
       };
     };
     "term-size-2.2.0" = {
@@ -944,20 +926,18 @@ let
   args = {
     name = "now";
     packageName = "now";
-    version = "19.2.0";
+    version = "20.1.0";
     src = ./.;
     dependencies = [
       sources."@sindresorhus/is-0.14.0"
       sources."@szmarczak/http-timer-1.1.2"
       sources."@types/color-name-1.1.1"
-      sources."@types/node-14.0.26"
-      sources."@vercel/build-utils-2.4.2"
-      sources."@vercel/go-1.1.4"
-      sources."@vercel/next-2.6.13"
-      sources."@vercel/node-1.7.3"
-      sources."@vercel/python-1.2.2"
-      sources."@vercel/ruby-1.2.3"
-      sources."@vercel/static-build-0.17.6"
+      sources."@types/node-14.6.2"
+      sources."@vercel/build-utils-2.5.1"
+      sources."@vercel/go-1.1.6"
+      sources."@vercel/node-1.8.1"
+      sources."@vercel/python-1.2.3"
+      sources."@vercel/ruby-1.2.4"
       (sources."ansi-align-3.0.0" // {
         dependencies = [
           sources."string-width-3.1.0"
@@ -970,7 +950,7 @@ let
       sources."buffer-from-1.1.1"
       (sources."cacheable-request-6.1.0" // {
         dependencies = [
-          sources."get-stream-5.1.0"
+          sources."get-stream-5.2.0"
           sources."lowercase-keys-2.0.0"
         ];
       })
@@ -1019,7 +999,7 @@ let
       sources."mimic-response-1.0.1"
       sources."minimist-1.2.5"
       sources."normalize-url-4.5.0"
-      sources."now-19.2.0"
+      sources."now-20.1.0"
       sources."once-1.4.0"
       sources."p-cancelable-1.1.0"
       sources."package-json-6.5.0"
@@ -1045,7 +1025,7 @@ let
       })
       sources."strip-ansi-5.2.0"
       sources."strip-json-comments-2.0.1"
-      sources."supports-color-7.1.0"
+      sources."supports-color-7.2.0"
       sources."term-size-2.2.0"
       sources."to-readable-stream-1.0.0"
       sources."ts-node-8.9.1"
