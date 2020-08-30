@@ -221,8 +221,8 @@
     fetch = {
       type = "git";
       url = "https://github.com/jfrog/jfrog-client-go";
-      rev = "v0.11.1";
-      sha256 = "07kjpmq23hm8zqnfp7bzwqk860j6wcw1hfjk9y3s7466sa738dd6";
+      rev = "v0.13.2";
+      sha256 = "0v1miwa8wzbkar7b6nypwhaa5sn6ajhv4xnmanypaf1ry6x7mp3i";
     };
   }
   {

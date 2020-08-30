@@ -8,6 +8,6 @@ in buildGoPackage {
   src = fetchFromGitHub { inherit (github) owner repo rev sha256; };
   goDeps = ./godeps.nix;
   # remove testsdata dir because it uses unreferenced dependencies
-  preConfigure = "rm -rf testsdata";
+  preConfigure = "rm -rf testdata";
   preInstall = "mv -v ./go/bin/jfrog-cli ./go/bin/jfrog";
 }
