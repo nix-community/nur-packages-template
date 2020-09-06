@@ -3,6 +3,6 @@
   "repo": "nix-direnv",
   "rev": "300258e2bded28c284451f4fac8475b2240b46f6",
   "sha256": "1wx3hwyjaysr4wm2hbgr64r2a3bvqxfjvayijvg1sy4b8dxzmk64",
-  "fetchSubmodules": false,
+  "fetchSubmodules": true,
   "ref": "1.1"
 }
