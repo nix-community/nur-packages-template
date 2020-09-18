@@ -6,7 +6,7 @@
 , maturin
 , pip
   # Check inputs
-, pytest
+, pytestCheckHook
 , numpy
 }:
 
@@ -36,7 +36,7 @@ rustPlatform.buildRustPackage rec {
   doCheck = false;
   doInstallCheck = true;
 
-  installCheckInputs = [ pytest numpy ];
+  installCheckInputs = [ pytestCheckHook numpy ];
 
   buildPhase = ''
     runHook preBuild
@@ -49,10 +49,13 @@ rustPlatform.buildRustPackage rec {
     pipInstallPhase
   '';
 
-  # Called checkPhase for compatibility, but must be run after install (as installCheckPhase)
-  installCheckPhase = ''
-    pytest --import-mode=append
+  preCheck = ''
+    export TESTDIR=$(mktemp -d)
+    cp -r tests/ $TESTDIR
+    pushd $TESTDIR
   '';
+  postCheck = "popd";
+
 
   meta = with lib; {
     description = "A python graph library implemented in Rust.";
