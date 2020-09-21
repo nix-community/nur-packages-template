@@ -100,6 +100,7 @@ rec {
     qiskit = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/qiskit {
       inherit qiskit-aer qiskit-terra qiskit-ignis qiskit-aqua qiskit-ibmq-provider;
     };
+    qiskit-terraNoVisual = qiskit-terra.override { withVisualization = false; };
   };
 
 }
