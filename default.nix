@@ -101,6 +101,7 @@ rec {
       inherit qiskit-aer qiskit-terra qiskit-ignis qiskit-aqua qiskit-ibmq-provider;
     };
     qiskit-terraNoVisual = qiskit-terra.override { withVisualization = false; };
+    qiskit-ibmq-providerNoVisual = qiskit-ibmq-provider.override { withVisualization = false; qiskit-terra = qiskit-terraNoVisual; matplotlib = null; };
   };
 
 }
