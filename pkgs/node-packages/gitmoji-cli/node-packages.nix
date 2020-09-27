@@ -598,13 +598,13 @@ let
         sha512 = "nBF+F1rAZVCu/p7rjzgA+Yb4lfYXrpl7a6VmJrU8wF9I1CKvP/QwPNZHnOlwbTkY6dvtFIzFMSyQXbLoTQPRpA==";
       };
     };
-    "gitmoji-cli-3.2.11" = {
+    "gitmoji-cli-3.2.12" = {
       name = "gitmoji-cli";
       packageName = "gitmoji-cli";
-      version = "3.2.11";
+      version = "3.2.12";
       src = fetchurl {
-        url = "https://registry.npmjs.org/gitmoji-cli/-/gitmoji-cli-3.2.11.tgz";
-        sha512 = "CJbeY7IvD7lckCrwIx6dMIyd8feR3Gn+K1/Pj2uklXeml4jKj6iuVvQTf1ftAdbIU3gr2htEHJecnbruxgUfHA==";
+        url = "https://registry.npmjs.org/gitmoji-cli/-/gitmoji-cli-3.2.12.tgz";
+        sha512 = "ZL27e8s3lkkrKrGCCQDlwIGnLOihrrehDI1jriWaU+UaVME1IYCtOiYbLp59iITK2s8Ak7e0LSSCyO08bRLAvQ==";
       };
     };
     "global-dirs-2.0.1" = {
@@ -1853,7 +1853,7 @@ let
   args = {
     name = "gitmoji-cli";
     packageName = "gitmoji-cli";
-    version = "3.2.11";
+    version = "3.2.12";
     src = ./.;
     dependencies = [
       sources."@babel/code-frame-7.10.4"
@@ -1943,7 +1943,7 @@ let
       sources."find-up-3.0.0"
       sources."fuse.js-6.4.1"
       sources."get-stream-5.2.0"
-      sources."gitmoji-cli-3.2.11"
+      sources."gitmoji-cli-3.2.12"
       sources."global-dirs-2.0.1"
       (sources."got-9.6.0" // {
         dependencies = [
