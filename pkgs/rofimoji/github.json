@@ -1,8 +1,8 @@
 {
   "owner": "fdw",
   "repo": "rofimoji",
-  "rev": "e15315c2714afa7ec269047e771e35a40be4fedf",
-  "sha256": "0v31rv4wr7ps2gcscrbfrz9qjif74skr5847kl40qrl8gcbgszrh",
-  "fetchSubmodules": false,
-  "ref": "4.2.0"
+  "rev": "38d0a6f9c3c187666776a3d3465e040fcd3a7e3d",
+  "sha256": "08ayndpifr04njpijc5n5ii5nvibfpab39p6ngyyj0pb43792a8j",
+  "fetchSubmodules": true,
+  "ref": "4.3.0"
 }
