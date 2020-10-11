@@ -22,31 +22,22 @@ let
         sha512 = "XIB2XbzHTN6ieIjfIMV9hlVcfPU26s2vafYWQcZHWXHOxiaRZYEDKEwdl129Zyg50+foYV2jCgtrqSA6qNuNSA==";
       };
     };
-    "@types/color-name-1.1.1" = {
-      name = "_at_types_slash_color-name";
-      packageName = "@types/color-name";
-      version = "1.1.1";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/@types/color-name/-/color-name-1.1.1.tgz";
-        sha512 = "rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==";
-      };
-    };
-    "@types/node-14.11.2" = {
+    "@types/node-14.11.8" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "14.11.2";
+      version = "14.11.8";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-14.11.2.tgz";
-        sha512 = "jiE3QIxJ8JLNcb1Ps6rDbysDhN4xa8DJJvuC9prr6w+1tIh+QAbYyNF3tyiZNLDBIuBCf4KEcV2UvQm/V60xfA==";
+        url = "https://registry.npmjs.org/@types/node/-/node-14.11.8.tgz";
+        sha512 = "KPcKqKm5UKDkaYPTuXSx8wEP7vE9GnuaXIZKijwRYcePpZFDVuy2a57LarFKiORbHOuTOOwYzxVxcUzsh2P2Pw==";
       };
     };
-    "@vercel/build-utils-2.5.3" = {
+    "@vercel/build-utils-2.5.4" = {
       name = "_at_vercel_slash_build-utils";
       packageName = "@vercel/build-utils";
-      version = "2.5.3";
+      version = "2.5.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/build-utils/-/build-utils-2.5.3.tgz";
-        sha512 = "jsvfTLbduwVuexC8LPO58z2qByEhlb8469s2mZQUkCjLxkX1DzW66QB7N68ymzd8rBPAg5n2hi4Zc5NxLHDXLw==";
+        url = "https://registry.npmjs.org/@vercel/build-utils/-/build-utils-2.5.4.tgz";
+        sha512 = "xPvYkxhpBXNIZQUrsmC3g58Heapaev4D8vrH3UcBgsvttU8uTQiuuISOOeTwZpufPxgZT5wgF0DRBybEulnCew==";
       };
     };
     "@vercel/go-1.1.6" = {
@@ -58,13 +49,13 @@ let
         sha512 = "swA2crS08fkPmw4UkR9yjmoL8FOCzuNHLFDqj8oM1V9ni610ibJ7Xk57jI8uyS7bTecQVh8VUxihb+SF0GT+aw==";
       };
     };
-    "@vercel/node-1.8.3" = {
+    "@vercel/node-1.8.4" = {
       name = "_at_vercel_slash_node";
       packageName = "@vercel/node";
-      version = "1.8.3";
+      version = "1.8.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/node/-/node-1.8.3.tgz";
-        sha512 = "NTRoQJBQTCT1erz9+hg/juHI9Yz5UpwBuR+O9qNZMFjlqU2913BkeZSNb9FAGcNKks/wK9usktRReys3cATLzg==";
+        url = "https://registry.npmjs.org/@vercel/node/-/node-1.8.4.tgz";
+        sha512 = "4bwJVqia4e/qDgBbdDWL2INZS5F/nouUDK+onJwi3xKGy7829cb8b9g2j7pMcqonv2U/xzOCUMyTr+uESx9hHQ==";
       };
     };
     "@vercel/python-1.2.3" = {
@@ -112,13 +103,13 @@ let
         sha512 = "bY6fj56OUQ0hU1KjFNDQuJFezqKdrAyFdIevADiqrWHwSlbmBNMHp5ak2f40Pm8JTFyM2mqxkG6ngkHO11f/lg==";
       };
     };
-    "ansi-styles-4.2.1" = {
+    "ansi-styles-4.3.0" = {
       name = "ansi-styles";
       packageName = "ansi-styles";
-      version = "4.2.1";
+      version = "4.3.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.2.1.tgz";
-        sha512 = "9VGjrMsG1vePxcSweQsN20KY/c4zN0h9fLjqAbwbPfahM3t+NL+M9HC8xeXG2I8pX5NoamTGNuomEUFI7fcUjA==";
+        url = "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz";
+        sha512 = "zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==";
       };
     };
     "arg-4.1.3" = {
@@ -598,13 +589,13 @@ let
         sha512 = "2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==";
       };
     };
-    "now-20.1.1" = {
+    "now-20.1.2" = {
       name = "now";
       packageName = "now";
-      version = "20.1.1";
+      version = "20.1.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/now/-/now-20.1.1.tgz";
-        sha512 = "49prz00NH0xGj/dfp1Kk9Eomdq3au9kdfHOqUnI4Dfq3XaN8p113G2n6Jvf0ZVhtFki3dIlmO+avWCoNYXR2xQ==";
+        url = "https://registry.npmjs.org/now/-/now-20.1.2.tgz";
+        sha512 = "uzc143R5l7pZBq9HqUmmALndTdwH+btaZlTW843qx9GTaLr+C/bgH7YCic2eBOSTKVBAfBExSaNE+yEYHn70qw==";
       };
     };
     "once-1.4.0" = {
@@ -926,16 +917,15 @@ let
   args = {
     name = "now";
     packageName = "now";
-    version = "20.1.1";
+    version = "20.1.2";
     src = ./.;
     dependencies = [
       sources."@sindresorhus/is-0.14.0"
       sources."@szmarczak/http-timer-1.1.2"
-      sources."@types/color-name-1.1.1"
-      sources."@types/node-14.11.2"
-      sources."@vercel/build-utils-2.5.3"
+      sources."@types/node-14.11.8"
+      sources."@vercel/build-utils-2.5.4"
       sources."@vercel/go-1.1.6"
-      sources."@vercel/node-1.8.3"
+      sources."@vercel/node-1.8.4"
       sources."@vercel/python-1.2.3"
       sources."@vercel/ruby-1.2.4"
       (sources."ansi-align-3.0.0" // {
@@ -944,7 +934,7 @@ let
         ];
       })
       sources."ansi-regex-4.1.0"
-      sources."ansi-styles-4.2.1"
+      sources."ansi-styles-4.3.0"
       sources."arg-4.1.3"
       sources."boxen-4.2.0"
       sources."buffer-from-1.1.1"
@@ -999,7 +989,7 @@ let
       sources."mimic-response-1.0.1"
       sources."minimist-1.2.5"
       sources."normalize-url-4.5.0"
-      sources."now-20.1.1"
+      sources."now-20.1.2"
       sources."once-1.4.0"
       sources."p-cancelable-1.1.0"
       sources."package-json-6.5.0"
