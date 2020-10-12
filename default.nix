@@ -43,6 +43,7 @@ rec {
       };
       propagatedBuildInputs = oldAttrs.propagatedBuildInputs ++ [ cirq ];
     });
+    pytest-profiling = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pytest-profiling { };
     pubchempy = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/pubchempy { };
     python-box = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/python-box { };
     openfermion = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/openfermion { inherit pubchempy; };
