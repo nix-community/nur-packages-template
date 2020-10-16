@@ -25,16 +25,16 @@
 
 buildPythonPackage rec {
   pname = "qiskit-aqua";
-  version = "0.7.5";
+  version = "0.8.0";
 
-  disabled = pythonOlder "3.5";
+  disabled = pythonOlder "3.6";
 
   # Pypi's tarball doesn't contain tests
   src = fetchFromGitHub {
     owner = "Qiskit";
     repo = "qiskit-aqua";
     rev = version;
-    sha256 = "19sdv7lnc4b1c86rd1dv7pjpi8cmrpzbv7nav0fb899ki8ldqdwq";
+    sha256 = "1v3mqrisrqpxrpn3z77rj5hb09s1yqa9qvcmmxiamcic6jq96njf";
   };
 
   # Optional packages: pyscf (see below NOTE) & pytorch. Can install via pip/nix if needed.
@@ -87,7 +87,11 @@ buildPythonPackage rec {
 
   postInstall = "rm -rf $out/${python.sitePackages}/docs";
 
-  checkInputs = [ ddt qiskit-aer pytestCheckHook ];
+  checkInputs = [
+    pytestCheckHook
+    ddt
+    qiskit-aer
+  ];
   dontUseSetuptoolsCheck = true;
   pythonImportsCheck = [
     "qiskit.aqua"
@@ -104,6 +108,7 @@ buildPythonPackage rec {
     "--ignore=test/chemistry/test_qeom_ee.py"
     "--ignore=test/chemistry/test_qeom_vqe.py"
     "--ignore=test/chemistry/test_vqe_uccsd_adapt.py"
+    "--ignore=test/chemistry/test_bopes_sampler.py"
   ];
   disabledTests = [
     # Disabled due to missing pyscf
@@ -115,8 +120,10 @@ buildPythonPackage rec {
 
     # Disabling slow tests > 10 seconds
     "TestVQE"
+    "TestOOVQE"
     "TestVQC"
     "TestQSVM"
+    "TestOptimizerAQGD"
     "test_graph_partition_vqe"
     "TestLookupRotation"
     "_vqe"
@@ -143,6 +150,7 @@ buildPythonPackage rec {
     "test_confidence_intervals_00001"
     "test_eoh"
     "test_qasm_5"
+    "test_uccsd_hf"
   ];
 
   meta = with lib; {

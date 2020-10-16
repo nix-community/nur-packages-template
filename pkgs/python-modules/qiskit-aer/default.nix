@@ -15,22 +15,23 @@
 , scikit-build
 , spdlog
   # Check Inputs
-, qiskit-terra
 , pytestCheckHook
-, python
+, ddt
+, fixtures
+, qiskit-terra
 }:
 
 buildPythonPackage rec {
   pname = "qiskit-aer";
-  version = "0.6.1";
+  version = "0.7.0";
 
-  disabled = pythonOlder "3.5";
+  disabled = pythonOlder "3.6";
 
   src = fetchFromGitHub {
     owner = "Qiskit";
     repo = "qiskit-aer";
     rev = version;
-    sha256 = "1fnv11diis0as8zcc57mamz0gbjd6vj7nw3arxzvwa77ja803sr4";
+    sha256 = "03bj44g3dzsaw05nd2rf1jawyalw9xqbc481qcahv8ms6jw889sy";
   };
 
   nativeBuildInputs = [
@@ -67,8 +68,10 @@ buildPythonPackage rec {
     "qiskit.providers.aer.backends.controller_wrappers" # Checks C++ files built correctly. Only exists if built & moved to output
   ];
   checkInputs = [
-    qiskit-terra
     pytestCheckHook
+    ddt
+    fixtures
+    qiskit-terra
   ];
   dontUseSetuptoolsCheck = true;  # Otherwise runs tests twice
 
