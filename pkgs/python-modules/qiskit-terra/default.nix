@@ -30,7 +30,7 @@
 , z3
   # Classical function -> Quantum Circuit compiler
 , withClassicalFunctionCompiler ? false
-, tweedledum ? null
+, tweedledum
   # test requirements
 , ddt
 , hypothesis
