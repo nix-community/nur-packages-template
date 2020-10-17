@@ -2,7 +2,6 @@
 , pythonOlder
 , buildPythonPackage
 , fetchFromGitHub
-# , cplex
 , cvxpy
 , dlx
 , docplex
@@ -17,6 +16,15 @@
 , quandl
 , scikitlearn
 , yfinance
+  # Optional inputs
+, withTorch ? false
+, pytorch
+, withPyscf ? false
+, pyscf
+, withScikitQuant ? false
+, scikit-quant ? null
+, withCplex ? false
+, cplex ? null
   # Check Inputs
 , ddt
 , pytestCheckHook
@@ -39,7 +47,6 @@ buildPythonPackage rec {
 
   # Optional packages: pyscf (see below NOTE) & pytorch. Can install via pip/nix if needed.
   propagatedBuildInputs = [
-    # cplex
     cvxpy
     docplex
     dlx # Python Dancing Links package
@@ -53,7 +60,10 @@ buildPythonPackage rec {
     quandl
     scikitlearn
     yfinance
-  ];
+  ] ++ lib.optionals (withTorch) [ pytorch ]
+  ++ lib.optionals (withPyscf) [ pyscf ]
+  ++ lib.optionals (withScikitQuant) [ scikit-quant ]
+  ++ lib.optionals (withCplex) [ cplex ];
 
   # *** NOTE ***
   # We make pyscf optional in this package, due to difficulties packaging it in Nix (test failures, complicated flags, etc).
@@ -103,8 +113,7 @@ buildPythonPackage rec {
   ];
   preCheck = "pushd $TMP/$sourceRoot";
   postCheck = "popd";
-  pytestFlagsArray = [
-    # Disabled b/c missing pyscf
+  pytestFlagsArray = lib.optionals (!withPyscf) [
     "--ignore=test/chemistry/test_qeom_ee.py"
     "--ignore=test/chemistry/test_qeom_vqe.py"
     "--ignore=test/chemistry/test_vqe_uccsd_adapt.py"
