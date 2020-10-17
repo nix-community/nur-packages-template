@@ -3,17 +3,21 @@
 , buildPythonPackage
 , fetchFromGitHub
 , fetchpatch
+  # C Inputs
+, blas
+, openblas
+, catch2
 , cmake
-, cvxpy
 , cython
 , muparserx
 , ninja
 , nlohmann_json
+, spdlog
+  # Python Inputs
+, cvxpy
 , numpy
-, openblas
 , pybind11
 , scikit-build
-, spdlog
   # Check Inputs
 , pytestCheckHook
 , ddt
@@ -41,7 +45,8 @@ buildPythonPackage rec {
   ];
 
   buildInputs = [
-    openblas
+    (if (lib.versionAtLeast lib.version "20.09") then blas else openblas )
+    catch2
     spdlog
     nlohmann_json
     muparserx
@@ -67,6 +72,11 @@ buildPythonPackage rec {
     "qiskit.providers.aer.backends.qasm_simulator"
     "qiskit.providers.aer.backends.controller_wrappers" # Checks C++ files built correctly. Only exists if built & moved to output
   ];
+  # Slow tests
+  disabledTests = [
+    "test_paulis_1_and_2_qubits"
+    "test_3d_oscillator"
+  ];
   checkInputs = [
     pytestCheckHook
     ddt
@@ -84,9 +94,7 @@ buildPythonPackage rec {
     # Add qiskit-aer compiled files to cython include search
     pushd $HOME
   '';
-  postCheck = ''
-    popd
-  '';
+  postCheck = "popd";
 
   meta = with lib; {
     description = "High performance simulators for Qiskit";
