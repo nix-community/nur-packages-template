@@ -42,12 +42,15 @@
 #       }
 #     }
 let
-  generated = import ./default.nix { inherit pkgs system; };
-  info = generated.args;
-  renamedpkg = generated.package.overrideAttrs
-    (old: { name = "${info.name}-${info.version}"; });
-  selfpkg = generated.sources."${info.name}-${info.version}";
+  original = import ./default.nix { inherit pkgs system; };
+  name = "${original.args.name}-${original.args.version}";
+  renamedpkg = original.package.overrideAttrs (old: { inherit name; });
+  selfpkg = original.sources.${name};
+  requireNativeNodeGypBuild =
+    lib.any (dep: dep.name == "node-gyp-build") original.args.dependencies;
 in renamedpkg.override {
   src = selfpkg.src;
-  dependencies = lib.remove selfpkg info.dependencies;
+  dependencies = lib.remove selfpkg original.args.dependencies;
+  buildInputs = [ ]
+    ++ lib.optional requireNativeNodeGypBuild pkgs.nodePackages.node-gyp-build;
 }
