@@ -22,22 +22,22 @@ let
         sha512 = "XIB2XbzHTN6ieIjfIMV9hlVcfPU26s2vafYWQcZHWXHOxiaRZYEDKEwdl129Zyg50+foYV2jCgtrqSA6qNuNSA==";
       };
     };
-    "@types/node-14.11.8" = {
+    "@types/node-14.14.7" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "14.11.8";
+      version = "14.14.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-14.11.8.tgz";
-        sha512 = "KPcKqKm5UKDkaYPTuXSx8wEP7vE9GnuaXIZKijwRYcePpZFDVuy2a57LarFKiORbHOuTOOwYzxVxcUzsh2P2Pw==";
+        url = "https://registry.npmjs.org/@types/node/-/node-14.14.7.tgz";
+        sha512 = "Zw1vhUSQZYw+7u5dAwNbIA9TuTotpzY/OF7sJM9FqPOF3SPjKnxrjoTktXDZgUjybf4cWVBP7O8wvKdSaGHweg==";
       };
     };
-    "@vercel/build-utils-2.5.4" = {
+    "@vercel/build-utils-2.6.0" = {
       name = "_at_vercel_slash_build-utils";
       packageName = "@vercel/build-utils";
-      version = "2.5.4";
+      version = "2.6.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/build-utils/-/build-utils-2.5.4.tgz";
-        sha512 = "xPvYkxhpBXNIZQUrsmC3g58Heapaev4D8vrH3UcBgsvttU8uTQiuuISOOeTwZpufPxgZT5wgF0DRBybEulnCew==";
+        url = "https://registry.npmjs.org/@vercel/build-utils/-/build-utils-2.6.0.tgz";
+        sha512 = "fxvPrFfPQR7e77QrH2xJfkza3EyFtOa5AdtbWom73Zs5+eyrpetvHHqnzKCfRQFhdTVqOuSDwVoN/uLhMS7tQw==";
       };
     };
     "@vercel/go-1.1.6" = {
@@ -49,13 +49,13 @@ let
         sha512 = "swA2crS08fkPmw4UkR9yjmoL8FOCzuNHLFDqj8oM1V9ni610ibJ7Xk57jI8uyS7bTecQVh8VUxihb+SF0GT+aw==";
       };
     };
-    "@vercel/node-1.8.4" = {
+    "@vercel/node-1.8.5" = {
       name = "_at_vercel_slash_node";
       packageName = "@vercel/node";
-      version = "1.8.4";
+      version = "1.8.5";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@vercel/node/-/node-1.8.4.tgz";
-        sha512 = "4bwJVqia4e/qDgBbdDWL2INZS5F/nouUDK+onJwi3xKGy7829cb8b9g2j7pMcqonv2U/xzOCUMyTr+uESx9hHQ==";
+        url = "https://registry.npmjs.org/@vercel/node/-/node-1.8.5.tgz";
+        sha512 = "1iw7FSR8Oau6vZB1MWfBnA5q2a/IqRHiSZSbt8lz0dyTF599q8pc5GcSv/TvmrYaEGzh3+N0S4cbmuMCqVlwJg==";
       };
     };
     "@vercel/python-1.2.3" = {
@@ -589,13 +589,13 @@ let
         sha512 = "2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==";
       };
     };
-    "now-20.1.2" = {
+    "now-20.1.4" = {
       name = "now";
       packageName = "now";
-      version = "20.1.2";
+      version = "20.1.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/now/-/now-20.1.2.tgz";
-        sha512 = "uzc143R5l7pZBq9HqUmmALndTdwH+btaZlTW843qx9GTaLr+C/bgH7YCic2eBOSTKVBAfBExSaNE+yEYHn70qw==";
+        url = "https://registry.npmjs.org/now/-/now-20.1.4.tgz";
+        sha512 = "EiTJv2DvPlaZk26PxRHi8mtzzqsReuY62uFFEkYLoDLzJbebre0AkRndy3tfQKCLF74nHY1JCF7OsGcngc242Q==";
       };
     };
     "once-1.4.0" = {
@@ -643,13 +643,13 @@ let
         sha512 = "LwZy+p3SFs1Pytd/jYct4wpv49HiYCqd9Rlc5ZVdk0V+8Yzv6jR5Blk3TRmPL1ft69TxP0IMZGJ+WPFU2BFhww==";
       };
     };
-    "pupa-2.0.1" = {
+    "pupa-2.1.1" = {
       name = "pupa";
       packageName = "pupa";
-      version = "2.0.1";
+      version = "2.1.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/pupa/-/pupa-2.0.1.tgz";
-        sha512 = "hEJH0s8PXLY/cdXh66tNEQGndDrIKNqNC5xmrysZy3i5C3oEoLna7YAOad+7u125+zH1HNXUmGEkrhb3c2VriA==";
+        url = "https://registry.npmjs.org/pupa/-/pupa-2.1.1.tgz";
+        sha512 = "l1jNAspIBSFqbT+y+5FosojNpVpF94nlI+wDUpqP9enwOTfHx9f0gh5nB96vl+6yTpsJsypeNrwfzPrKuHB41A==";
       };
     };
     "rc-1.2.8" = {
@@ -661,13 +661,13 @@ let
         sha512 = "y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==";
       };
     };
-    "registry-auth-token-4.2.0" = {
+    "registry-auth-token-4.2.1" = {
       name = "registry-auth-token";
       packageName = "registry-auth-token";
-      version = "4.2.0";
+      version = "4.2.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/registry-auth-token/-/registry-auth-token-4.2.0.tgz";
-        sha512 = "P+lWzPrsgfN+UEpDS3U8AQKg/UjZX6mQSJueZj3EK+vNESoqBSpBUD3gmu4sF9lOsjXWjF11dQKUqemf3veq1w==";
+        url = "https://registry.npmjs.org/registry-auth-token/-/registry-auth-token-4.2.1.tgz";
+        sha512 = "6gkSb4U6aWJB4SF2ZvLb76yCBjcvufXBqvvEx1HbmKPkutswjW1xNVRY0+daljIYRbogN7O0etYSlbiaEQyMyw==";
       };
     };
     "registry-url-5.1.0" = {
@@ -787,13 +787,13 @@ let
         sha512 = "qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==";
       };
     };
-    "term-size-2.2.0" = {
+    "term-size-2.2.1" = {
       name = "term-size";
       packageName = "term-size";
-      version = "2.2.0";
+      version = "2.2.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/term-size/-/term-size-2.2.0.tgz";
-        sha512 = "a6sumDlzyHVJWb8+YofY4TW112G6p2FCPEAFk+59gIYHv3XHRhm9ltVQ9kli4hNWeQBwSpe8cRN25x0ROunMOw==";
+        url = "https://registry.npmjs.org/term-size/-/term-size-2.2.1.tgz";
+        sha512 = "wK0Ri4fOGjv/XPy8SBHZChl8CM7uMc5VML7SqiQ0zG7+J5Vr+RMQDoHa2CNT6KHUnTGIXH34UDMkPzAUyapBZg==";
       };
     };
     "to-readable-stream-1.0.0" = {
@@ -917,15 +917,15 @@ let
   args = {
     name = "now";
     packageName = "now";
-    version = "20.1.2";
+    version = "20.1.4";
     src = ./.;
     dependencies = [
       sources."@sindresorhus/is-0.14.0"
       sources."@szmarczak/http-timer-1.1.2"
-      sources."@types/node-14.11.8"
-      sources."@vercel/build-utils-2.5.4"
+      sources."@types/node-14.14.7"
+      sources."@vercel/build-utils-2.6.0"
       sources."@vercel/go-1.1.6"
-      sources."@vercel/node-1.8.4"
+      sources."@vercel/node-1.8.5"
       sources."@vercel/python-1.2.3"
       sources."@vercel/ruby-1.2.4"
       (sources."ansi-align-3.0.0" // {
@@ -989,15 +989,15 @@ let
       sources."mimic-response-1.0.1"
       sources."minimist-1.2.5"
       sources."normalize-url-4.5.0"
-      sources."now-20.1.2"
+      sources."now-20.1.4"
       sources."once-1.4.0"
       sources."p-cancelable-1.1.0"
       sources."package-json-6.5.0"
       sources."prepend-http-2.0.0"
       sources."pump-3.0.0"
-      sources."pupa-2.0.1"
+      sources."pupa-2.1.1"
       sources."rc-1.2.8"
-      sources."registry-auth-token-4.2.0"
+      sources."registry-auth-token-4.2.1"
       sources."registry-url-5.1.0"
       sources."responselike-1.0.2"
       sources."semver-6.3.0"
@@ -1016,7 +1016,7 @@ let
       sources."strip-ansi-5.2.0"
       sources."strip-json-comments-2.0.1"
       sources."supports-color-7.2.0"
-      sources."term-size-2.2.0"
+      sources."term-size-2.2.1"
       sources."to-readable-stream-1.0.0"
       sources."ts-node-8.9.1"
       sources."type-fest-0.8.1"
