@@ -1,6 +1,7 @@
 name: "Build and populate cache"
 on:
   push:
+  pull_request:
   schedule:
     - cron:  '27 6 * * *'
 env:
