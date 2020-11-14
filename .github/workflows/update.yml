@@ -41,7 +41,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2.3.4
-      - uses: webfactory/ssh-agent@v0.4.1
+      - name: Configure SSH
+        uses: webfactory/ssh-agent@v0.4.1
         with:
           ssh-private-key: ${{ secrets.SSH_DEPLOY_KEY }}
       - name: Install nix
