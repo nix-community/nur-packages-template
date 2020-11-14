@@ -1,0 +1,20 @@
+{
+    "owner": "kubermatic",
+    "repo": "kubeone",
+    "ref": "v1.0.2",
+    "check-cmd": "sha256sum --check kubeone_*_checksums.txt",
+    "assets": {
+      "kubeone_1.0.2_checksums.txt": {
+        "url": "https://github.com/kubermatic/kubeone/releases/download/v1.0.2/kubeone_1.0.2_checksums.txt",
+        "hash": "sha256:0md10ir0786rx5arbafibqzhn60zfh8gvk1r2cnqx006nrbq8kda"
+      },
+      "kubeone_1.0.2_darwin_amd64.zip": {
+        "url": "https://github.com/kubermatic/kubeone/releases/download/v1.0.2/kubeone_1.0.2_darwin_amd64.zip",
+        "hash": "sha256:1hzkmzlcqmsad7sj7i8gphlshcwrd8s19cj1w2wa0chrcn7gd0bc"
+      },
+      "kubeone_1.0.2_linux_amd64.zip": {
+        "url": "https://github.com/kubermatic/kubeone/releases/download/v1.0.2/kubeone_1.0.2_linux_amd64.zip",
+        "hash": "sha256:125ijidmji2k0sqf087ahq98c1aqg3zawhqwb0k1srf46nfy2x6r"
+      }
+    }
+  }
