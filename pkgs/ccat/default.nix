@@ -1,27 +1,16 @@
-{ stdenvNoCC, fetchurl }:
+{ lib, buildGoPackage, fetchFromGitHub }:
 
-with stdenvNoCC;
-
-mkDerivation rec {
+let github = lib.importJSON ./github.json;
+in buildGoPackage {
   pname = "ccat";
-  version = "1.1.0";
-
-  src = fetchurl {
-    url =
-      "https://github.com/jingweno/${pname}/releases/download/v${version}/linux-amd64-${version}.tar.gz";
-    sha512 =
-      "28bvp4nc9fvqxwxbf98azc6v6vjsw7shhp8dlb71w6brz73gnlahl7mj4q5hkjzzsbfzrlc082rlwf17gv9x4d17cgmfns3mckaa1bi";
-  };
-
-  installPhase = ''
-    install -Dm755 ccat "$out/bin/ccat"
-  '';
+  version = github.ref;
+  goPackagePath = "github.com/jingweno/ccat";
+  src = fetchFromGitHub { inherit (github) owner repo rev sha256; };
 
   meta = with lib; {
     description =
       "ccat is the colorizing cat. It works similar to cat but displays content with syntax highlighting.";
     license = licenses.mit;
-    homepage = "https://github.com/jingweno/ccat";
-    platforms = [ "x86_64-linux" ];
+    homepage = "https://github.com/owenthereal/ccat";
   };
 }
