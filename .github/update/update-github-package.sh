@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-source ".github/auto-pr/utils.sh"
+source ".github/update/utils.sh"
 
 pkgdir=$1
 cd "$pkgdir"

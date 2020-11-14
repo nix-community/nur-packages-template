@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-source ".github/auto-pr/utils.sh"
+source ".github/update/utils.sh"
 
 if [ -z "$(git diff)" ] ; then
   quit "👌 there is no change so no reason to update vendors file"

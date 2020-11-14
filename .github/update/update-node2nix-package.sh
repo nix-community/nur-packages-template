@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-toolsdir="$PWD/.github/auto-pr"
+toolsdir="$PWD/.github/update"
 source "$toolsdir/utils.sh"
 
 pkgdir=$1

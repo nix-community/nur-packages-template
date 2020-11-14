@@ -21,8 +21,8 @@ jobs:
           signingKey: "${{ secrets.CACHIX_SIGNING_KEY }}"
       - name: Cache build dependencies
         run: |
-          nix-shell .github/auto-pr/shell.nix --run true
-          nix-store -qR --include-outputs $(nix-instantiate .github/auto-pr/shell.nix) | cachix push jeremiehuchet
+          nix-shell .github/update/shell.nix --run true
+          nix-store -qR --include-outputs $(nix-instantiate .github/update/shell.nix) | cachix push jeremiehuchet
       - id: set-matrix
         name: Find packages
         run: |
@@ -56,12 +56,12 @@ jobs:
           name: jeremiehuchet
       - name: github update check
         if: ${{ matrix.type == 'github' }}
-        run: nix-shell .github/auto-pr/shell.nix --run "./.github/auto-pr/update-github-package.sh ${{ matrix.path }}"
+        run: nix-shell .github/update/shell.nix --run "./.github/update/update-github-package.sh ${{ matrix.path }}"
       - name: node2nix update check
         if: ${{ matrix.type == 'node2nix' }}
-        run: nix-shell .github/auto-pr/shell.nix --run "./.github/auto-pr/update-node2nix-package.sh ${{ matrix.path }}"
+        run: nix-shell .github/update/shell.nix --run "./.github/update/update-node2nix-package.sh ${{ matrix.path }}"
       - name: node2nix update check
         if: ${{ matrix.type == 'vgo2nix' }}
-        run: nix-shell .github/auto-pr/shell.nix --run "./.github/auto-pr/post-update-vgo2nix.sh ${{ matrix.path }}"
+        run: nix-shell .github/update/shell.nix --run "./.github/update/post-update-vgo2nix.sh ${{ matrix.path }}"
       - name: open pull request
-        run: nix-shell .github/auto-pr/shell.nix --run "./.github/auto-pr/submit-pull-request.sh ${{ matrix.path }}"
+        run: nix-shell .github/update/shell.nix --run "./.github/update/submit-pull-request.sh ${{ matrix.path }}"
