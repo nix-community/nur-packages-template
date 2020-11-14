@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-toolsdir="$PWD/.github/update"
-source "$toolsdir/utils.sh"
+source "$TOOLS"
 
 pkgdir=$1
 cd "$pkgdir"
@@ -22,6 +21,6 @@ mv package.json.new package.json
 
 # update nix package definition
 node2nix --strip-optional-dependencies 2>&1 | tail
-cp "$toolsdir/node2nix-fix-template.nix" fixed.nix
+cp "$GITDIR/.github/update/node2nix-fix-template.nix" fixed.nix
 
 export_version_vars $old_version $latest_version

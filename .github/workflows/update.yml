@@ -1,5 +1,6 @@
 name: "Check for updates"
 on:
+  workflow_dispatch:
   schedule:
     - cron: "57 7 * * *"
 jobs:
@@ -26,10 +27,10 @@ jobs:
       - id: set-matrix
         name: Find packages
         run: |
-          find pkgs -type f -name github.json  -printf '{"path": "%h", "type": "github"  },' > packages_list
-          find pkgs -type f -name package.json -printf '{"path": "%h", "type": "node2nix"},' >> packages_list
-          find pkgs -type f -name godeps.nix   -printf '{"path": "%h", "type": "vgo2nix" },' >> packages_list
-          echo "::set-output name=matrix::{ include: [ $(cat packages_list) ] }"
+          MATRIX=$(mktemp --tmpdir matrix-XXX.json)
+          nix-shell .github/update/shell.nix --run "generate_matrix | jq -c > $MATRIX"
+          jq . "$MATRIX"
+          echo "::set-output name=matrix::{ \"include\": $(cat $MATRIX) }"
   check-updates:
     needs: list-packages
     strategy:
@@ -38,7 +39,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     runs-on: ubuntu-latest
-    name: ${{matrix.path}} (${{matrix.type}})
+    name: ${{matrix.pkgname}}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2.3.4
@@ -55,13 +56,13 @@ jobs:
         with:
           name: jeremiehuchet
       - name: github update check
-        if: ${{ matrix.type == 'github' }}
-        run: nix-shell .github/update/shell.nix --run "./.github/update/update-github-package.sh ${{ matrix.path }}"
+        if: matrix.github_src
+        run: nix-shell .github/update/shell.nix --run "./.github/update/update-github-package.sh ${{ matrix.pkgdir }}"
       - name: node2nix update check
-        if: ${{ matrix.type == 'node2nix' }}
-        run: nix-shell .github/update/shell.nix --run "./.github/update/update-node2nix-package.sh ${{ matrix.path }}"
-      - name: node2nix update check
-        if: ${{ matrix.type == 'vgo2nix' }}
-        run: nix-shell .github/update/shell.nix --run "./.github/update/post-update-vgo2nix.sh ${{ matrix.path }}"
+        if: matrix.node_src
+        run: nix-shell .github/update/shell.nix --run "./.github/update/update-node2nix-package.sh ${{ matrix.pkgdir }}"
+      - name: vgo2nix post update process
+        if: matrix.vgo2nix
+        run: nix-shell .github/update/shell.nix --run "./.github/update/post-update-vgo2nix.sh ${{ matrix.pkgdir }}"
       - name: open pull request
-        run: nix-shell .github/update/shell.nix --run "./.github/update/submit-pull-request.sh ${{ matrix.path }}"
+        run: nix-shell .github/update/shell.nix --run "./.github/update/submit-pull-request.sh ${{ matrix.pkgdir }}"

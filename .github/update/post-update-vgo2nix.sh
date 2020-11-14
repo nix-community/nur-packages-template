@@ -1,21 +1,19 @@
 #!/usr/bin/env bash
 set -e
 
-source ".github/update/utils.sh"
+source "$TOOLS"
 
-if [ -z "$(git diff)" ] ; then
-  quit "👌 there is no change so no reason to update vendors file"
-fi
+has_changes_or_quit
 
-pkgdir=$(cd "$1" ; pwd)
+pkgdir="$1"
 
 SRC_EXPR="
 with import <nixpkgs> {};
 let github = lib.importJSON ./github.json;
 in fetchFromGitHub {
   inherit (github) owner repo rev sha256;
-};
+}
 "
-SRC_DIR=$(nix-build --expr "$SRC_EXPR")
+SRC_DIR=$(cd "$pkgdir" ; nix-build --expr "$SRC_EXPR")
 
-vgo2nix -dir "$SRC_DIR" -infile "$pkgdir/godeps.nix" -outfile "$pkgdir/godeps.nix"
+vgo2nix -dir "$SRC_DIR" -infile "$PWD/$pkgdir/godeps.nix" -outfile "$PWD/$pkgdir/godeps.nix"
