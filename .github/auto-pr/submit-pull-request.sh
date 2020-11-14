@@ -12,9 +12,6 @@ if [ $new_commits -eq 0 ] ; then
     exit 0
 fi
 
-# make remote "origin" writeable
-git remote set-url --push origin "git@github.com:$GITHUB_REPOSITORY.git"
-
 actual_pr=$(hub pr list -h "update/$pname")
 if [ -z "$actual_pr" ] ; then
   echo "🎉 Opening new pull request"

@@ -29,3 +29,6 @@ git diff --exit-code || fail "🧹 git workspace must be clean"
 # configure git
 git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 git config user.name "Github Actions"
+
+# make remote "origin" writeable
+git remote set-url --push origin "git@github.com:$GITHUB_REPOSITORY.git"
