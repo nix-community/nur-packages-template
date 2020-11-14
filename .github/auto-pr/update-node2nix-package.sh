@@ -24,4 +24,4 @@ mv package.json.new package.json
 node2nix --strip-optional-dependencies 2>&1 | tail
 cp "$toolsdir/node2nix-fix-template.nix" fixed.nix
 
-commit_optional_changes "$old_version" "$latest_version"
+export_version_vars $old_version $latest_version

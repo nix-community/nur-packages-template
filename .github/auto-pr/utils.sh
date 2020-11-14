@@ -10,9 +10,14 @@ fail() {
   exit 1
 }
 
+export_version_vars() {
+  cat - <<EOF >> "$GITHUB_ENV"
+old_version=$1
+new_version=$2
+EOF
+}
+
 commit_optional_changes() {
-  old_version=$1
-  new_version=$2
   pname=$(basename "$PWD")
 
   git diff --exit-code && quit "✅ git workspace is still clean: nothing to update"

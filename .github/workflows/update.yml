@@ -26,8 +26,9 @@ jobs:
       - id: set-matrix
         name: Find packages
         run: |
-          find pkgs -type f -name github.json  -printf '{"path": "%h", "type": "github"},' > packages_list
+          find pkgs -type f -name github.json  -printf '{"path": "%h", "type": "github"  },' > packages_list
           find pkgs -type f -name package.json -printf '{"path": "%h", "type": "node2nix"},' >> packages_list
+          find pkgs -type f -name godeps.nix   -printf '{"path": "%h", "type": "vgo2nix" },' >> packages_list
           echo "::set-output name=matrix::{ include: [ $(cat packages_list) ] }"
   check-updates:
     needs: list-packages
@@ -59,5 +60,8 @@ jobs:
       - name: node2nix update check
         if: ${{ matrix.type == 'node2nix' }}
         run: nix-shell .github/auto-pr/shell.nix --run "./.github/auto-pr/update-node2nix-package.sh ${{ matrix.path }}"
+      - name: node2nix update check
+        if: ${{ matrix.type == 'vgo2nix' }}
+        run: nix-shell .github/auto-pr/shell.nix --run "./.github/auto-pr/post-update-vgo2nix.sh ${{ matrix.path }}"
       - name: open pull request
         run: nix-shell .github/auto-pr/shell.nix --run "./.github/auto-pr/submit-pull-request.sh ${{ matrix.path }}"

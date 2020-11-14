@@ -3,14 +3,15 @@ set -e
 
 pname=$(basename $1)
 
-git log -5 --oneline --graph --decorate --all
-echo ...
-
-new_commits=$(git rev-list --count HEAD ^$GITHUB_SHA)
-if [ $new_commits -eq 0 ] ; then
-    echo "👌 everything is up to date"
-    exit 0
+if [ -s "$(git diff)" ] ; then
+    quit "👌 everything is up to date"
 fi
+
+commit_optional_changes
+git log -5 --oneline --graph --decorate --all
+
+# make remote "origin" writeable
+git remote set-url --push origin "git@github.com:$GITHUB_REPOSITORY.git"
 
 actual_pr=$(hub pr list -h "update/$pname")
 if [ -z "$actual_pr" ] ; then

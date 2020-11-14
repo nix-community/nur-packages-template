@@ -30,4 +30,4 @@ else
   fi
 fi
 
-commit_optional_changes "$old_version" "$new_version"
+export_version_vars $old_version $new_version
