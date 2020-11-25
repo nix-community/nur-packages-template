@@ -9,6 +9,8 @@ in mkDerivation rec {
 
   src = fetchFromGitHub { inherit (github) owner repo rev sha256; };
 
+  patches = [ ./fix-incorrectly-spelled-variable.patch];
+
   installPhase = ''
     install -Dm644 direnvrc "$out/share/nix-direnv/direnvrc"
   '';
