@@ -194,8 +194,8 @@
     fetch = {
       type = "git";
       url = "https://github.com/jfrog/jfrog-cli-core";
-      rev = "v1.1.1";
-      sha256 = "1zk364wd6kl85gk265ni1irbhmrwj33n0aqdmgzna57586crglwp";
+      rev = "v1.1.2";
+      sha256 = "0f0s6850c8nd6js23i9rl0129z7xb35zqm50bnwn31yqyrd7psa1";
     };
   }
   {
