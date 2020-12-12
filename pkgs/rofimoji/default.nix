@@ -9,7 +9,7 @@ let
   };
 in buildPythonApplication rec {
   pname = "rofimoji";
-  version = "4.1.0";
+  version = github.ref;
 
   src = fetchFromGitHub {
     inherit (github) owner repo rev sha256;
