@@ -1,5 +1,5 @@
 # imported from https://github.com/NixOS/nixpkgs/blob/0cff30bb44063c627dd033ccca8155ace853d4d9/pkgs/development/python-modules/pyxdg/default.nix
-{ stdenv
+{ lib
 , buildPythonPackage
 , fetchPypi
 , fetchpatch
@@ -25,7 +25,7 @@ buildPythonPackage rec {
     })
   ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     homepage = "http://freedesktop.org/wiki/Software/pyxdg";
     description = "Contains implementations of freedesktop.org standards";
     license = licenses.lgpl2;

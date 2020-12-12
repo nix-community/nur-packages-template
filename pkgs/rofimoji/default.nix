@@ -1,8 +1,12 @@
-{ lib, python3Packages, fetchFromGitHub, rofi, xdotool, xsel }:
+{ pkgs, lib, python3Packages, fetchFromGitHub, rofi, xdotool, xsel, fetchpatch}:
 
 with python3Packages;
 
-let github = lib.importJSON ./github.json;
+let
+  github = lib.importJSON ./github.json;
+  pyxdg-0_26 = pkgs.callPackage ./pyxdg-0.26.nix {
+    inherit lib buildPythonPackage fetchPypi fetchpatch;
+  };
 in buildPythonApplication rec {
   pname = "rofimoji";
   version = "4.1.0";
@@ -11,7 +15,7 @@ in buildPythonApplication rec {
     inherit (github) owner repo rev sha256;
   };
 
-  propagatedBuildInputs = [ pyxdg ConfigArgParse rofi xdotool xsel ];
+  propagatedBuildInputs = [ pyxdg-0_26 ConfigArgParse rofi xdotool xsel ];
 
   doCheck = false;
 
