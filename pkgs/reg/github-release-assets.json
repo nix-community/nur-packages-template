@@ -1,0 +1,128 @@
+{
+  "owner": "genuinetools",
+  "repo": "reg",
+  "ref": "v0.16.1",
+  "check_cmd": "sed -i 's| /github/workspace/cross/reg-| reg-|g' *.sha256 ; sha256sum --check reg-*.sha256",
+  "assets": {
+    "reg-darwin-386": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-darwin-386",
+      "hash": "sha256:12ib5b4dyb24v1gfga2xjpi7yvz65lvyf2lr2hxpys73rk72m629"
+    },
+    "reg-darwin-386.md5": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-darwin-386.md5",
+      "hash": "sha256:08xyf0v0x307g717wyjl1qg1d95mx635ndkqnzqqpr5ricv7xzjd"
+    },
+    "reg-darwin-386.sha256": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-darwin-386.sha256",
+      "hash": "sha256:1mwlq5bq830p8dapqnmx1kc28x2fzbh5cpln8cwxxkjdmk4ha0nd"
+    },
+    "reg-darwin-amd64": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-darwin-amd64",
+      "hash": "sha256:1hmijqq4lf0fdp5xvqf76ixg6dxgpsdzqlj7nzjqw3k4mmbaqs17"
+    },
+    "reg-darwin-amd64.md5": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-darwin-amd64.md5",
+      "hash": "sha256:0qwvf9z8wdn6cza93z494mh8fp9iah4icny1mm9w2rdn5bp5gyji"
+    },
+    "reg-darwin-amd64.sha256": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-darwin-amd64.sha256",
+      "hash": "sha256:00b1893cpfksayrikxv29jrpdf6f47ri35cbhqazyznzgjlnzich"
+    },
+    "reg-freebsd-386": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-freebsd-386",
+      "hash": "sha256:051g95wj1lslscsdvapdangqv1drnc2dqvns0f1ik04ygs0pjqkw"
+    },
+    "reg-freebsd-386.md5": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-freebsd-386.md5",
+      "hash": "sha256:0z6sf12cdwxgmsm6qdy67mj2s8r7ml49mmz5x2pjlf5asyrlwwc1"
+    },
+    "reg-freebsd-386.sha256": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-freebsd-386.sha256",
+      "hash": "sha256:09kl505slf01b77wfbqsgylalphhnca58ky6i26pdziyqhsng1s8"
+    },
+    "reg-freebsd-amd64": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-freebsd-amd64",
+      "hash": "sha256:1x7byg4wclj4gw20081gajhkml2fmygdqlnkqb3rr8l55snwp0aq"
+    },
+    "reg-freebsd-amd64.md5": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-freebsd-amd64.md5",
+      "hash": "sha256:00hsymq791bamn2laspknlrh1fd9qn0cpsfma1s1mb8snxbm4k92"
+    },
+    "reg-freebsd-amd64.sha256": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-freebsd-amd64.sha256",
+      "hash": "sha256:09sfxf63rsjmdlxc2s5jcbvvfm5j10jyyn1s64sllmyz3mc79rm2"
+    },
+    "reg-linux-386": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-linux-386",
+      "hash": "sha256:1gkf434x9v52yx84bfzj8jj9sm5g45vxhqn34k0zqcpg0lqmpjlp"
+    },
+    "reg-linux-386.md5": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-linux-386.md5",
+      "hash": "sha256:1nrb80yj3j89hv3xbb2gmfhbynkay5cqlizbb8zpy59vxs50f5pm"
+    },
+    "reg-linux-386.sha256": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-linux-386.sha256",
+      "hash": "sha256:0mibilja8y1isfn01y0c8yhlbflygwffy3kx7cy6gn8hsfspbsyv"
+    },
+    "reg-linux-amd64": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-linux-amd64",
+      "hash": "sha256:0a72havqd0x9k5cgv9y63j2lg6sp9ylm9grj8z1xib14aby3gs5d"
+    },
+    "reg-linux-amd64.md5": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-linux-amd64.md5",
+      "hash": "sha256:0s9gk1i2yxpzhcknzdn9f6iblp6b2272az7bd4bnhygmjba82jpm"
+    },
+    "reg-linux-amd64.sha256": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-linux-amd64.sha256",
+      "hash": "sha256:1hw49mzkrmsdprz7jcbiphmfjzl9c8gadfyfa0cyh1ax26yf0dqy"
+    },
+    "reg-linux-arm": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-linux-arm",
+      "hash": "sha256:1zf80ky4yy8xpicfa3lw3605lhdivxxgwag3bj9gd499hl076nja"
+    },
+    "reg-linux-arm64": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-linux-arm64",
+      "hash": "sha256:0ypvzx36c66dcq49n7ds6c3w657kbrn0nsx8zf45xiz6whxd7six"
+    },
+    "reg-linux-arm64.md5": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-linux-arm64.md5",
+      "hash": "sha256:0mgy6l76a2s96yp3n7m1n4fwgbv6qb7gbwslfd8jd1ajcs27rkba"
+    },
+    "reg-linux-arm64.sha256": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-linux-arm64.sha256",
+      "hash": "sha256:08vnqlqsrfj0dp1v9cwazxilgkqpqa2bwrmg6bvyh19q6hbn8pkk"
+    },
+    "reg-linux-arm.md5": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-linux-arm.md5",
+      "hash": "sha256:18jvkjgjy6k8wr5g70g29069lsaydqfgwf3nbm9c6qmww914c2qd"
+    },
+    "reg-linux-arm.sha256": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-linux-arm.sha256",
+      "hash": "sha256:1wa3rv6wym97qw5hn4zgcxjrmd1nmss4wh1gzl46qvvgpvxgz7gn"
+    },
+    "reg-windows-386": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-windows-386",
+      "hash": "sha256:0qhnmvyi4w4xsvgkq5fkmw824lcsbaf94nj2b8bgwq2pprns9di4"
+    },
+    "reg-windows-386.md5": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-windows-386.md5",
+      "hash": "sha256:1nymmnn03xzy2mippkk8k79mvkr0ypybdvjgisa112kkd4d1vkil"
+    },
+    "reg-windows-386.sha256": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-windows-386.sha256",
+      "hash": "sha256:1z4dzx61i24pbf0g1hark96lx1pbfi0xr6acalhg7scf4wam9c71"
+    },
+    "reg-windows-amd64": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-windows-amd64",
+      "hash": "sha256:0p2nsjk6byj32z6d3xkc77fd9fwgrvr2qz63iblm51f80zfs9ci3"
+    },
+    "reg-windows-amd64.md5": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-windows-amd64.md5",
+      "hash": "sha256:1g1xx28w5bawcysn0za01g9y5mn99qnrfyv1ljkqsh72qk23jw6g"
+    },
+    "reg-windows-amd64.sha256": {
+      "url": "https://github.com/genuinetools/reg/releases/download/v0.16.1/reg-windows-amd64.sha256",
+      "hash": "sha256:0na9z47j6jjbabm4drb75l393i5ccxsz806srs7xgqpw3xb8j9rq"
+    }
+  }
+}
