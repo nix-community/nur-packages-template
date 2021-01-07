@@ -59,8 +59,7 @@ rec {
     cirq = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/cirq { };
     cvxpy = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/cvxpy { inherit ecos osqp scs; };
     ecos = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/ecos { };
-    qdldl = pkgs.python3Packages.callPackage ./pkgs/python-modules/qdldl { };
-    osqp = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/osqp { inherit qdldl; };
+    osqp = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/osqp { };
     scs = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/scs { scs = lib-scs; };
 
     # NOTE: remove once makes release version
