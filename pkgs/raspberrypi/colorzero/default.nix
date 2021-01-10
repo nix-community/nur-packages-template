@@ -13,6 +13,7 @@ buildPythonPackage rec {
   propagatedBuildInputs = [];
 
   checkInputs = [ pytestCheckHook ];
+  dontUseSetuptoolsCheck = true;  # for nixpkgs < 20.09
   pythonImportsCheck = [ "colorzero" ];
 
   meta = with lib; {
