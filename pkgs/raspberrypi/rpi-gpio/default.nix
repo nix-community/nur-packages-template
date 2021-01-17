@@ -15,7 +15,7 @@ buildPythonPackage rec {
 
   # Tests require custom circuit hooked up
   doCheck = false;
-  pythonImportsCheck = [ "RPi.GPIO" ];
+  # pythonImportsCheck = [ "RPi.GPIO" ];
 
   meta = with lib; {
     description = "A module to control Raspberry Pi GPIO channels";
