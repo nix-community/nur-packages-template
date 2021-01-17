@@ -1,6 +1,6 @@
 { lib
 , buildPythonPackage
-, sources ? import ../../../nix/sources.nix { }
+, fetchFromGitHub
 , libgpiod
 , pytestCheckHook
 }:
@@ -9,7 +9,12 @@ buildPythonPackage rec {
   pname = "rpi-gpio2";
   version = "0.3.0a3";
 
-  src = sources.rpi-gpio2;
+  src = fetchFromGitHub {
+    owner = "underground-software";
+    repo = "rpi.gpio2";
+    rev = "v${version}";
+    sha256 = "11z6g95njfn9rwcd8d2vblj8mi05bglhdiwxv5lgmq5yfc91nx7h";
+  };
 
   propagatedBuildInputs = [ libgpiod ];
 

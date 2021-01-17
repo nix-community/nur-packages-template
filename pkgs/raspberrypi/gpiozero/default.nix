@@ -1,6 +1,6 @@
-{ sources ? import ../../../nix/sources.nix {}
-, lib
+{ lib
 , buildPythonPackage
+, fetchFromGitHub
 , colorzero
 , withPigpio ? true, pigpio-py
 , withRpiGpio ? false, rpi-gpio
@@ -13,7 +13,12 @@ buildPythonPackage rec {
   pname = "gpiozero";
   version = "1.5.1";
 
-  src = sources.gpiozero;
+  src = fetchFromGitHub {
+    owner = "gpiozero";
+    repo = pname;
+    rev = "v${version}";
+    sha256 = "17fr7bilrhrb6r7djb41g317lm864kd4bkrl22aqhk4236sqq9ym";
+  };
 
   propagatedBuildInputs = [ colorzero ]
     ++ lib.optionals (withPigpio) [ pigpio-py ]

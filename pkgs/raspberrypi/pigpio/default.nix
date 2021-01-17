@@ -1,15 +1,20 @@
-{ sources ? import ../../../nix/sources.nix {}
-, stdenv
+{ stdenv
 , lib
+, fetchFromGitHub
 , cmake
 }:
 
 # C libraries & daemon for pigpio
-stdenv.mkDerivation {
+stdenv.mkDerivation rec {
   pname = "pigpio";
   version = "78";
 
-  src = sources.pigpio;
+  src = fetchFromGitHub {
+    owner = "joan2937";
+    repo = "pigpio";
+    rev = "v${version}";
+    sha256 = "0x628bsjb8iqnjvmz3bs0k0jc9m14yq0grfnsnwr53fs6fprh0wr";
+  };
 
   nativeBuildInputs = [ cmake ];
 

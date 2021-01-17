@@ -1,6 +1,6 @@
 { stdenv
 , lib
-, sources ? import ../../../nix/sources.nix { }
+, fetchFromGitHub
 , python3
 , rpi-gpio
 , libffi
@@ -12,7 +12,12 @@ stdenv.mkDerivation {
   # Argon One Package: Fan & Power Button Control
   pname = "argonone-rpi4";
   version = "unstable-2020-09-14";
-  src = sources.argonone-rpi4;
+  src = fetchFromGitHub {
+    owner = "elrondo46";
+    repo = "argonone";
+    rev = "66a51591c3c1da81e0b2078aa0deb006406c24e8";
+    sha256 = "14l8fwwj81jsisrvrscg47i1kwbf4j35yjzzk4wl95dcz3s4y4rm";
+  };
   # propagatedBuildInputs = pkgs.python3.withPackages( ps: [ ps. ]);
 
   nativeBuildInputs = [ python3.pkgs.wrapPython ];

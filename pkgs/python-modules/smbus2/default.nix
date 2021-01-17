@@ -1,6 +1,6 @@
-{ sources ? import ../../../nix/sources.nix {}
-, buildPythonPackage
+{ buildPythonPackage
 , lib
+, fetchFromGitHub
 , nose
 }:
 
@@ -8,7 +8,12 @@ buildPythonPackage rec {
   pname = "smbus2";
   version = "0.4.0";
 
-  src = sources.smbus2;
+  src = fetchFromGitHub {
+    owner = "kplindegaard";
+    repo = pname;
+    rev = version;
+    sha256 = "1dfns2dmv81g87yp2l5qm9a9v8ayi9qfwzzw5i216kg6l3zba2fq";
+  };
 
   propagatedBuildInputs = [ ];
 
