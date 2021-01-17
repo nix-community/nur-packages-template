@@ -62,7 +62,11 @@ jobs:
       id: build_uncached
       # if this errors, continue to verbose build.
       continue-on-error: true
-      run: NIXPKGS_ALLOW_UNFREE=1 nix run -I 'nixpkgs=channel:nixos-unstable' nixpkgs.nix-build-uncached -c nix-build-uncached ci.nix -A cacheOutputs
+      # Allow building unfree packages & unsupported systems for CI purposes
+      env:
+          NIXPKGS_ALLOW_UNFREE: 1
+          NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM: 1
+      run: nix run -I 'nixpkgs=channel:nixos-unstable' nixpkgs.nix-build-uncached -c nix-build-uncached ci.nix -A cacheOutputs
     # nix-build-uncached uses "nix build" internally, which only outputs last 10 lines of failure.
     # To get more verbose error that we can debug, reruns any failed derivations to get full output
     # Is this nice to the builder? No, but it's better than wasting time guessing at failed builds.
