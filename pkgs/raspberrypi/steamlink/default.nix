@@ -42,6 +42,6 @@ stdenv.mkDerivation rec {
     license = licenses.unfree;
     homepage = "TODO";
     maintainers = [ maintainers.drewrisinger ];
-    platforms = [ "aarch64-linux" "armv7-linux" "armv6-linux" ];
+    platforms = [ "aarch64-linux" "armv7l-linux" "armv6l-linux" ];
   };
 }
