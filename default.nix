@@ -8,6 +8,9 @@
 
 { pkgs ? import <nixpkgs> {} }:
 
+let
+  sources = import ./nix/sources.nix { };
+in
 rec {
   # The `lib`, `modules`, and `overlay` names are special
   lib = import ./lib { inherit pkgs; }; # functions
@@ -25,6 +28,14 @@ rec {
   xcfun = pkgs.callPackage ./pkgs/libraries/xcfun { };
   muparserx = pkgs.callPackage ./pkgs/libraries/muparserx { };
   tuna = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/tuna { };
+
+  # Raspberry Pi Packages
+  raspberryPi = pkgs.recurseIntoAttrs {
+    argonone-rpi4 = pkgs.callPackage ./pkgs/raspberrypi/argonone-rpi4 { inherit (python3Packages) rpi-gpio sources; };
+    pigpio-c = pkgs.callPackage ./pkgs/raspberrypi/pigpio { inherit sources; };
+    steamlink = pkgs.callPackage ./pkgs/raspberrypi/steamlink {};
+    vc-log = pkgs.callPackage ./pkgs/raspberrypi/vc-log { inherit sources; };
+  };
 
   python3Packages = pkgs.recurseIntoAttrs rec {
     # New packages NOT in NixOS/nixpkgs (and likely never will be)
@@ -105,6 +116,16 @@ rec {
     };
     qiskit-terraNoVisual = qiskit-terra.override { withVisualization = false; };
     qiskit-ibmq-providerNoVisual = qiskit-ibmq-provider.override { withVisualization = false; qiskit-terra = qiskit-terraNoVisual; matplotlib = null; };
+
+    # Raspberry Pi Packages
+    colorzero = pkgs.python3Packages.callPackage ./pkgs/raspberrypi/colorzero { inherit sources; };
+    gpiozero = pkgs.python3Packages.callPackage ./pkgs/raspberrypi/gpiozero {
+      inherit colorzero pigpio-py rpi-gpio sources;
+    };
+    pigpio-py = pkgs.python3.pkgs.callPackage ./pkgs/raspberrypi/pigpio/python.nix { inherit (raspberryPi) pigpio-c; };
+    rpi-gpio = pkgs.python3Packages.callPackage ./pkgs/raspberrypi/rpi-gpio { };
+    rpi-gpio2 = pkgs.python3Packages.callPackage ./pkgs/raspberrypi/rpi-gpio2 { inherit sources; };
+    smbus2 = pkgs.python3.pkgs.callPackage ./pkgs/python-modules/smbus2 { inherit sources; };
   };
 
 }
