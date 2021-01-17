@@ -18,13 +18,12 @@ stdenv.mkDerivation {
     rev = "66a51591c3c1da81e0b2078aa0deb006406c24e8";
     sha256 = "14l8fwwj81jsisrvrscg47i1kwbf4j35yjzzk4wl95dcz3s4y4rm";
   };
-  # propagatedBuildInputs = pkgs.python3.withPackages( ps: [ ps. ]);
 
   nativeBuildInputs = [ python3.pkgs.wrapPython ];
 
   buildInputs = [ libffi lm_sensors ];
 
-  propagatedBuildInputs = [ (python3.withPackages(ps: [ ps.smbus-cffi rpi-gpio ])) ];
+  propagatedBuildInputs = [ (python3.withPackages(ps: [ rpi-gpio ])) ];
 
   installPhase = ''
     echo "Copying ArgonOne files to Out Dir"
