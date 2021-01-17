@@ -1,40 +1,4 @@
 {
-    "argonone-rpi4": {
-        "branch": "master",
-        "description": "Argon One Service and Control Scripts por Raspberry Pi 4",
-        "homepage": "",
-        "owner": "elrondo46",
-        "repo": "argonone",
-        "rev": "66a51591c3c1da81e0b2078aa0deb006406c24e8",
-        "sha256": "14l8fwwj81jsisrvrscg47i1kwbf4j35yjzzk4wl95dcz3s4y4rm",
-        "type": "tarball",
-        "url": "https://github.com/elrondo46/argonone/archive/66a51591c3c1da81e0b2078aa0deb006406c24e8.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "colorzero": {
-        "branch": "master",
-        "description": "Another color manipulation library for Python (originally from picamera)",
-        "homepage": "https://colorzero.readthedocs.io/",
-        "owner": "waveform80",
-        "repo": "colorzero",
-        "rev": "b4ec2edf416a80eaff7ef55a42a0dbeccf785d12",
-        "sha256": "1zlnkri8wrpk447yys2ihi3m2w4k3ppqbhqlsix2xpam3qc4lagi",
-        "type": "tarball",
-        "url": "https://github.com/waveform80/colorzero/archive/b4ec2edf416a80eaff7ef55a42a0dbeccf785d12.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "gpiozero": {
-        "branch": "master",
-        "description": "A simple interface to GPIO devices with Raspberry Pi",
-        "homepage": "https://gpiozero.readthedocs.io/",
-        "owner": "gpiozero",
-        "repo": "gpiozero",
-        "rev": "3b9b78578dc87aa2f8d0dad2713666132fca4ac0",
-        "sha256": "10zjxh23wwqhm22rnzfdknlk5flpwrbv64974fh9vg1w3cq64m5k",
-        "type": "tarball",
-        "url": "https://github.com/gpiozero/gpiozero/archive/3b9b78578dc87aa2f8d0dad2713666132fca4ac0.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "niv": {
         "branch": "master",
         "description": "Easy dependency management for Nix projects",
@@ -45,49 +9,6 @@
         "sha256": "1kpsvc53x821cmjg1khvp1nz7906gczq8mp83664cr15h94sh8i4",
         "type": "tarball",
         "url": "https://github.com/nmattia/niv/archive/ba57d5a29b4e0f2085917010380ef3ddc3cf380f.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "pigpio": {
-        "branch": "master",
-        "description": "pigpio is a C library for the Raspberry which allows control of the General Purpose Input Outputs (GPIO).",
-        "homepage": "",
-        "owner": "joan2937",
-        "repo": "pigpio",
-        "rev": "cc17196c7586c3625ac8adf8f34838d320ffeda6",
-        "sha256": "0x628bsjb8iqnjvmz3bs0k0jc9m14yq0grfnsnwr53fs6fprh0wr",
-        "type": "tarball",
-        "url": "https://github.com/joan2937/pigpio/archive/cc17196c7586c3625ac8adf8f34838d320ffeda6.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "rpi-gpio2": {
-        "branch": "master",
-        "description": null,
-        "homepage": null,
-        "owner": "underground-software",
-        "repo": "rpi.gpio2",
-        "rev": "127a49d06eae0ce2eb2dabe0fdba7fce2de11d50",
-        "sha256": "1bw7k0a5s3c9drmdcyramymqym259n0iji1rbnnvby64jg0d5is6",
-        "type": "tarball",
-        "url": "https://github.com/underground-software/rpi.gpio2/archive/127a49d06eae0ce2eb2dabe0fdba7fce2de11d50.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "rpi-vc-log": {
-        "branch": "master",
-        "ref": "master",
-        "repo": "https://git.venev.name/hristo/rpi-vc-log.git",
-        "rev": "3d21b290e1058ed80bb64b9524d21cc0fb1c6c8e",
-        "type": "git"
-    },
-    "smbus2": {
-        "branch": "master",
-        "description": "A drop-in replacement for smbus-cffi/smbus-python in pure Python",
-        "homepage": null,
-        "owner": "kplindegaard",
-        "repo": "smbus2",
-        "rev": "dde54d4ae8c223f033d3f144830cad240c0a1682",
-        "sha256": "1w5ws1sqbqp2f0b7mbqqaiadskpz7jsj0kkw5zy37zb6akld9ng7",
-        "type": "tarball",
-        "url": "https://github.com/kplindegaard/smbus2/archive/dde54d4ae8c223f033d3f144830cad240c0a1682.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
