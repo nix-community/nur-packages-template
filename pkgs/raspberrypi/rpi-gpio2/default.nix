@@ -1,10 +1,14 @@
-{ lib
+{ stdenv
+, lib
 , buildPythonPackage
 , fetchFromGitHub
 , libgpiod
 , pytestCheckHook
 }:
 
+let
+  builderIsRaspberryPi = (stdenv.buildPlatform.isAarch64);
+in
 buildPythonPackage rec {
   pname = "rpi-gpio2";
   version = "0.3.0a3";
@@ -19,8 +23,9 @@ buildPythonPackage rec {
   propagatedBuildInputs = [ libgpiod ];
 
   checkInputs = [ pytestCheckHook ];
-
-  pythonImportsCheck = [ "rpi.gpio" ];
+  pythonImportsCheck = [ "RPi.GPIO" ];
+  doCheck = builderIsRaspberryPi;
+  dontUsePythonImportsCheck = !doCheck; # import only works on raspberry pi
 
   meta = with lib; {
     description = "Compatibility layer between RPi.GPIO syntax and libgpiod semantics";
