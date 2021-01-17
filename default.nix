@@ -28,7 +28,7 @@ rec {
 
   # Raspberry Pi Packages
   raspberryPi = pkgs.recurseIntoAttrs {
-    argonone-rpi4 = pkgs.callPackage ./pkgs/raspberrypi/argonone-rpi4 { inherit (python3Packages) rpi-gpio; };
+    argonone-rpi4 = pkgs.callPackage ./pkgs/raspberrypi/argonone-rpi4 { inherit (python3Packages) rpi-gpio smbus2; };
     pigpio-c = pkgs.callPackage ./pkgs/raspberrypi/pigpio { };
     steamlink = pkgs.callPackage ./pkgs/raspberrypi/steamlink {};
     vc-log = pkgs.callPackage ./pkgs/raspberrypi/vc-log { };
