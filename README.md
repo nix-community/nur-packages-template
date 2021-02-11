@@ -29,6 +29,8 @@ Some nixos packages automatically updated.
 
 **[pyrandr](pkgs/pyrandr)** is wrapper for xrandr aims to provide a simpler CLI.
 
+**[reg](pkgs/reg)** is a Docker registry v2 command line client and repo listing generator with security checks.
+
 **[rofi-bookmarks](pkgs/rofi-bookmarks)** provides a list of browser bookmarks to choose from in rofi.
 
 **[rofimoji](pkgs/rofimoji)** provides an emoji picker in rofi.
