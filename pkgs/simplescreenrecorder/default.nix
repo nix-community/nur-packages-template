@@ -1,14 +1,14 @@
-{ stdenv, pkgs, fetchurl, pkgconfig, cmake, ninja
+{ lib, stdenv, mkDerivation, fetchFromGitHub, pkgconfig, cmake, ninja
+, qtbase, qtx11extras, qttools, libX11, libXext, libXfixes, libXinerama, libxcb
+, alsaLib, ffmpeg_3, libjack2, libv4l, libGLU, libGL, libpulseaudio
 }:
 
-stdenv.mkDerivation rec {
+let github = lib.importJSON ./github.json;
+in mkDerivation rec {
   pname = "simplescreenrecorder";
-  version = "0.3.11";
+  version = "0.4.3";
 
-  src = fetchurl {
-    url = "https://github.com/MaartenBaert/ssr/archive/${version}.tar.gz";
-    sha256 = "0l6irdadqpajvv0dj3ngs1231n559l0y1pykhs2h7526qm4w7xal";
-  };
+  src = fetchFromGitHub { inherit (github) owner repo rev sha256; };
 
   cmakeFlags = [ "-DWITH_QT5=TRUE" ];
 
@@ -23,14 +23,14 @@ stdenv.mkDerivation rec {
   '';
 
   nativeBuildInputs = [ pkgconfig cmake ninja ];
-  buildInputs = with pkgs; [
+  buildInputs = [
     alsaLib ffmpeg_3 libjack2
-    xorg.libX11 xorg.libXext xorg.libXfixes
-    libGLU libGL libpulseaudio
-    qt5.qtbase qt5.qtx11extras
+    libX11 libXext libXfixes libXinerama libxcb
+    libv4l libGLU libGL libpulseaudio
+    qtbase qtx11extras qttools
   ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "A screen recorder for Linux";
     homepage = "https://www.maartenbaert.be/simplescreenrecorder";
     license = licenses.gpl3;
