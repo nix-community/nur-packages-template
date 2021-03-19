@@ -19,7 +19,6 @@
   ccat = pkgs.callPackage ./pkgs/ccat { };
   dbvisualizer = pkgs.callPackage ./pkgs/dbvisualizer { };
   gitmoji-cli = pkgs.callPackage ./pkgs/node-packages/gitmoji-cli/fixed.nix { };
-  jfrog-cli = pkgs.callPackage ./pkgs/jfrog-cli { };
   kubeone = pkgs.callPackage ./pkgs/kubeone { };
   nix-direnv = pkgs.callPackage ./pkgs/nix-direnv { };
   networkmanager-ssh = pkgs.callPackage ./pkgs/networkmanager-ssh { };
