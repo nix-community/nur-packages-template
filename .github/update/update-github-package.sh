@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e
+set -x
 
 source "$TOOLS"
 
@@ -21,7 +22,7 @@ if [ -n "$latest_rev" ] ; then
   fi
 else
   # it's not a branch, assuming we use the latest released tag
-  latest_tag=$(hub api "repos/$owner/$repo/releases/latest" | jq -r .tag_name)
+  latest_tag=$(hub api "repos/$owner/$repo/tags" | jq -r '.[0].name')
   if [ "$refname" != "$latest_tag" ] ; then
     old_version=$refname
     new_version=$latest_tag
