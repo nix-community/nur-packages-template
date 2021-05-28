@@ -62,7 +62,7 @@ jobs:
         if: matrix.github_rel_assets
         run: nix-shell .github/update/shell.nix --run "./.github/update/update-github-release-assets.sh ${{ matrix.pkgdir }}"
       - name: node2nix update check
-        if: matrix.node_src
+        if: matrix.npm_src
         run: nix-shell .github/update/shell.nix --run "./.github/update/update-node2nix-package.sh ${{ matrix.pkgdir }}"
       - name: vgo2nix post update process
         if: matrix.vgo2nix
