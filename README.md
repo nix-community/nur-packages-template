@@ -7,8 +7,6 @@ Some nixos packages automatically updated.
 
 **[any-proxy](pkgs/any-proxy)** is a server that can transparently proxy any tcp connection through an upstream proxy server.
 
-**[bazarr](pkgs/bazarr)** is a companion application to Sonarr and Radarr. It manages and downloads subtitles.
-
 **[ccat](pkgs/ccat)** works similar to cat but displays content with syntax highlighting.
 
 **[dbvisualizer](pkgs/dbvisualizer)** is a tool to access databases.

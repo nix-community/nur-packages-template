@@ -15,7 +15,6 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   any-proxy = pkgs.callPackage ./pkgs/any-proxy { };
-  bazarr = pkgs.callPackage ./pkgs/bazarr { };
   ccat = pkgs.callPackage ./pkgs/ccat { };
   dbvisualizer = pkgs.callPackage ./pkgs/dbvisualizer { };
   gitmoji-cli = pkgs.callPackage ./pkgs/node-packages/gitmoji-cli/fixed.nix { };

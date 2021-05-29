@@ -1,8 +1,0 @@
-{
-  "owner": "morpheus65535",
-  "repo": "bazarr",
-  "rev": "fc9f7772b3b6364b9f92fc9bada9d7cabb8047e1",
-  "sha256": "0ggc8bm8g8aydaq1xmywvasxdbxbfkg8ygcy8r9f82pl9ikhb7x7",
-  "fetchSubmodules": true,
-  "ref": "v0.9.3"
-}
