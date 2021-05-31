@@ -346,15 +346,6 @@ let
         sha1 = "80a4dd323748384bfa248083622aedec982adff3";
       };
     };
-    "decompress-response-4.2.1" = {
-      name = "decompress-response";
-      packageName = "decompress-response";
-      version = "4.2.1";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/decompress-response/-/decompress-response-4.2.1.tgz";
-        sha512 = "jOSne2qbyE+/r8G1VU+G/82LBs2Fs4LAsTiLSHOCOMZQl2OKZ6i8i4IyHemTe+/yIXOtTcRQMzPcgyhoFlqPkw==";
-      };
-    };
     "decompress-response-6.0.0" = {
       name = "decompress-response";
       packageName = "decompress-response";
@@ -362,6 +353,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/decompress-response/-/decompress-response-6.0.0.tgz";
         sha512 = "aW35yZM6Bb/4oJlZncMH2LCoZtJXTRxES17vE3hoRiowU2kWHaJKFkSBDnDR+cm9J+9QhXmREyIfv0pji9ejCQ==";
+      };
+    };
+    "define-lazy-prop-2.0.0" = {
+      name = "define-lazy-prop";
+      packageName = "define-lazy-prop";
+      version = "2.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/define-lazy-prop/-/define-lazy-prop-2.0.0.tgz";
+        sha512 = "Ds09qNh8yw3khSjiJjiUInaGX9xlqZDY7JVryGxdxV7NPeuqQfplOpQ66yJFZut3jLa5zOwkXw1g9EI2uKh4Og==";
       };
     };
     "dlnacasts-0.1.0" = {
@@ -479,15 +479,6 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/get-browser-rtc/-/get-browser-rtc-1.1.0.tgz";
         sha512 = "MghbMJ61EJrRsDe7w1Bvqt3ZsBuqhce5nrn/XAwgwOXhcsz53/ltdxOse1h/8eKXj5slzxdsz56g5rzOFSGwfQ==";
-      };
-    };
-    "get-stdin-7.0.0" = {
-      name = "get-stdin";
-      packageName = "get-stdin";
-      version = "7.0.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/get-stdin/-/get-stdin-7.0.0.tgz";
-        sha512 = "zRKcywvrXlXsA0v0i9Io4KDRaAw7+a1ZpjRwl9Wox8PFlVCCHra7E9c4kqXCoCM9nR5tBkaTTZRBoCm60bFqTQ==";
       };
     };
     "get-stdin-8.0.0" = {
@@ -734,15 +725,6 @@ let
         sha512 = "PfOXfDN9GnUjlNHjjxKQuMxPC8s12iSrnmg+Ff1BU1uLn7S1BFAKzpZCu6Gwg3WsCUvTZrZoDSHvy6B/j+N4/Q==";
       };
     };
-    "magnet-uri-5.4.0" = {
-      name = "magnet-uri";
-      packageName = "magnet-uri";
-      version = "5.4.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/magnet-uri/-/magnet-uri-5.4.0.tgz";
-        sha512 = "ZpqciThlbvE6KkyT5oxAup/6CwjePw1hdtR8NU5+vq2hn9Sp5b7w3bRiJRvo9fMHUj2dWSuVCdkqt9p4ed1V9Q==";
-      };
-    };
     "magnet-uri-6.2.0" = {
       name = "magnet-uri";
       packageName = "magnet-uri";
@@ -795,15 +777,6 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/mimic-response/-/mimic-response-1.0.1.tgz";
         sha512 = "j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ==";
-      };
-    };
-    "mimic-response-2.1.0" = {
-      name = "mimic-response";
-      packageName = "mimic-response";
-      version = "2.1.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/mimic-response/-/mimic-response-2.1.0.tgz";
-        sha512 = "wXqjST+SLt7R009ySCglWBCFpjUygmCIfD790/kVbiGmUgfYGuB14PiTd5DwVxSV4NcYHjzMkoj5LjQZwTQLEA==";
       };
     };
     "mimic-response-3.1.0" = {
@@ -968,13 +941,13 @@ let
         sha1 = "583b1aa775961d4b113ac17d9c50baef9dd76bd1";
       };
     };
-    "open-7.4.2" = {
+    "open-8.2.0" = {
       name = "open";
       packageName = "open";
-      version = "7.4.2";
+      version = "8.2.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/open/-/open-7.4.2.tgz";
-        sha512 = "MVHddDVweXZF3awtlAS+6pgKLlm/JgxZ90+/NBurBoQctVOOB/zDdVjcyPzQ+0laDGbsWgrRkflI65sQeOgT9Q==";
+        url = "https://registry.npmjs.org/open/-/open-8.2.0.tgz";
+        sha512 = "O8uInONB4asyY3qUcEytpgwxQG3O0fJ/hlssoUHsBboOIRVZzT6Wq+Rwj5nffbeUhOdMjpXeISpDDzHCMRDuOQ==";
       };
     };
     "package-json-versionify-1.0.4" = {
@@ -984,15 +957,6 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/package-json-versionify/-/package-json-versionify-1.0.4.tgz";
         sha1 = "5860587a944873a6b7e6d26e8e51ffb22315bf17";
-      };
-    };
-    "parse-torrent-7.1.3" = {
-      name = "parse-torrent";
-      packageName = "parse-torrent";
-      version = "7.1.3";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/parse-torrent/-/parse-torrent-7.1.3.tgz";
-        sha512 = "to8zT7+o6bVTyP35r2QgG1svuFGMFO1mE6ri1oWHgL9tlgnOtfjmfHmA3mOuP9HTIU/8OiZw0NG5zbyqVLxhvA==";
       };
     };
     "parse-torrent-9.1.3" = {
@@ -1245,15 +1209,6 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/simple-get/-/simple-get-2.8.1.tgz";
         sha512 = "lSSHRSw3mQNUGPAYRqo7xy9dhKmxFXIjLjp4KHpf99GEH2VH7C3AM+Qfx6du6jhfUi6Vm7XnbEVEf7Wb6N8jRw==";
-      };
-    };
-    "simple-get-3.1.0" = {
-      name = "simple-get";
-      packageName = "simple-get";
-      version = "3.1.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/simple-get/-/simple-get-3.1.0.tgz";
-        sha512 = "bCR6cP+aTdScaQCnQKbPKtJOKDp/hj9EDLJo3Nw4y1QksqaovlW/bnptB6/c1e+qmNIDHRK+oXFDdEqBT8WzUA==";
       };
     };
     "simple-get-4.0.0" = {
@@ -1571,13 +1526,13 @@ let
         sha512 = "htwcY5OBOWL/OMwaw3xi1Mp2gE9k5UmGTKeO3n1ixQDH9QgeqqRlBJz2ZLEyOL8yN1FdS/D9z+ijm06bZ3oW5w==";
       };
     };
-    "webtorrent-cli-3.2.1" = {
+    "webtorrent-cli-3.2.4" = {
       name = "webtorrent-cli";
       packageName = "webtorrent-cli";
-      version = "3.2.1";
+      version = "3.2.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/webtorrent-cli/-/webtorrent-cli-3.2.1.tgz";
-        sha512 = "DHUtDymD5ZGv/h35FY4n9YdlHoNOy07X7ibexi+19AL/+MFdGuIIQEEnJQT/wA05mrzR6ubeJmcLXXqZISwLFQ==";
+        url = "https://registry.npmjs.org/webtorrent-cli/-/webtorrent-cli-3.2.4.tgz";
+        sha512 = "fobRASGOskIqf/ciwZ3TF14RhqWga6dR8kUD6a2E0L2YAY5n1PIJv1dVPXEwvfKHBFWDo5VwIH2OAzt/Tw2poQ==";
       };
     };
     "winreg-1.2.4" = {
@@ -1629,7 +1584,7 @@ let
   args = {
     name = "webtorrent-cli";
     packageName = "webtorrent-cli";
-    version = "3.2.1";
+    version = "3.2.4";
     src = ./.;
     dependencies = [
       sources."addr-to-ip-port-1.5.1"
@@ -1698,6 +1653,7 @@ let
       sources."create-torrent-4.7.0"
       sources."debug-2.6.9"
       sources."decompress-response-3.3.0"
+      sources."define-lazy-prop-2.0.0"
       (sources."dlnacasts-0.1.0" // {
         dependencies = [
           sources."mime-1.6.0"
@@ -1719,7 +1675,7 @@ let
       })
       sources."fs.realpath-1.0.0"
       sources."get-browser-rtc-1.1.0"
-      sources."get-stdin-7.0.0"
+      sources."get-stdin-8.0.0"
       sources."glob-7.1.7"
       sources."he-1.2.0"
       sources."http-node-git://github.com/feross/http-node#webtorrent"
@@ -1756,7 +1712,7 @@ let
           sources."ms-2.1.2"
         ];
       })
-      sources."magnet-uri-5.4.0"
+      sources."magnet-uri-6.2.0"
       sources."mediasource-2.4.0"
       sources."memory-chunk-store-1.3.5"
       sources."mime-2.5.2"
@@ -1777,13 +1733,13 @@ let
       sources."node-ssdp-2.9.1"
       sources."on-finished-2.3.0"
       sources."once-1.4.0"
-      sources."open-7.4.2"
+      sources."open-8.2.0"
       sources."package-json-versionify-1.0.4"
-      (sources."parse-torrent-7.1.3" // {
+      (sources."parse-torrent-9.1.3" // {
         dependencies = [
-          sources."decompress-response-4.2.1"
-          sources."mimic-response-2.1.0"
-          sources."simple-get-3.1.0"
+          sources."decompress-response-6.0.0"
+          sources."mimic-response-3.1.0"
+          sources."simple-get-4.0.0"
         ];
       })
       sources."path-is-absolute-1.0.1"
@@ -1875,15 +1831,12 @@ let
         dependencies = [
           sources."debug-4.3.2"
           sources."decompress-response-6.0.0"
-          sources."get-stdin-8.0.0"
-          sources."magnet-uri-6.2.0"
           sources."mimic-response-3.1.0"
           sources."ms-2.1.2"
-          sources."parse-torrent-9.1.3"
           sources."simple-get-4.0.0"
         ];
       })
-      sources."webtorrent-cli-3.2.1"
+      sources."webtorrent-cli-3.2.4"
       sources."winreg-1.2.4"
       sources."wrappy-1.0.2"
       sources."ws-7.4.6"
