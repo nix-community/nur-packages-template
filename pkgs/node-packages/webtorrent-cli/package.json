@@ -1,7 +1,7 @@
 {
   "name": "webtorrent-cli",
-  "version": "3.2.4",
+  "version": "3.3.0",
   "dependencies": {
-    "webtorrent-cli": "3.2.4"
+    "webtorrent-cli": "3.3.0"
   }
 }
