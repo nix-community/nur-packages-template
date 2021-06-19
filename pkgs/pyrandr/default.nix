@@ -1,9 +1,7 @@
-{ stdenvNoCC, fetchFromGitHub, python3, xrandr }:
-
-with stdenvNoCC;
+{ stdenvNoCC, lib, fetchFromGitHub, python3, xrandr }:
 
 let github = lib.importJSON ./github.json;
-in mkDerivation {
+in stdenvNoCC.mkDerivation {
   pname = "pyrandr";
   version = github.ref;
 

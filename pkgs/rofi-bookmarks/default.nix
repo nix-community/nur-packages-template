@@ -1,10 +1,8 @@
-{ stdenvNoCC, fetchFromGitHub, nodejs-12_x, rofi }:
-
-with stdenvNoCC;
+{ stdenvNoCC, lib, fetchFromGitHub, nodejs-12_x, rofi }:
 
 
 let github = lib.importJSON ./github.json;
-in mkDerivation {
+in stdenvNoCC.mkDerivation {
   pname = "rofi-bookmarks";
   version = github.ref;
 

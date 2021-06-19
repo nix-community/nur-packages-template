@@ -1,9 +1,7 @@
-{ stdenvNoCC, fetchFromGitHub }:
-
-with stdenvNoCC;
+{ stdenvNoCC, lib, fetchFromGitHub }:
 
 let github = lib.importJSON ./github.json;
-in mkDerivation rec {
+in stdenvNoCC.mkDerivation rec {
   pname = "nix-direnv";
   version = github.ref;
 
