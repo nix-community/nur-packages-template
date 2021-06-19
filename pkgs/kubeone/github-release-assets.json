@@ -1,20 +1,20 @@
 {
   "owner": "kubermatic",
   "repo": "kubeone",
-  "ref": "v1.2.1",
+  "ref": "v1.2.3",
   "check_cmd": "sha256sum --check kubeone_*_checksums.txt",
   "assets": {
-    "kubeone_1.2.1_checksums.txt": {
-      "url": "https://github.com/kubermatic/kubeone/releases/download/v1.2.1/kubeone_1.2.1_checksums.txt",
-      "hash": "sha256:0yzghdnfjaxiiwi3g1iaapkji0n5hpn2qwh0s9p3nizxlwifpxkw"
+    "kubeone_1.2.3_checksums.txt": {
+      "url": "https://github.com/kubermatic/kubeone/releases/download/v1.2.3/kubeone_1.2.3_checksums.txt",
+      "hash": "sha256:0a24i7wjbmccs0dhs0471j7j7fysqihcgw0jjzcr2vw5xy2y8ggm"
     },
-    "kubeone_1.2.1_darwin_amd64.zip": {
-      "url": "https://github.com/kubermatic/kubeone/releases/download/v1.2.1/kubeone_1.2.1_darwin_amd64.zip",
-      "hash": "sha256:1fg9f7ng18h6iskksna9cprblfs5cp8wd5isq9azpbzshq9aqxhh"
+    "kubeone_1.2.3_darwin_amd64.zip": {
+      "url": "https://github.com/kubermatic/kubeone/releases/download/v1.2.3/kubeone_1.2.3_darwin_amd64.zip",
+      "hash": "sha256:0mzi4qylfmfwpa1wk2c8333fjsnhhm4h16c53in2kqqxm3dz85c7"
     },
-    "kubeone_1.2.1_linux_amd64.zip": {
-      "url": "https://github.com/kubermatic/kubeone/releases/download/v1.2.1/kubeone_1.2.1_linux_amd64.zip",
-      "hash": "sha256:1b7j3sl36vw2rdjfmwab29x050d5kbq9c2x29wxkdfk2ccsksvd1"
+    "kubeone_1.2.3_linux_amd64.zip": {
+      "url": "https://github.com/kubermatic/kubeone/releases/download/v1.2.3/kubeone_1.2.3_linux_amd64.zip",
+      "hash": "sha256:00crhdp1w07m4wlgjrbj1l6016ls1npqknqj88v7l1d36clib1v6"
     }
   }
 }
