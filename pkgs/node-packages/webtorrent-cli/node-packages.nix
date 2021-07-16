@@ -85,13 +85,13 @@ let
         sha512 = "jtuSG9CQr5yoHFuvhgf50+DH8Aezl3C/mMSfqdG4DqP7Kqe34uBUtCEHPN9oWaldTm96/i7y5e778SnM5ES4rw==";
       };
     };
-    "bittorrent-dht-10.0.0" = {
+    "bittorrent-dht-10.0.1" = {
       name = "bittorrent-dht";
       packageName = "bittorrent-dht";
-      version = "10.0.0";
+      version = "10.0.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/bittorrent-dht/-/bittorrent-dht-10.0.0.tgz";
-        sha512 = "mrM18HMabvd3n/hQa4PYe942nWvBsJCBQb5PfT9kUJLlspNPGiulZYSCgWs7+XarS7nufYrGEp07f9eKTKIrgw==";
+        url = "https://registry.npmjs.org/bittorrent-dht/-/bittorrent-dht-10.0.1.tgz";
+        sha512 = "aR0vAgm+SgLiwTCEtNgeuqtT2deg+E/xHCTb7iryikvLbqbR58oFHbNYX4CM6EzyNGSKfcdBKp1gWI5Gcn2Aaw==";
       };
     };
     "bittorrent-lsd-1.1.0" = {
@@ -497,15 +497,6 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tgz";
         sha1 = "0258eae4d3d0c0974de1c169188ef0051d1d1988";
-      };
-    };
-    "executable-4.1.1" = {
-      name = "executable";
-      packageName = "executable";
-      version = "4.1.1";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/executable/-/executable-4.1.1.tgz";
-        sha512 = "8iA79xD3uAch729dUG8xaaBBFGaEa0wdD2VkYLFHwlqosEj/jT66AzcreRDSgV7ehnNLBW2WR5jIXwGKjVdTLg==";
       };
     };
     "filestream-5.0.0" = {
@@ -1067,15 +1058,6 @@ let
         sha512 = "dBILiDmm43y0JPISWEmVGKBETQjwJe6mSU9GND+P9KW0SJGUwoU/odyH1nbalOP9i8WSYuqf1lQnaj92Bhw+Ug==";
       };
     };
-    "pify-2.3.0" = {
-      name = "pify";
-      packageName = "pify";
-      version = "2.3.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/pify/-/pify-2.3.0.tgz";
-        sha1 = "ed141a6ac043a849ea588498e7dca8b15330e90c";
-      };
-    };
     "prettier-bytes-1.0.4" = {
       name = "prettier-bytes";
       packageName = "prettier-bytes";
@@ -1616,22 +1598,22 @@ let
         sha512 = "YTr1w5KmxRN5CBCvplKOD6g/OjwCl5iz+SIjDbq8gWTkByYZun5duHm+OLUkBlbJrCGvMyFyNhTMQxV4Ny0v8g==";
       };
     };
-    "webtorrent-1.2.0" = {
+    "webtorrent-1.2.4" = {
       name = "webtorrent";
       packageName = "webtorrent";
-      version = "1.2.0";
+      version = "1.2.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/webtorrent/-/webtorrent-1.2.0.tgz";
-        sha512 = "iSeWKHYYdgAQOpxjugzYOJ2gIF7JTJpNL3lEieOo3MvcNhLsVYEWJCfqaLb8hAHu/hfQGmQ6Hs2DCyGCE7PWiQ==";
+        url = "https://registry.npmjs.org/webtorrent/-/webtorrent-1.2.4.tgz";
+        sha512 = "oQf2HYtylJSHlPX8FDqn79JEO2Og856X78oZHH3So7zJK0RlQVdDolH82MvjbrVxDv6Mfa7s1rIjPKcy+hQEFw==";
       };
     };
-    "webtorrent-cli-3.3.1" = {
+    "webtorrent-cli-3.5.1" = {
       name = "webtorrent-cli";
       packageName = "webtorrent-cli";
-      version = "3.3.1";
+      version = "3.5.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/webtorrent-cli/-/webtorrent-cli-3.3.1.tgz";
-        sha512 = "C29onCkDUhQORBMG4+0JPOEC5zDnkXXB7ZJjJaC3WqmXvTWH4P7FfYys5uSXr/UzT3JjoqnwTWPjhunJZZkYxA==";
+        url = "https://registry.npmjs.org/webtorrent-cli/-/webtorrent-cli-3.5.1.tgz";
+        sha512 = "v05UjEHkc88TbocJyvm8m+VCIQUjlbmi2P0KhkKGljDv7GX2vzsmLAO00oE5ywE8BJtUZZKVkRfxhTGJuJLHTw==";
       };
     };
     "winreg-1.2.4" = {
@@ -1719,7 +1701,7 @@ let
   args = {
     name = "webtorrent-cli";
     packageName = "webtorrent-cli";
-    version = "3.3.1";
+    version = "3.5.1";
     src = ./.;
     dependencies = [
       sources."addr-to-ip-port-1.5.1"
@@ -1731,7 +1713,7 @@ let
       sources."bep53-range-1.1.0"
       sources."binary-search-1.3.6"
       sources."bitfield-4.0.0"
-      (sources."bittorrent-dht-10.0.0" // {
+      (sources."bittorrent-dht-10.0.1" // {
         dependencies = [
           sources."debug-4.3.2"
           sources."ms-2.1.2"
@@ -1808,7 +1790,6 @@ let
       sources."err-code-3.0.1"
       sources."escalade-3.1.1"
       sources."escape-html-1.0.3"
-      sources."executable-4.1.1"
       sources."filestream-5.0.0"
       sources."freelist-1.0.3"
       (sources."fs-chunk-store-2.0.3" // {
@@ -1888,7 +1869,6 @@ let
       })
       sources."path-is-absolute-1.0.1"
       sources."piece-length-2.0.1"
-      sources."pify-2.3.0"
       sources."prettier-bytes-1.0.4"
       sources."process-nextick-args-2.0.1"
       sources."pump-3.0.0"
@@ -1973,7 +1953,7 @@ let
       sources."util-deprecate-1.0.2"
       sources."videostream-3.2.2"
       sources."vlc-command-1.2.0"
-      (sources."webtorrent-1.2.0" // {
+      (sources."webtorrent-1.2.4" // {
         dependencies = [
           sources."debug-4.3.2"
           sources."decompress-response-6.0.0"
@@ -1982,7 +1962,7 @@ let
           sources."simple-get-4.0.0"
         ];
       })
-      sources."webtorrent-cli-3.3.1"
+      sources."webtorrent-cli-3.5.1"
       sources."winreg-1.2.4"
       sources."wrap-ansi-7.0.0"
       sources."wrappy-1.0.2"
