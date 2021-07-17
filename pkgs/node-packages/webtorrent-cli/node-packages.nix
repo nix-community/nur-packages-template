@@ -1607,13 +1607,13 @@ let
         sha512 = "oQf2HYtylJSHlPX8FDqn79JEO2Og856X78oZHH3So7zJK0RlQVdDolH82MvjbrVxDv6Mfa7s1rIjPKcy+hQEFw==";
       };
     };
-    "webtorrent-cli-3.5.1" = {
+    "webtorrent-cli-3.5.2" = {
       name = "webtorrent-cli";
       packageName = "webtorrent-cli";
-      version = "3.5.1";
+      version = "3.5.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/webtorrent-cli/-/webtorrent-cli-3.5.1.tgz";
-        sha512 = "v05UjEHkc88TbocJyvm8m+VCIQUjlbmi2P0KhkKGljDv7GX2vzsmLAO00oE5ywE8BJtUZZKVkRfxhTGJuJLHTw==";
+        url = "https://registry.npmjs.org/webtorrent-cli/-/webtorrent-cli-3.5.2.tgz";
+        sha512 = "czMFGRzxT2IsgZoMkmHwGASBSx/pLGQOZV3oAD/c5qCw4+YVBMYP2/FehaQ/CF3dMKBnIH4jIevK2KT6pdRC2A==";
       };
     };
     "winreg-1.2.4" = {
@@ -1701,7 +1701,7 @@ let
   args = {
     name = "webtorrent-cli";
     packageName = "webtorrent-cli";
-    version = "3.5.1";
+    version = "3.5.2";
     src = ./.;
     dependencies = [
       sources."addr-to-ip-port-1.5.1"
@@ -1962,7 +1962,7 @@ let
           sources."simple-get-4.0.0"
         ];
       })
-      sources."webtorrent-cli-3.5.1"
+      sources."webtorrent-cli-3.5.2"
       sources."winreg-1.2.4"
       sources."wrap-ansi-7.0.0"
       sources."wrappy-1.0.2"
