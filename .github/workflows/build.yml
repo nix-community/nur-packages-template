@@ -25,8 +25,9 @@ jobs:
         # Example: mycache (for mycache.cachix.org)
         #
         # For this to work, you also need to set the CACHIX_SIGNING_KEY or
-        # CACHIX_AUTH_TOKEN secret in your repository settings in Github found
-        # at https://github.com/<your_githubname>/nur-packages/settings/secrets
+        # CACHIX_AUTH_TOKEN secret in your repository secrets settings in
+        # Github found at
+        # https://github.com/<your_githubname>/nur-packages/settings/secrets
         cachixName:
           - <YOUR_CACHIX_NAME>
         nixPath:
@@ -50,8 +51,7 @@ jobs:
       with:
         name: ${{ matrix.cachixName }}
         signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
-        # or:
-        #authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+        authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
     - name: Check evaluation
       run: |
         nix-env -f . -qa \* --meta --xml \
