@@ -13,13 +13,13 @@ let
         sha512 = "9pzDqyc6OLDaqe+zbACgFkb6fKMNG6CObKpnYXChRsvYGyEdc7CA2BaqeOM+vOtCS5ndmJicPJhKAwYRI6UfFw==";
       };
     };
-    "@babel/helper-validator-identifier-7.14.8" = {
+    "@babel/helper-validator-identifier-7.14.9" = {
       name = "_at_babel_slash_helper-validator-identifier";
       packageName = "@babel/helper-validator-identifier";
-      version = "7.14.8";
+      version = "7.14.9";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.14.8.tgz";
-        sha512 = "ZGy6/XQjllhYQrNw/3zfWRwZCTVSiBLZ9DHVZxn9n2gip/7ab8mv2TWlKPIBk26RwedCBoWdjLmn+t9na2Gcow==";
+        url = "https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.14.9.tgz";
+        sha512 = "pQYxPY0UP6IHISRitNe8bsijHex4TWZXi2HwKVsjPiltzlhse2znVcm9Ace510VT1kxIHjGJCZZQBX2gJDbo0g==";
       };
     };
     "@babel/highlight-7.14.5" = {
@@ -274,13 +274,13 @@ let
         sha512 = "Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==";
       };
     };
-    "chalk-4.1.1" = {
+    "chalk-4.1.2" = {
       name = "chalk";
       packageName = "chalk";
-      version = "4.1.1";
+      version = "4.1.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/chalk/-/chalk-4.1.1.tgz";
-        sha512 = "diHzdDKxcU+bAsUboHLPEDQiw0qEe0qd7SYUn3HgcFlWgbDcfLGswOHYeGrHKzG9z6UYf01d9VFMfZxPM1xZSg==";
+        url = "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz";
+        sha512 = "oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==";
       };
     };
     "chardet-0.7.0" = {
@@ -814,13 +814,13 @@ let
         sha512 = "+5s0SJbGoyiJTZZ2JTpFPLMPSch72KEqGOTvQsBqg0RBWvwhWUSYZFAtz3TPW0GXJuLBJPts1E241iHg+VRfhg==";
       };
     };
-    "gitmoji-cli-4.2.0" = {
+    "gitmoji-cli-4.3.0" = {
       name = "gitmoji-cli";
       packageName = "gitmoji-cli";
-      version = "4.2.0";
+      version = "4.3.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/gitmoji-cli/-/gitmoji-cli-4.2.0.tgz";
-        sha512 = "tpmDCrNmPrb1z5hauKtxXxYdHaV4+K4AjZqkzyQzDcV6tpUSBwYMGu66pFpw7g0Ux4QnE0pYSsdh3efDfYv1Pg==";
+        url = "https://registry.npmjs.org/gitmoji-cli/-/gitmoji-cli-4.3.0.tgz";
+        sha512 = "SkqEZkntXXnuCmN+kaSBiLZtOp1H8IbHgVxks7FcSvd8Hwz+u3ndYqrO4fY2XIcEn/+EOwP1/1voOONSpAxtVQ==";
       };
     };
     "global-dirs-3.0.0" = {
@@ -1156,13 +1156,13 @@ let
         sha1 = "71a50c8429dfca773c92a390a4a03b39fcd51d3e";
       };
     };
-    "is-stream-2.0.0" = {
+    "is-stream-2.0.1" = {
       name = "is-stream";
       packageName = "is-stream";
-      version = "2.0.0";
+      version = "2.0.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/is-stream/-/is-stream-2.0.0.tgz";
-        sha512 = "XCoy+WlUr7d1+Z8GgSuXmpuUFC9fOhRXglJMx+dwLKTkL44Cjd4W1Z5P+BQZpr+cR93aGP4S/s7Ftw6Nd/kiEw==";
+        url = "https://registry.npmjs.org/is-stream/-/is-stream-2.0.1.tgz";
+        sha512 = "hFoiJiTl63nn+kstHGBtewWSKnQLpyb155KHheA1l39uvtO9nWIop1p3udqPcUd/xbF1VLMO4n7OI6p7RbngDg==";
       };
     };
     "is-typedarray-1.0.0" = {
@@ -1930,13 +1930,13 @@ let
         sha512 = "hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==";
       };
     };
-    "rxjs-7.2.0" = {
+    "rxjs-7.3.0" = {
       name = "rxjs";
       packageName = "rxjs";
-      version = "7.2.0";
+      version = "7.3.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/rxjs/-/rxjs-7.2.0.tgz";
-        sha512 = "aX8w9OpKrQmiPKfT1bqETtUr9JygIz6GZ+gql8v7CijClsP0laoFUdKzxFAoWuRdSlOdU2+crss+cMf+cqMTnw==";
+        url = "https://registry.npmjs.org/rxjs/-/rxjs-7.3.0.tgz";
+        sha512 = "p2yuGIg9S1epc3vrjKf6iVb3RCaAYjYskkO+jHIaV0IjOPlJop4UnodOoFb2xeNwlguqLYvGw1b1McillYb5Gw==";
       };
     };
     "safe-buffer-5.2.1" = {
@@ -2519,11 +2519,11 @@ let
   args = {
     name = "gitmoji-cli";
     packageName = "gitmoji-cli";
-    version = "4.2.0";
+    version = "4.3.0";
     src = ./.;
     dependencies = [
       sources."@babel/code-frame-7.14.5"
-      sources."@babel/helper-validator-identifier-7.14.8"
+      sources."@babel/helper-validator-identifier-7.14.9"
       (sources."@babel/highlight-7.14.5" // {
         dependencies = [
           sources."ansi-styles-3.2.1"
@@ -2575,7 +2575,7 @@ let
       })
       sources."camelcase-5.3.1"
       sources."camelcase-keys-6.2.2"
-      sources."chalk-4.1.1"
+      sources."chalk-4.1.2"
       sources."chardet-0.7.0"
       sources."ci-info-2.0.0"
       sources."cli-boxes-2.2.1"
@@ -2641,7 +2641,7 @@ let
       sources."fuse.js-6.4.6"
       sources."get-stream-6.0.1"
       sources."get-uri-3.0.2"
-      sources."gitmoji-cli-4.2.0"
+      sources."gitmoji-cli-4.3.0"
       sources."global-dirs-3.0.0"
       (sources."got-9.6.0" // {
         dependencies = [
@@ -2684,7 +2684,7 @@ let
       sources."is-obj-2.0.0"
       sources."is-path-inside-3.0.3"
       sources."is-plain-obj-1.1.0"
-      sources."is-stream-2.0.0"
+      sources."is-stream-2.0.1"
       sources."is-typedarray-1.0.0"
       sources."is-unicode-supported-0.1.0"
       sources."is-yarn-global-0.3.0"
@@ -2803,7 +2803,7 @@ let
       sources."responselike-1.0.2"
       sources."restore-cursor-3.1.0"
       sources."run-async-2.4.1"
-      sources."rxjs-7.2.0"
+      sources."rxjs-7.3.0"
       sources."safe-buffer-5.2.1"
       sources."safer-buffer-2.1.2"
       sources."semver-7.3.5"
