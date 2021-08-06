@@ -814,13 +814,13 @@ let
         sha512 = "+5s0SJbGoyiJTZZ2JTpFPLMPSch72KEqGOTvQsBqg0RBWvwhWUSYZFAtz3TPW0GXJuLBJPts1E241iHg+VRfhg==";
       };
     };
-    "gitmoji-cli-4.4.1" = {
+    "gitmoji-cli-4.5.0" = {
       name = "gitmoji-cli";
       packageName = "gitmoji-cli";
-      version = "4.4.1";
+      version = "4.5.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/gitmoji-cli/-/gitmoji-cli-4.4.1.tgz";
-        sha512 = "+T6OUPejA5b1c+fuZ0yjdVVBhj0Js6rAieAtgi3ZLtJ0QpNzVI2rvNOiSaDyip3GpiLMTuNmH83G5mcOzrU+8w==";
+        url = "https://registry.npmjs.org/gitmoji-cli/-/gitmoji-cli-4.5.0.tgz";
+        sha512 = "8Zyt0/LQeTBg1biDUJjJ0BuWZQ4cXmNQHH+9wzJrdsfMkXl3vQ9fLJPVM22DHaHhmzpyMfgb6M3RSB3l+kO0mQ==";
       };
     };
     "global-dirs-3.0.0" = {
@@ -841,13 +841,13 @@ let
         sha512 = "R7eWptXuGYxwijs0eV+v3o6+XH1IqVK8dJOEecQfTmkncw9AV4dcw/Dhxi8MdlqPthxxpZyizMzyg8RTmEsG+Q==";
       };
     };
-    "graceful-fs-4.2.6" = {
+    "graceful-fs-4.2.8" = {
       name = "graceful-fs";
       packageName = "graceful-fs";
-      version = "4.2.6";
+      version = "4.2.8";
       src = fetchurl {
-        url = "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.6.tgz";
-        sha512 = "nTnJ528pbqxYanhpDYsi4Rd8MAeaBA67+RZ10CM1m3bTAVFEDcd5AuA4a6W5YkGZ1iNXHzZz8T6TBKLeBuNriQ==";
+        url = "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.8.tgz";
+        sha512 = "qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==";
       };
     };
     "hard-rejection-2.1.0" = {
@@ -2519,7 +2519,7 @@ let
   args = {
     name = "gitmoji-cli";
     packageName = "gitmoji-cli";
-    version = "4.4.1";
+    version = "4.5.0";
     src = ./.;
     dependencies = [
       sources."@babel/code-frame-7.14.5"
@@ -2641,14 +2641,14 @@ let
       sources."fuse.js-6.4.6"
       sources."get-stream-6.0.1"
       sources."get-uri-3.0.2"
-      sources."gitmoji-cli-4.4.1"
+      sources."gitmoji-cli-4.5.0"
       sources."global-dirs-3.0.0"
       (sources."got-9.6.0" // {
         dependencies = [
           sources."get-stream-4.1.0"
         ];
       })
-      sources."graceful-fs-4.2.6"
+      sources."graceful-fs-4.2.8"
       sources."hard-rejection-2.1.0"
       sources."has-1.0.3"
       sources."has-flag-4.0.0"
