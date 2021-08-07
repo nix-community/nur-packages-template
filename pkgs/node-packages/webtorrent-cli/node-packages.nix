@@ -4,13 +4,13 @@
 
 let
   sources = {
-    "addr-to-ip-port-1.5.1" = {
+    "addr-to-ip-port-1.5.4" = {
       name = "addr-to-ip-port";
       packageName = "addr-to-ip-port";
-      version = "1.5.1";
+      version = "1.5.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/addr-to-ip-port/-/addr-to-ip-port-1.5.1.tgz";
-        sha512 = "bA+dyydTNuQtrEDJ0g9eR7XabNhvrM5yZY0hvTbNK3yvoeC73ZqMES6E1cEqH9WPxs4uMtMsOjfwS4FmluhsAA==";
+        url = "https://registry.npmjs.org/addr-to-ip-port/-/addr-to-ip-port-1.5.4.tgz";
+        sha512 = "ByxmJgv8vjmDcl3IDToxL2yrWFrRtFpZAToY0f46XFXl8zS081t7El5MXIodwm7RC6DhHBRoOSMLFSPKCtHukg==";
       };
     };
     "ansi-regex-5.0.0" = {
@@ -49,22 +49,22 @@ let
         sha512 = "AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==";
       };
     };
-    "bencode-2.0.1" = {
+    "bencode-2.0.2" = {
       name = "bencode";
       packageName = "bencode";
-      version = "2.0.1";
+      version = "2.0.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/bencode/-/bencode-2.0.1.tgz";
-        sha512 = "2uhEl8FdjSBUyb69qDTgOEeeqDTa+n3yMQzLW0cOzNf1Ow5bwcg3idf+qsWisIKRH8Bk8oC7UXL8irRcPA8ZEQ==";
+        url = "https://registry.npmjs.org/bencode/-/bencode-2.0.2.tgz";
+        sha512 = "0ilVjnE2diLdbec/3KN14SP0KE85wh8v/FceNRMbAB2ioc3yTj9tgqdoK9tFEH++TZ10JreTS29qTwg7+SpTiQ==";
       };
     };
-    "bep53-range-1.1.0" = {
+    "bep53-range-1.1.1" = {
       name = "bep53-range";
       packageName = "bep53-range";
-      version = "1.1.0";
+      version = "1.1.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/bep53-range/-/bep53-range-1.1.0.tgz";
-        sha512 = "yGQTG4NtwTciX0Bkgk1FqQL4p+NiCQKpTSFho2lrxvUkXIlzyJDwraj8aYxAxRZMnnOhRr7QlIBoMRPEnIR34Q==";
+        url = "https://registry.npmjs.org/bep53-range/-/bep53-range-1.1.1.tgz";
+        sha512 = "ct6s33iiwRCUPp9KXnJ4QMWDgHIgaw36caK/5XEQ9L8dCzSQlJt1Vk6VmHh1VD4AlGCAI4C2zmtfItifBBPrhQ==";
       };
     };
     "binary-search-1.3.6" = {
@@ -85,49 +85,49 @@ let
         sha512 = "jtuSG9CQr5yoHFuvhgf50+DH8Aezl3C/mMSfqdG4DqP7Kqe34uBUtCEHPN9oWaldTm96/i7y5e778SnM5ES4rw==";
       };
     };
-    "bittorrent-dht-10.0.1" = {
+    "bittorrent-dht-10.0.2" = {
       name = "bittorrent-dht";
       packageName = "bittorrent-dht";
-      version = "10.0.1";
+      version = "10.0.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/bittorrent-dht/-/bittorrent-dht-10.0.1.tgz";
-        sha512 = "aR0vAgm+SgLiwTCEtNgeuqtT2deg+E/xHCTb7iryikvLbqbR58oFHbNYX4CM6EzyNGSKfcdBKp1gWI5Gcn2Aaw==";
+        url = "https://registry.npmjs.org/bittorrent-dht/-/bittorrent-dht-10.0.2.tgz";
+        sha512 = "V7+V6ZCfxHtn/wvaRuUvxucJhocb8StgKurQJUdHboVjNGWjALVG+VAYuZqz5iN+/j4vmd4GwqjR1ixYCMkyVA==";
       };
     };
-    "bittorrent-lsd-1.1.0" = {
+    "bittorrent-lsd-1.1.1" = {
       name = "bittorrent-lsd";
       packageName = "bittorrent-lsd";
-      version = "1.1.0";
+      version = "1.1.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/bittorrent-lsd/-/bittorrent-lsd-1.1.0.tgz";
-        sha512 = "j9F+bDt1R//+kLfeSgkmc1A3x0u70gjb/FXaRgTtw+V3wIeYjOekiIlmsXf1SNKuxU5YHDkNL8CFNHx+MfSPSw==";
+        url = "https://registry.npmjs.org/bittorrent-lsd/-/bittorrent-lsd-1.1.1.tgz";
+        sha512 = "dWxU2Mr2lU6jzIKgZrTsXgeXDCIcYpR1b6f2n89fn7juwPAYbNU04OgWjcQPLiNliY0filsX5CQAWntVErpk+Q==";
       };
     };
-    "bittorrent-peerid-1.3.3" = {
+    "bittorrent-peerid-1.3.4" = {
       name = "bittorrent-peerid";
       packageName = "bittorrent-peerid";
-      version = "1.3.3";
+      version = "1.3.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/bittorrent-peerid/-/bittorrent-peerid-1.3.3.tgz";
-        sha512 = "tSh9HdQgwyEAfo1jzoGEis6o/zs4CcdRTchG93XVl5jct+DCAN90M5MVUV76k2vJ9Xg3GAzLB5NLsY/vnVTh6w==";
+        url = "https://registry.npmjs.org/bittorrent-peerid/-/bittorrent-peerid-1.3.4.tgz";
+        sha512 = "Xzk1FJFHmsc9H8IKFtDUkfAZIT1HW8r6UqajfZBBxWmpA1v7FsPO8xPFtnFzCqcXlPN3yi8dDmlqZCemyB7P8w==";
       };
     };
-    "bittorrent-protocol-3.4.2" = {
+    "bittorrent-protocol-3.4.3" = {
       name = "bittorrent-protocol";
       packageName = "bittorrent-protocol";
-      version = "3.4.2";
+      version = "3.4.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/bittorrent-protocol/-/bittorrent-protocol-3.4.2.tgz";
-        sha512 = "a7ueJzmCImWIXfKrJ+dT6mgqi5+LFByAXoMXhV/cYt/y8kplaC8N9ZWfpiTidJY4H2o1GTsyMy73o62a/rZ0Ow==";
+        url = "https://registry.npmjs.org/bittorrent-protocol/-/bittorrent-protocol-3.4.3.tgz";
+        sha512 = "FNQMWrVptQlOxT5+s4M8QO6yWv67WwquUwpg+0dMcPj2UjwGt+XP3U/jVPg16PxxOBz0N371L+Qe7H2LdALC9Q==";
       };
     };
-    "bittorrent-tracker-9.17.3" = {
+    "bittorrent-tracker-9.17.4" = {
       name = "bittorrent-tracker";
       packageName = "bittorrent-tracker";
-      version = "9.17.3";
+      version = "9.17.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/bittorrent-tracker/-/bittorrent-tracker-9.17.3.tgz";
-        sha512 = "Z37yunPPT8pIEkB0Q0bDP1fMke2Rez7JSsmqwqGKoJWh4zjAtFgrEw2GHYNllRRvcy+fkfVPWt7ArvxsGoUmfA==";
+        url = "https://registry.npmjs.org/bittorrent-tracker/-/bittorrent-tracker-9.17.4.tgz";
+        sha512 = "ykhdVQHtLfn4DYSJUQD/zFAbP8YwnF6nGlj2SBnCY4xkW5bhwXPeFZUhryAtdITl0qNL/FpmFOamBZfxIwkbxg==";
       };
     };
     "blob-to-buffer-1.2.9" = {
@@ -211,13 +211,13 @@ let
         sha1 = "f8f78b76789888ef39f205cd637f68e702122b2c";
       };
     };
-    "buffer-from-1.1.1" = {
+    "buffer-from-1.1.2" = {
       name = "buffer-from";
       packageName = "buffer-from";
-      version = "1.1.1";
+      version = "1.1.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.1.tgz";
-        sha512 = "MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==";
+        url = "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz";
+        sha512 = "E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==";
       };
     };
     "cache-chunk-store-3.2.2" = {
@@ -229,13 +229,13 @@ let
         sha512 = "2lJdWbgHFFxcSth9s2wpId3CR3v1YC63KjP4T9WhpW7LWlY7Hiiei3QwwqzkWqlJTfR8lSy9F5kRQECeyj+yQA==";
       };
     };
-    "chalk-4.1.1" = {
+    "chalk-4.1.2" = {
       name = "chalk";
       packageName = "chalk";
-      version = "4.1.1";
+      version = "4.1.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/chalk/-/chalk-4.1.1.tgz";
-        sha512 = "diHzdDKxcU+bAsUboHLPEDQiw0qEe0qd7SYUn3HgcFlWgbDcfLGswOHYeGrHKzG9z6UYf01d9VFMfZxPM1xZSg==";
+        url = "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz";
+        sha512 = "oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==";
       };
     };
     "charset-1.0.1" = {
@@ -364,13 +364,13 @@ let
         sha512 = "PXHBvGLuL69u55IkLa5e5838fLhIMHxmkV4ge42a8alGyn7BtawYgI0hQ849EedvtHIOLNNH3i6eQU1BiE9SUA==";
       };
     };
-    "create-torrent-4.7.0" = {
+    "create-torrent-5.0.1" = {
       name = "create-torrent";
       packageName = "create-torrent";
-      version = "4.7.0";
+      version = "5.0.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/create-torrent/-/create-torrent-4.7.0.tgz";
-        sha512 = "Pb3XjZNKdCs0Nk46yFKb82y+a3xRQeMvGi1AlJfIV40y/iwkgBqzS5EfqdnakEOvh2jzTOx3v8QxZpkz4hPzyw==";
+        url = "https://registry.npmjs.org/create-torrent/-/create-torrent-5.0.1.tgz";
+        sha512 = "fVvg1YYSogo3TlU1WFeTt937nhGQlf5KtB6M2HyDa/U02dbeMBE2AY9PcPlMufXNQoM/UCO28y26EmuApM7ZmA==";
       };
     };
     "debug-2.6.9" = {
@@ -497,6 +497,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tgz";
         sha1 = "0258eae4d3d0c0974de1c169188ef0051d1d1988";
+      };
+    };
+    "fast-fifo-1.0.0" = {
+      name = "fast-fifo";
+      packageName = "fast-fifo";
+      version = "1.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/fast-fifo/-/fast-fifo-1.0.0.tgz";
+        sha512 = "4VEXmjxLj7sbs8J//cn2qhRap50dGzF5n8fjay8mau+Jn4hxSeR3xPFwxMaQq/pDaq7+KQk0PAbC2+nWDkJrmQ==";
       };
     };
     "filestream-5.0.0" = {
@@ -662,15 +671,6 @@ let
         sha512 = "JdHz4tSMx1IeFj8yEcQU0i58qiSkOlmZXkZ8+HJ0ROV5KcgLRDO9F703oJ1GeZCvqggrcCbmagD/V7hghY62wA==";
       };
     };
-    "ipaddr.js-1.9.1" = {
-      name = "ipaddr.js";
-      packageName = "ipaddr.js";
-      version = "1.9.1";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-1.9.1.tgz";
-        sha512 = "0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==";
-      };
-    };
     "ipaddr.js-2.0.1" = {
       name = "ipaddr.js";
       packageName = "ipaddr.js";
@@ -786,6 +786,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/last-one-wins/-/last-one-wins-1.0.4.tgz";
         sha1 = "c1bfd0cbcb46790ec9156b8d1aee8fcb86cda22a";
+      };
+    };
+    "limiter-1.1.5" = {
+      name = "limiter";
+      packageName = "limiter";
+      version = "1.1.5";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/limiter/-/limiter-1.1.5.tgz";
+        sha512 = "FWWMIEOxz3GwUI4Ts/IvgVy6LPvoMPgjMdQ185nN6psJyBJ4yOpzqm695/h5umdLJg2vW3GR5iG11MAkR2AzJA==";
       };
     };
     "load-ip-set-2.2.1" = {
@@ -1031,13 +1040,13 @@ let
         sha1 = "5860587a944873a6b7e6d26e8e51ffb22315bf17";
       };
     };
-    "parse-torrent-9.1.3" = {
+    "parse-torrent-9.1.4" = {
       name = "parse-torrent";
       packageName = "parse-torrent";
-      version = "9.1.3";
+      version = "9.1.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/parse-torrent/-/parse-torrent-9.1.3.tgz";
-        sha512 = "/Yr951CvJM8S6TjMaqrsmMxeQEAjDeCX+MZ3hGXXc7DG2wqzp/rzOsHtDzIVqN6NsFRCqy6wYLF/W7Sgvq7bXw==";
+        url = "https://registry.npmjs.org/parse-torrent/-/parse-torrent-9.1.4.tgz";
+        sha512 = "NSlG8ewolqfcEWevUUsrpvxzVWYGaKWwPHMcXTAV2qYYo6pPugVOacQXt8uDlEYh23Ituz+A9pAZK5YaXTV8Pg==";
       };
     };
     "path-is-absolute-1.0.1" = {
@@ -1328,6 +1337,15 @@ let
         sha512 = "8MJPnjRN6A8UCp1I+H/dSFyjwJhp6wta4hsVRhjf8w9qBHRzxYt14RaOcjvQnhD1N4yKOddEjflwMnQM4VtXjQ==";
       };
     };
+    "speed-limiter-1.0.2" = {
+      name = "speed-limiter";
+      packageName = "speed-limiter";
+      version = "1.0.2";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/speed-limiter/-/speed-limiter-1.0.2.tgz";
+        sha512 = "Ax+TbUOho84bWUc3AKqWtkIvAIVws7d6QI4oJkgH4yQ5Yil+lR3vjd/7qd51dHKGzS5bFxg0++QwyNRN7s6rZA==";
+      };
+    };
     "speedometer-1.1.0" = {
       name = "speedometer";
       packageName = "speedometer";
@@ -1373,6 +1391,15 @@ let
         sha512 = "ztP79ug6S+I7td0Nd2GBeIKCm+vA54c+e60FY87metz5n/l6ydPELd2lxsljz8OpIhsRM9HkIiAwz85+S5G5/A==";
       };
     };
+    "streamx-2.11.0" = {
+      name = "streamx";
+      packageName = "streamx";
+      version = "2.11.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/streamx/-/streamx-2.11.0.tgz";
+        sha512 = "Cv8hFlHwVRKg35EXAxCSmRRzCR8Nyphx3v58hkx8nqfRe3GM8kAPfDY16GvpU2V4m/U8Ri9Fdoi+K5X3z8VpMA==";
+      };
+    };
     "string-width-4.2.2" = {
       name = "string-width";
       packageName = "string-width";
@@ -1382,13 +1409,13 @@ let
         sha512 = "XBJbT3N4JhVumXE0eoLU9DCjcaF92KLNqTmFCnG1pf8duUxFGwtP6AD6nkjw9a3IdiRtL3E2w3JDiE/xi3vOeA==";
       };
     };
-    "string2compact-1.3.0" = {
+    "string2compact-1.3.2" = {
       name = "string2compact";
       packageName = "string2compact";
-      version = "1.3.0";
+      version = "1.3.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/string2compact/-/string2compact-1.3.0.tgz";
-        sha512 = "004ulKKANDuQilQsNxy2lisrpMG0qUJxBU+2YCEF7KziRyNR0Nredm2qk0f1V82nva59H3y9GWeHXE63HzGRFw==";
+        url = "https://registry.npmjs.org/string2compact/-/string2compact-1.3.2.tgz";
+        sha512 = "3XUxUgwhj7Eqh2djae35QHZZT4mN3fsO7kagZhSGmhhlrQagVvWSFuuFIWnpxFS0CdTB2PlQcaL16RDi14I8uw==";
       };
     };
     "string_decoder-1.1.1" = {
@@ -1472,13 +1499,13 @@ let
         sha1 = "7d229b1fcc637e466ca081180836a7aabff83f43";
       };
     };
-    "torrent-discovery-9.4.0" = {
+    "torrent-discovery-9.4.4" = {
       name = "torrent-discovery";
       packageName = "torrent-discovery";
-      version = "9.4.0";
+      version = "9.4.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/torrent-discovery/-/torrent-discovery-9.4.0.tgz";
-        sha512 = "+YW9JGbO5bCuDw9YYW//p4iVLV0aP4C+AYrNQjL/+dSNPUtD1ufK1V8UZERt6rIoeNGhutkSVyeO4Fid9Tjxjg==";
+        url = "https://registry.npmjs.org/torrent-discovery/-/torrent-discovery-9.4.4.tgz";
+        sha512 = "psD/QcqSevMouHFbPKz4V9X5u2HuR/SaxeIp2T/JAduHKmDoq/pgxMQiAe/4DlhDgSCIAYWEB2xKP0dUTInBpQ==";
       };
     };
     "torrent-piece-2.0.1" = {
@@ -1562,13 +1589,13 @@ let
         sha512 = "3XZZuJSeoIUyMYSuDbTbVtP4KAVGHPfU8nmHFkr8LJc+THCaUXwnu/2AV+LCSLarET/hL9IlbNfYTGrt6fOVuQ==";
       };
     };
-    "ut_pex-3.0.1" = {
+    "ut_pex-3.0.2" = {
       name = "ut_pex";
       packageName = "ut_pex";
-      version = "3.0.1";
+      version = "3.0.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/ut_pex/-/ut_pex-3.0.1.tgz";
-        sha512 = "t1MHIDHSISgOJcmq8UM6Qv9/hRQYVaUvzqSNnXa5ATDbS9hXfhBpyBo2HcSyJtwPSHsmMtNui8G6yKirwJ8vow==";
+        url = "https://registry.npmjs.org/ut_pex/-/ut_pex-3.0.2.tgz";
+        sha512 = "3xM88t+AVU5GR0sIY3tmRMLUS+YKiwStc7U7+ZFQ+UHQpX7BjVJOomhmtm0Bs+8R2n812Dt2ymXm01EqDrOOpQ==";
       };
     };
     "util-deprecate-1.0.2" = {
@@ -1598,22 +1625,22 @@ let
         sha512 = "YTr1w5KmxRN5CBCvplKOD6g/OjwCl5iz+SIjDbq8gWTkByYZun5duHm+OLUkBlbJrCGvMyFyNhTMQxV4Ny0v8g==";
       };
     };
-    "webtorrent-1.2.4" = {
+    "webtorrent-1.3.9" = {
       name = "webtorrent";
       packageName = "webtorrent";
-      version = "1.2.4";
+      version = "1.3.9";
       src = fetchurl {
-        url = "https://registry.npmjs.org/webtorrent/-/webtorrent-1.2.4.tgz";
-        sha512 = "oQf2HYtylJSHlPX8FDqn79JEO2Og856X78oZHH3So7zJK0RlQVdDolH82MvjbrVxDv6Mfa7s1rIjPKcy+hQEFw==";
+        url = "https://registry.npmjs.org/webtorrent/-/webtorrent-1.3.9.tgz";
+        sha512 = "K52E15SutGIgrBj0YzYNYgkuQMucKePdGk2zxMwLHtFh9sJ0KVPlQgkmORhSbJqC51cRVq/4Xt2jToZde8ioRQ==";
       };
     };
-    "webtorrent-cli-3.5.3" = {
+    "webtorrent-cli-3.5.4" = {
       name = "webtorrent-cli";
       packageName = "webtorrent-cli";
-      version = "3.5.3";
+      version = "3.5.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/webtorrent-cli/-/webtorrent-cli-3.5.3.tgz";
-        sha512 = "Av+6PnflFJueTj19z6Pv/ai9KzOV8r7nClBiQCBbO55eqNL6pNBV47N/KwxDIPx8OeATTFEA/joCohi5AD/8TQ==";
+        url = "https://registry.npmjs.org/webtorrent-cli/-/webtorrent-cli-3.5.4.tgz";
+        sha512 = "7YZv5fSs6tf0JPSQT5eT02t+IgZR7sHPGGSbT2ZmE4VO3X1a4WhSIP4tIpQCNxbzcKCCe6NFimpTxlxXNF/KEQ==";
       };
     };
     "winreg-1.2.4" = {
@@ -1679,13 +1706,13 @@ let
         sha512 = "0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==";
       };
     };
-    "yargs-17.0.1" = {
+    "yargs-17.1.0" = {
       name = "yargs";
       packageName = "yargs";
-      version = "17.0.1";
+      version = "17.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/yargs/-/yargs-17.0.1.tgz";
-        sha512 = "xBBulfCc8Y6gLFcrPvtqKz9hz8SO0l1Ni8GgDekvBX2ro0HRQImDGnikfc33cgzcYUSncapnNcZDjVFIH3f6KQ==";
+        url = "https://registry.npmjs.org/yargs/-/yargs-17.1.0.tgz";
+        sha512 = "SQr7qqmQ2sNijjJGHL4u7t8vyDZdZ3Ahkmo4sc1w5xI9TBX0QDdG/g4SFnxtWOsGLjwHQue57eFALfwFCnixgg==";
       };
     };
     "yargs-parser-20.2.9" = {
@@ -1701,38 +1728,38 @@ let
   args = {
     name = "webtorrent-cli";
     packageName = "webtorrent-cli";
-    version = "3.5.3";
+    version = "3.5.4";
     src = ./.;
     dependencies = [
-      sources."addr-to-ip-port-1.5.1"
+      sources."addr-to-ip-port-1.5.4"
       sources."ansi-regex-5.0.0"
       sources."ansi-styles-4.3.0"
       sources."balanced-match-1.0.2"
       sources."base64-js-1.5.1"
-      sources."bencode-2.0.1"
-      sources."bep53-range-1.1.0"
+      sources."bencode-2.0.2"
+      sources."bep53-range-1.1.1"
       sources."binary-search-1.3.6"
       sources."bitfield-4.0.0"
-      (sources."bittorrent-dht-10.0.1" // {
+      (sources."bittorrent-dht-10.0.2" // {
         dependencies = [
           sources."debug-4.3.2"
           sources."ms-2.1.2"
         ];
       })
-      (sources."bittorrent-lsd-1.1.0" // {
+      (sources."bittorrent-lsd-1.1.1" // {
         dependencies = [
           sources."debug-4.3.2"
           sources."ms-2.1.2"
         ];
       })
-      sources."bittorrent-peerid-1.3.3"
-      (sources."bittorrent-protocol-3.4.2" // {
+      sources."bittorrent-peerid-1.3.4"
+      (sources."bittorrent-protocol-3.4.3" // {
         dependencies = [
           sources."debug-4.3.2"
           sources."ms-2.1.2"
         ];
       })
-      (sources."bittorrent-tracker-9.17.3" // {
+      (sources."bittorrent-tracker-9.17.4" // {
         dependencies = [
           sources."debug-4.3.2"
           sources."decompress-response-6.0.0"
@@ -1750,9 +1777,9 @@ let
       sources."buffer-alloc-1.2.0"
       sources."buffer-alloc-unsafe-1.1.0"
       sources."buffer-fill-1.0.0"
-      sources."buffer-from-1.1.1"
+      sources."buffer-from-1.1.2"
       sources."cache-chunk-store-3.2.2"
-      sources."chalk-4.1.1"
+      sources."chalk-4.1.2"
       sources."charset-1.0.1"
       sources."chrome-dgram-3.0.6"
       sources."chrome-dns-1.0.1"
@@ -1773,7 +1800,7 @@ let
       })
       sources."core-util-is-1.0.2"
       sources."cpus-1.0.3"
-      sources."create-torrent-4.7.0"
+      sources."create-torrent-5.0.1"
       sources."debug-2.6.9"
       sources."decompress-response-3.3.0"
       sources."define-lazy-prop-2.0.0"
@@ -1790,6 +1817,7 @@ let
       sources."err-code-3.0.1"
       sources."escalade-3.1.1"
       sources."escape-html-1.0.3"
+      sources."fast-fifo-1.0.0"
       sources."filestream-5.0.0"
       sources."freelist-1.0.3"
       (sources."fs-chunk-store-2.0.3" // {
@@ -1825,6 +1853,7 @@ let
       sources."k-rpc-5.1.0"
       sources."k-rpc-socket-1.11.1"
       sources."last-one-wins-1.0.4"
+      sources."limiter-1.1.5"
       (sources."load-ip-set-2.2.1" // {
         dependencies = [
           sources."decompress-response-6.0.0"
@@ -1860,7 +1889,7 @@ let
       sources."once-1.4.0"
       sources."open-8.2.1"
       sources."package-json-versionify-1.0.4"
-      (sources."parse-torrent-9.1.3" // {
+      (sources."parse-torrent-9.1.4" // {
         dependencies = [
           sources."decompress-response-6.0.0"
           sources."mimic-response-3.1.0"
@@ -1911,17 +1940,15 @@ let
           sources."ms-2.1.2"
         ];
       })
+      sources."speed-limiter-1.0.2"
       sources."speedometer-1.1.0"
       sources."split-1.0.1"
       sources."stream-to-blob-2.0.1"
       sources."stream-to-blob-url-3.0.2"
       sources."stream-with-known-length-to-buffer-1.0.4"
+      sources."streamx-2.11.0"
       sources."string-width-4.2.2"
-      (sources."string2compact-1.3.0" // {
-        dependencies = [
-          sources."ipaddr.js-1.9.1"
-        ];
-      })
+      sources."string2compact-1.3.2"
       sources."string_decoder-1.3.0"
       sources."strip-ansi-6.0.0"
       sources."supports-color-7.2.0"
@@ -1929,7 +1956,7 @@ let
       sources."through-2.3.8"
       sources."thunky-0.1.0"
       sources."to-arraybuffer-1.0.1"
-      (sources."torrent-discovery-9.4.0" // {
+      (sources."torrent-discovery-9.4.4" // {
         dependencies = [
           sources."debug-4.3.2"
           sources."ms-2.1.2"
@@ -1949,11 +1976,11 @@ let
           sources."ms-2.1.2"
         ];
       })
-      sources."ut_pex-3.0.1"
+      sources."ut_pex-3.0.2"
       sources."util-deprecate-1.0.2"
       sources."videostream-3.2.2"
       sources."vlc-command-1.2.0"
-      (sources."webtorrent-1.2.4" // {
+      (sources."webtorrent-1.3.9" // {
         dependencies = [
           sources."debug-4.3.2"
           sources."decompress-response-6.0.0"
@@ -1962,7 +1989,7 @@ let
           sources."simple-get-4.0.0"
         ];
       })
-      sources."webtorrent-cli-3.5.3"
+      sources."webtorrent-cli-3.5.4"
       sources."winreg-1.2.4"
       sources."wrap-ansi-7.0.0"
       sources."wrappy-1.0.2"
@@ -1970,7 +1997,7 @@ let
       sources."xml2js-0.4.23"
       sources."xmlbuilder-11.0.1"
       sources."y18n-5.0.8"
-      sources."yargs-17.0.1"
+      sources."yargs-17.1.0"
       sources."yargs-parser-20.2.9"
     ];
     buildInputs = globalBuildInputs;
