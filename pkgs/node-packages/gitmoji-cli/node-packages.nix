@@ -409,13 +409,13 @@ let
         sha512 = "aMKprgk5YhBNyH25hj8wGt2+D52Sw1DRRIzqBwLp2Ya9mFmY8KPvvtvmna8SxVR9JMZ4kzMD68N22vlaRpkeFA==";
       };
     };
-    "core-util-is-1.0.2" = {
+    "core-util-is-1.0.3" = {
       name = "core-util-is";
       packageName = "core-util-is";
-      version = "1.0.2";
+      version = "1.0.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz";
-        sha1 = "b5fd54220aa2bc5ab57aab7140c940754503c1a7";
+        url = "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.3.tgz";
+        sha512 = "ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==";
       };
     };
     "cross-spawn-7.0.3" = {
@@ -814,13 +814,13 @@ let
         sha512 = "+5s0SJbGoyiJTZZ2JTpFPLMPSch72KEqGOTvQsBqg0RBWvwhWUSYZFAtz3TPW0GXJuLBJPts1E241iHg+VRfhg==";
       };
     };
-    "gitmoji-cli-4.5.1" = {
+    "gitmoji-cli-4.6.1" = {
       name = "gitmoji-cli";
       packageName = "gitmoji-cli";
-      version = "4.5.1";
+      version = "4.6.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/gitmoji-cli/-/gitmoji-cli-4.5.1.tgz";
-        sha512 = "jKet1JrZa/pxV1JePwm6Asd3ZnyqIQG8FN3caTjd9hM+LygssW2NLSFOpnlrvblNXzhpwLxNxcvIv4RoU1Impw==";
+        url = "https://registry.npmjs.org/gitmoji-cli/-/gitmoji-cli-4.6.1.tgz";
+        sha512 = "B2wwKFTFDPrs0vESTIsU2jJXlqvq8PCC6aTkOS+1qPsATPkepeYC0PHw/CZpjx1o77aoTCkbmitb1dP8hVs8Gw==";
       };
     };
     "global-dirs-3.0.0" = {
@@ -2519,7 +2519,7 @@ let
   args = {
     name = "gitmoji-cli";
     packageName = "gitmoji-cli";
-    version = "4.5.1";
+    version = "4.6.1";
     src = ./.;
     dependencies = [
       sources."@babel/code-frame-7.14.5"
@@ -2592,7 +2592,7 @@ let
           sources."dot-prop-5.3.0"
         ];
       })
-      sources."core-util-is-1.0.2"
+      sources."core-util-is-1.0.3"
       sources."cross-spawn-7.0.3"
       sources."crypto-random-string-2.0.0"
       sources."data-uri-to-buffer-3.0.1"
@@ -2641,7 +2641,7 @@ let
       sources."fuse.js-6.4.6"
       sources."get-stream-6.0.1"
       sources."get-uri-3.0.2"
-      sources."gitmoji-cli-4.5.1"
+      sources."gitmoji-cli-4.6.1"
       sources."global-dirs-3.0.0"
       (sources."got-9.6.0" // {
         dependencies = [
