@@ -10,7 +10,7 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2.3.5
       - name: Install nix
         uses: cachix/install-nix-action@v13
         with:
@@ -42,7 +42,7 @@ jobs:
     name: ${{matrix.pkgname}}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2.3.5
       - name: Configure SSH
         uses: webfactory/ssh-agent@v0.5.3
         with:
