@@ -11,6 +11,8 @@ in buildPythonApplication rec {
   pname = "rofimoji";
   version = github.ref;
 
+  format = "pyproject";
+
   src = fetchFromGitHub {
     inherit (github) owner repo rev sha256;
   };
