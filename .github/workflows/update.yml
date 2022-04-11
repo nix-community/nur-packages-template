@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Install nix
-        uses: cachix/install-nix-action@v14.1
+        uses: cachix/install-nix-action@v17
         with:
           nix_path: nixpkgs=channel:nixos-21.05
       - name: Setup cachix
@@ -48,7 +48,7 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_DEPLOY_KEY }}
       - name: Install nix
-        uses: cachix/install-nix-action@v14.1
+        uses: cachix/install-nix-action@v17
         with:
           nix_path: nixpkgs=channel:nixos-21.05
       - name: Setup cachix
