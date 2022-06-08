@@ -1,8 +1,0 @@
-{
-  "owner": "MaartenBaert",
-  "repo": "ssr",
-  "rev": "f3cdbf724b4c004ed29537f6487d78296b8aeedf",
-  "sha256": "0mrx8wprs8bi42fwwvk6rh634ic9jnn0gkfpd6q9pcawnnbz3vq8",
-  "fetchSubmodules": true,
-  "ref": "0.4.3"
-}
