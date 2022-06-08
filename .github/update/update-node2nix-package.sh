@@ -20,7 +20,7 @@ jq ".version = \"$latest_version\" | .dependencies.\"$pname\" = \"$latest_versio
 mv package.json.new package.json
 
 # update nix package definition
-node2nix --strip-optional-dependencies 2>&1 | tail
+node2nix --nodejs-14 --strip-optional-dependencies 2>&1 | tail
 cp "$GITDIR/.github/update/node2nix-fix-template.nix" fixed.nix
 
 export_version_vars $old_version $latest_version
