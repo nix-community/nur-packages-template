@@ -1,4 +1,4 @@
-{ stdenvNoCC, lib, fetchFromGitHub, nodejs-12_x, rofi }:
+{ stdenvNoCC, lib, fetchFromGitHub, nodejs-14_x, rofi }:
 
 
 let github = lib.importJSON ./github.json;
@@ -8,7 +8,7 @@ in stdenvNoCC.mkDerivation {
 
   src = fetchFromGitHub { inherit (github) owner repo rev sha256; };
 
-  buildInputs = [ nodejs-12_x ];
+  buildInputs = [ nodejs-14_x ];
 
   installPhase = ''
     mkdir -p $out/bin $out/share/rofi-bookmarks
