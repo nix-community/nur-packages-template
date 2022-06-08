@@ -32,6 +32,7 @@ jobs:
           - jeremiehuchet
         nixPath:
           - nixpkgs=channel:nixos-21.11
+          - nixpkgs=channel:nixos-22.05
           - nixpkgs=channel:nixos-unstable
     runs-on: ubuntu-latest
     steps:
