@@ -76,13 +76,13 @@ let
         sha512 = "Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==";
       };
     };
-    "acorn-8.7.1" = {
+    "acorn-8.8.0" = {
       name = "acorn";
       packageName = "acorn";
-      version = "8.7.1";
+      version = "8.8.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/acorn/-/acorn-8.7.1.tgz";
-        sha512 = "Xx54uLJQZ19lKygFXOWsscKUbsBZW0CPykPhVQdhIeIwrbPmJzqeASDInc8nKBnp/JT6igTs82qPXz069H8I/A==";
+        url = "https://registry.npmjs.org/acorn/-/acorn-8.8.0.tgz";
+        sha512 = "QOxyigPVrpZ2GXT+PFyZTl6TtOFc5egxHIP9IlQ+RbupQuX4RkT/Bee4/kQuC02Xkzg84JcT7oLYtDIQxp+v7w==";
       };
     };
     "acorn-walk-8.2.0" = {
@@ -337,13 +337,13 @@ let
         sha512 = "I/zHAwsKf9FqGoXM4WWRACob9+SNukZTd94DWF57E4toouRulbCxcUh6RKUEOQlYTHJnzkPMySvPNaaSLNfLZw==";
       };
     };
-    "cli-spinners-2.6.1" = {
+    "cli-spinners-2.7.0" = {
       name = "cli-spinners";
       packageName = "cli-spinners";
-      version = "2.6.1";
+      version = "2.7.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/cli-spinners/-/cli-spinners-2.6.1.tgz";
-        sha512 = "x/5fWmGMnbKQAaNwN+UZlV79qBLM9JFnJuJ03gIi5whrob0xV0ofNVHy9DhwGdsMJQc2OKv0oGmLzvaqvAVv+g==";
+        url = "https://registry.npmjs.org/cli-spinners/-/cli-spinners-2.7.0.tgz";
+        sha512 = "qu3pN8Y3qHNgE2AFweciB1IfMnmZ/fsNTEE+NOFjmGB2F/7rLhnhzppvpCnN4FovtP26k8lHyy9ptEbNwWFLzw==";
       };
     };
     "cli-width-3.0.0" = {
@@ -823,13 +823,13 @@ let
         sha512 = "+5s0SJbGoyiJTZZ2JTpFPLMPSch72KEqGOTvQsBqg0RBWvwhWUSYZFAtz3TPW0GXJuLBJPts1E241iHg+VRfhg==";
       };
     };
-    "gitmoji-cli-5.0.2" = {
+    "gitmoji-cli-5.0.3" = {
       name = "gitmoji-cli";
       packageName = "gitmoji-cli";
-      version = "5.0.2";
+      version = "5.0.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/gitmoji-cli/-/gitmoji-cli-5.0.2.tgz";
-        sha512 = "gK2k/CRZWMVnFBhw/3NYDdxPOVIGnp+Jj1jM900qUHAv6NTwQa+7dOBdX8L6O5ySvr+C80mTfqNasGGwMPPHIw==";
+        url = "https://registry.npmjs.org/gitmoji-cli/-/gitmoji-cli-5.0.3.tgz";
+        sha512 = "tXni37GZ1tx3iiv7QhPGQcEkaRop71tUU0e3g9JcGY9t6FroJACD/QMwaefOFj1FjzX/kKbVoKG6qsKL1c8b7g==";
       };
     };
     "global-dirs-3.0.0" = {
@@ -2537,7 +2537,7 @@ let
   args = {
     name = "gitmoji-cli";
     packageName = "gitmoji-cli";
-    version = "5.0.2";
+    version = "5.0.3";
     src = ./.;
     dependencies = [
       sources."@babel/code-frame-7.18.6"
@@ -2557,7 +2557,7 @@ let
       sources."@tootallnate/once-1.1.2"
       sources."@types/minimist-1.2.2"
       sources."@types/normalize-package-data-2.4.1"
-      sources."acorn-8.7.1"
+      sources."acorn-8.8.0"
       sources."acorn-walk-8.2.0"
       sources."agent-base-6.0.2"
       sources."ajv-8.11.0"
@@ -2592,7 +2592,7 @@ let
       sources."ci-info-2.0.0"
       sources."cli-boxes-2.2.1"
       sources."cli-cursor-3.1.0"
-      sources."cli-spinners-2.6.1"
+      sources."cli-spinners-2.7.0"
       sources."cli-width-3.0.0"
       sources."clone-1.0.4"
       sources."clone-response-1.0.3"
@@ -2653,7 +2653,7 @@ let
       sources."fuse.js-6.6.2"
       sources."get-stream-6.0.1"
       sources."get-uri-3.0.2"
-      sources."gitmoji-cli-5.0.2"
+      sources."gitmoji-cli-5.0.3"
       sources."global-dirs-3.0.0"
       (sources."got-9.6.0" // {
         dependencies = [
