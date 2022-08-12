@@ -409,13 +409,13 @@ let
         sha512 = "dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==";
       };
     };
-    "conf-10.1.2" = {
+    "conf-10.2.0" = {
       name = "conf";
       packageName = "conf";
-      version = "10.1.2";
+      version = "10.2.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/conf/-/conf-10.1.2.tgz";
-        sha512 = "o9Fv1Mv+6A0JpoayQ8JleNp3hhkbOJP/Re/Q+QqxMPHPkABVsRjQGWZn9A5GcqLiTNC6d89p2PB5ZhHVDSMwyg==";
+        url = "https://registry.npmjs.org/conf/-/conf-10.2.0.tgz";
+        sha512 = "8fLl9F04EJqjSqH+QjITQfJF8BrOVaYr1jewVgSRAEWePfxT0sku4w2hrGQ60BC/TNLGQ2pgxNlTbWQmMPFvXg==";
       };
     };
     "configstore-5.0.1" = {
@@ -823,13 +823,13 @@ let
         sha512 = "+5s0SJbGoyiJTZZ2JTpFPLMPSch72KEqGOTvQsBqg0RBWvwhWUSYZFAtz3TPW0GXJuLBJPts1E241iHg+VRfhg==";
       };
     };
-    "gitmoji-cli-5.0.3" = {
+    "gitmoji-cli-5.1.0" = {
       name = "gitmoji-cli";
       packageName = "gitmoji-cli";
-      version = "5.0.3";
+      version = "5.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/gitmoji-cli/-/gitmoji-cli-5.0.3.tgz";
-        sha512 = "tXni37GZ1tx3iiv7QhPGQcEkaRop71tUU0e3g9JcGY9t6FroJACD/QMwaefOFj1FjzX/kKbVoKG6qsKL1c8b7g==";
+        url = "https://registry.npmjs.org/gitmoji-cli/-/gitmoji-cli-5.1.0.tgz";
+        sha512 = "DuFiQLlQNy9GaZDT8fXDBSfsNQoJbhetu14CaqVVCm9+cm2XoGPcsrvwspqqRDsnAu504f52YbsG3pXHFIEt9w==";
       };
     };
     "global-dirs-3.0.0" = {
@@ -1093,13 +1093,13 @@ let
         sha512 = "YfJT7rkpQB0updsdHLGWrvhBJfcfzNNawYDNIyQXJz0IViGf75O8EBPKSdvw2rF+LGCsX4FZ8tcr3b19LcZq4w==";
       };
     };
-    "is-core-module-2.9.0" = {
+    "is-core-module-2.10.0" = {
       name = "is-core-module";
       packageName = "is-core-module";
-      version = "2.9.0";
+      version = "2.10.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/is-core-module/-/is-core-module-2.9.0.tgz";
-        sha512 = "+5FPy5PnwmO3lvfMb0AsoPaBG+5KHUI0wYFXOtYPnVVVspTFUuMZNfNaNVRt3FZadstu2c8x23vykRW/NBoU6A==";
+        url = "https://registry.npmjs.org/is-core-module/-/is-core-module-2.10.0.tgz";
+        sha512 = "Erxj2n/LDAZ7H8WNJXd9tw38GYM3dv8rk8Zcs+jJuxYTW7sozH+SS8NtrSjVL1/vpLvWi1hxy96IzjJ3EHTJJg==";
       };
     };
     "is-fullwidth-code-point-3.0.0" = {
@@ -2537,7 +2537,7 @@ let
   args = {
     name = "gitmoji-cli";
     packageName = "gitmoji-cli";
-    version = "5.0.3";
+    version = "5.1.0";
     src = ./.;
     dependencies = [
       sources."@babel/code-frame-7.18.6"
@@ -2598,7 +2598,7 @@ let
       sources."clone-response-1.0.3"
       sources."color-convert-2.0.1"
       sources."color-name-1.1.4"
-      sources."conf-10.1.2"
+      sources."conf-10.2.0"
       (sources."configstore-5.0.1" // {
         dependencies = [
           sources."dot-prop-5.3.0"
@@ -2653,7 +2653,7 @@ let
       sources."fuse.js-6.6.2"
       sources."get-stream-6.0.1"
       sources."get-uri-3.0.2"
-      sources."gitmoji-cli-5.0.3"
+      sources."gitmoji-cli-5.1.0"
       sources."global-dirs-3.0.0"
       (sources."got-9.6.0" // {
         dependencies = [
@@ -2687,7 +2687,7 @@ let
       sources."ip-1.1.8"
       sources."is-arrayish-0.2.1"
       sources."is-ci-2.0.0"
-      sources."is-core-module-2.9.0"
+      sources."is-core-module-2.10.0"
       sources."is-fullwidth-code-point-3.0.0"
       sources."is-installed-globally-0.4.0"
       sources."is-interactive-1.0.0"
