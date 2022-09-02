@@ -1,0 +1,193 @@
+:root {
+  --grey: #2D2D2D;
+  --med-grey: #666666;
+  --light-grey: #CCCCCC;
+  --red: #F35863;
+  --blue: #4A61FD;
+  --skyblue: #3CB9E9;
+  --purple: #9900D0;
+  --green: #5BD244;
+  --bg-brand: #007262 !important;
+  --bg-brand-hover: #1E9484 !important;
+  --bg-brand-hover-secondary: #004C52 !important;
+  --bg-brand-secondary: #004C52 !important;
+  --bg-brand-disable: #303F40 !important;
+}
+html.list-colors body .color-red span,
+html.list-colors body .color-red span span,
+html.list-colors body .color-red span i,
+html.list-colors body .color-red .icon svg {
+  color: var(--red) !important;
+  fill: var(--red) !important;
+}
+html.list-colors body .color-blue span,
+html.list-colors body .color-blue span span,
+html.list-colors body .color-blue span i,
+html.list-colors body .color-blue .icon svg {
+  color: var(--blue) !important;
+  fill: var(--blue) !important;
+}
+html.list-colors body .color-green span,
+html.list-colors body .color-green span span,
+html.list-colors body .color-green span i,
+html.list-colors body .color-green .icon svg {
+  color: var(--green) !important;
+  fill: var(--green) !important;
+}
+html.list-colors body .color-purple span,
+html.list-colors body .color-purple span span,
+html.list-colors body .color-purple span i,
+html.list-colors body .color-purple .icon svg {
+  color: var(--purple) !important;
+  fill: var(--purple) !important;
+}
+html.list-colors body .color-skyblue span,
+html.list-colors body .color-skyblue span span,
+html.list-colors body .color-skyblue span i,
+html.list-colors body .color-skyblue .icon svg {
+  color: var(--skyblue) !important;
+  fill: var(--skyblue) !important;
+}
+/* * Body  * */
+body {
+  background-color: var(--bg-primary) !important;
+  -webkit-app-region: drag;
+}
+html {
+  overflow: hidden;
+}
+::-webkit-scrollbar {
+  width: 6px !important;
+}
+::-webkit-scrollbar-track {
+  border-radius: 0px !important;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0px !important;
+  background: var(--bg-scrollbar) !important;
+}
+.keyboardNavigation .listItem:focus {
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0) !important;
+}
+html.side-bar-hidden .leftColumn {
+  display: none !important;
+}
+html.side-bar-hidden #container.leftColumn-overlaid #app {
+  padding-left: 0px !important;
+}
+@media all and (max-width: 620px) {
+  .leftColumn,
+  #owaToDoButton,
+  #todoWhatsNewBtn {
+    display: none !important;
+  }
+  #container.leftColumn-overlaid #app {
+    padding-left: 0px !important;
+  }
+}
+/* * Sidebar * */
+.listItem,
+.listItem-container.active .emoji.medium {
+  background-color: transparent !important;
+}
+.listItem,
+.listItem .listItem-icon,
+.emoji {
+  background-color: transparent !important;
+}
+.sidebar-footer {
+  display: none;
+}
+.editableContent .edit {
+  background: var(--bg-tertiary);
+  color: var(--font-color-secondary);
+}
+/* * Main Container * */
+.backgroundLines {
+  display: none;
+}
+#main .addTask * {
+  background-color: transparent !important;
+}
+#main .add-task input,
+#baseAddInput-addTask {
+  background-color: transparent !important;
+}
+/* * Modals * */
+.modal .modal-content {
+  color: var(--font-color-primary) !important;
+}
+.button.gray {
+  background: var(--bg-tertiary) !important;
+  color: var(--font-color-secondary) !important;
+}
+.button.red {
+  background: var(--font-color-warning) !important;
+  color: var(--font-color-primary) !important;
+}
+.ms-Callout-container .ms-Tooltip * {
+  background: var(--bg-secondary);
+  color: var(--font-color-primary);
+}
+.ms-Callout-container .ms-Callout:after {
+  background: var(--bg-secondary);
+  color: var(--font-color-primary);
+  inset: -5px;
+}
+.ms-Callout-container .ms-Callout-beak,
+.ms-Callout-beakCurtain {
+  background: var(--bg-secondary);
+  color: var(--font-color-primary);
+}
+/* * Settings Panel * */
+.sortable-lists li input {
+  color: var(--font-color-secondary) !important;
+}
+.o365cs-base .o365sx-neutral-lighterAlt-background {
+  background: var(--bg-primary) !important;
+}
+.o365sx-neutral-dark-font {
+  color: var(--font-color-primary) !important;
+}
+/* * Suggestions Panel * */
+.ms-Panel-main {
+  background: var(--bg-tertiary) !important;
+}
+.details {
+  background: var(--bg-secondary) !important;
+}
+/* * Navbar & Search * */
+#Region_3 {
+  display: none;
+}
+#root #container #O365_NavHeader {
+  background: transparent;
+}
+#root #container #O365_NavHeader .searchToolbar {
+  background: var(--bg-secondary);
+}
+#root #container #O365_NavHeader .searchToolbar i {
+  color: var(--bg-brand-hover) !important;
+}
+#root #container #O365_NavHeader .searchToolbar-icon:hover {
+  background: var(--bg-tertiary) !important;
+}
+#root #container #O365_NavHeader .searchToolbar-input[type="text"] {
+  color: var(--font-color-primary);
+}
+#root #container #O365_NavHeader div {
+  background: transparent;
+}
+#root #container .o365header.is-consumer {
+  background: #00000033 !important;
+}
+#O365_HeaderLeftRegion,
+#O365_HeaderRightRegion {
+  display: none;
+}
+#CenterRegion #owaBranding_container {
+  display: none;
+}
+#CenterRegion {
+  background-color: var(--bg-primary) !important;
+}

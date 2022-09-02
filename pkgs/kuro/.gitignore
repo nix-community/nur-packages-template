@@ -1,0 +1,22 @@
+# dependencies
+node_modules
+
+# logs
+*.log
+
+# OS
+.DS_Store
+.dccache
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# compiled
+dist
+build
+
+# Nix compiled
+result
