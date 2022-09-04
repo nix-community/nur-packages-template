@@ -823,13 +823,13 @@ let
         sha512 = "+5s0SJbGoyiJTZZ2JTpFPLMPSch72KEqGOTvQsBqg0RBWvwhWUSYZFAtz3TPW0GXJuLBJPts1E241iHg+VRfhg==";
       };
     };
-    "gitmoji-cli-6.1.0" = {
+    "gitmoji-cli-6.2.0" = {
       name = "gitmoji-cli";
       packageName = "gitmoji-cli";
-      version = "6.1.0";
+      version = "6.2.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/gitmoji-cli/-/gitmoji-cli-6.1.0.tgz";
-        sha512 = "zqzJTQgzbQAF3hrKm5xqvODCan3LlKb5oHMjodxwrGS39OgIqCRwF0WjIac3K2sRiwE0tVNNyupjuof0NjsMgQ==";
+        url = "https://registry.npmjs.org/gitmoji-cli/-/gitmoji-cli-6.2.0.tgz";
+        sha512 = "kWKonZ5/Y645YSHH8nn90WzRHkAwe3tv99g7M4tYTCXm39qec395FAqfz/+ZiPPtagom1Oh8wGVNpAuPB0jj5A==";
       };
     };
     "global-dirs-3.0.0" = {
@@ -2092,13 +2092,13 @@ let
         sha512 = "cbqHunsQWnJNE6KhVSMsMeH5H/L9EpymbzqTQ3uLwNCLZ1Q481oWaofqH7nO6V07xlXwY6PhQdQ2IedWx/ZK4Q==";
       };
     };
-    "spdx-license-ids-3.0.11" = {
+    "spdx-license-ids-3.0.12" = {
       name = "spdx-license-ids";
       packageName = "spdx-license-ids";
-      version = "3.0.11";
+      version = "3.0.12";
       src = fetchurl {
-        url = "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.11.tgz";
-        sha512 = "Ctl2BrFiM0X3MANYgj3CkygxhRmr9mi6xhejbdO960nF6EDJApTYpn0BQnDKlnNBULKiCN1n3w9EBkHK8ZWg+g==";
+        url = "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.12.tgz";
+        sha512 = "rr+VVSXtRhO4OHbXUiAF7xW3Bo9DuuF6C5jH+q/x15j2jniycgKbxU09Hr0WqlSLUs4i4ltHGXqTe7VHclYWyA==";
       };
     };
     "statuses-2.0.1" = {
@@ -2398,13 +2398,22 @@ let
         sha512 = "DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==";
       };
     };
-    "vm2-3.9.10" = {
+    "validator-13.7.0" = {
+      name = "validator";
+      packageName = "validator";
+      version = "13.7.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/validator/-/validator-13.7.0.tgz";
+        sha512 = "nYXQLCBkpJ8X6ltALua9dRrZDHVYxjJ1wgskNt1lH9fzGjs3tgojGSCBjmEPwkWS1y29+DrizMTW19Pr9uB2nw==";
+      };
+    };
+    "vm2-3.9.11" = {
       name = "vm2";
       packageName = "vm2";
-      version = "3.9.10";
+      version = "3.9.11";
       src = fetchurl {
-        url = "https://registry.npmjs.org/vm2/-/vm2-3.9.10.tgz";
-        sha512 = "AuECTSvwu2OHLAZYhG716YzwodKCIJxB6u1zG7PgSQwIgAlEaoXH52bxdcvT8GkGjnYK7r7yWDW0m0sOsPuBjQ==";
+        url = "https://registry.npmjs.org/vm2/-/vm2-3.9.11.tgz";
+        sha512 = "PFG8iJRSjvvBdisowQ7iVF580DXb1uCIiGaXgm7tynMR1uTBlv7UJlB1zdv5KJ+Tmq1f0Upnj3fayoEOPpCBKg==";
       };
     };
     "wcwidth-1.0.1" = {
@@ -2537,7 +2546,7 @@ let
   args = {
     name = "gitmoji-cli";
     packageName = "gitmoji-cli";
-    version = "6.1.0";
+    version = "6.2.0";
     src = ./.;
     dependencies = [
       sources."@babel/code-frame-7.18.6"
@@ -2653,7 +2662,7 @@ let
       sources."fuse.js-6.6.2"
       sources."get-stream-6.0.1"
       sources."get-uri-3.0.2"
-      sources."gitmoji-cli-6.1.0"
+      sources."gitmoji-cli-6.2.0"
       sources."global-dirs-3.0.0"
       (sources."got-9.6.0" // {
         dependencies = [
@@ -2838,7 +2847,7 @@ let
       sources."spdx-correct-3.1.1"
       sources."spdx-exceptions-2.3.0"
       sources."spdx-expression-parse-3.0.1"
-      sources."spdx-license-ids-3.0.11"
+      sources."spdx-license-ids-3.0.12"
       sources."statuses-2.0.1"
       sources."string-width-4.2.3"
       sources."string_decoder-1.3.0"
@@ -2866,7 +2875,8 @@ let
       sources."url-parse-lax-3.0.0"
       sources."util-deprecate-1.0.2"
       sources."validate-npm-package-license-3.0.4"
-      sources."vm2-3.9.10"
+      sources."validator-13.7.0"
+      sources."vm2-3.9.11"
       sources."wcwidth-1.0.1"
       sources."webidl-conversions-3.0.1"
       sources."whatwg-url-5.0.0"
