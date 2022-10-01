@@ -3,7 +3,7 @@
 , pkgs
 , fetchFromGitHub
 , intltool
-, pkgconfig
+, pkg-config
 , autoreconfHook
 , networkmanager
 , gtk3
@@ -35,7 +35,7 @@ stdenv.mkDerivation rec {
       "sha512:033jhi5f537y0p13125jlw80fsma1kp4csfq3swrv6vjv3aldizbvrfvw7iwrkf3r274zy20p3byi1b2cwp5amdkark18z8l9s538qj";
   };
 
-  nativeBuildInputs = [ intltool pkgconfig autoreconfHook ];
+  nativeBuildInputs = [ intltool pkg-config autoreconfHook ];
   buildInputs = [ networkmanager libnma gtk3 glib libsecret ];
 
   patches = [
