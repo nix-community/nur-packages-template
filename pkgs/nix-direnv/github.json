@@ -1,8 +1,8 @@
 {
   "owner": "nix-community",
   "repo": "nix-direnv",
-  "rev": "a12b8a53050fe1f5d526a4e9c52b89d7d8def22d",
-  "sha256": "6UvOnFmohdhFenpEangbLLEdE0PeessRJjiO0mcydWI=",
+  "rev": "5d735de13814ab9078ebb8323b1b940fd100371e",
+  "sha256": "htlSwXYmT+baFRhSnEGvNCtcS5qa/VgSXFm5Lavy7eM=",
   "fetchSubmodules": true,
-  "ref": "2.1.2"
+  "ref": "2.2.0"
 }
