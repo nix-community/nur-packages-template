@@ -17,6 +17,8 @@ in buildPythonApplication rec {
     inherit (github) owner repo rev sha256;
   };
 
+  buildInputs = [ setuptools ];
+
   propagatedBuildInputs = [ pyxdg-0_26 configargparse rofi xdotool xsel ];
 
   doCheck = false;
