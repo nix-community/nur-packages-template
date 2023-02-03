@@ -1,7 +1,7 @@
 {
   "name": "gitmoji-cli",
-  "version": "7.0.3",
+  "version": "7.1.0",
   "dependencies": {
-    "gitmoji-cli": "7.0.3"
+    "gitmoji-cli": "7.1.0"
   }
 }
