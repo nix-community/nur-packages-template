@@ -5,19 +5,36 @@ generate_matrix() {
   gh_pkgs_json=$(find "$GITDIR" -type f -name github.json)
   gh_rel_assets_json=$(find "$GITDIR" -type f -name github-release-assets.json)
   node_pkgs_json=$(find "$GITDIR" -type f -name package.json)
-  matrix_csv=$(mktemp --tmpdir matrix-XXX.csv)
-  echo "pkgname,pkgdir,github_src,github_rel_assets,npm_src,vgo2nix" > "$matrix_csv"
+  local first="yes"
+  echo [
   for f in $gh_pkgs_json $node_pkgs_json $gh_rel_assets_json; do
     path=$(dirname "$f")
     pkgname=$(basename "$path")
     pkgdir=${path#$GITDIR/}
-    github_src=$(test -f "$pkgdir/github.json"  && echo true || echo false)
-    github_rel_assets=$(test -f "$pkgdir/github-release-assets.json"  && echo true || echo false)
-    npm_src=$(test    -f "$pkgdir/package.json" && echo true || echo false)
-    vgo2nix=$(test    -f "$pkgdir/godeps.nix"   && echo true || echo false)
-    echo "$pkgname,$pkgdir,$github_src,$github_rel_assets,$npm_src,$vgo2nix" >> "$matrix_csv"
+    updateType="unknown"
+    if [ -f "$pkgdir/github.json" ] ; then
+      updateType="github_src"
+    elif [ -f "$pkgdir/github-release-assets.json" ] ; then
+      updateType="github_rel_assets"
+    elif [ -f "$pkgdir/package.json" ] ; then
+      updateType="npm_src"
+    elif [ -f "$pkgdir/godeps.nix"] ; then
+      updateType="vgo2nix"
+    fi
+    if [ "$first" == "yes" ] ; then
+      first="nope"
+    else
+      echo ","
+    fi
+    cat - <<EOF
+  {
+    "pkgname": "$pkgname",
+    "pkgdir": "$pkgdir",
+    "update_type": "$updateType"
+  }
+EOF
   done
-  mlr --c2j --jlistwrap cat "$matrix_csv"
+  echo "]"
 }
 
 quit() {

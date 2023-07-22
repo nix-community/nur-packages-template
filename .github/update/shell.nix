@@ -10,7 +10,6 @@ in stdenv.mkDerivation {
     gitAndTools.hub
     jq
     nix-prefetch-github
-    miller
     nodePackages.node2nix
     nixpkgs-22_05.vgo2nix
   ];
