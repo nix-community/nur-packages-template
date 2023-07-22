@@ -30,7 +30,7 @@ jobs:
           MATRIX=$(mktemp --tmpdir matrix-XXX.json)
           nix-shell .github/update/shell.nix --run "generate_matrix | jq -c > $MATRIX"
           jq . "$MATRIX"
-          echo "::set-output name=matrix::{ \"include\": $(cat $MATRIX) }"
+          echo "matrix={ \"include\": $(cat $MATRIX) }" >> $GITHUB_OUTPUT
   check-updates:
     needs: list-packages
     strategy:
