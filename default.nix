@@ -19,6 +19,7 @@
   dbvisualizer = pkgs.callPackage ./pkgs/dbvisualizer { };
   gitmoji-cli = pkgs.callPackage ./pkgs/node-packages/gitmoji-cli/fixed.nix { };
   kubeone = pkgs.callPackage ./pkgs/kubeone { };
+  livebox-cli = pkgs.callPackage ./pkgs/livebox-cli { };
   nix-direnv = pkgs.callPackage ./pkgs/nix-direnv { };
   networkmanager-ssh = pkgs.callPackage ./pkgs/networkmanager-ssh { };
   notracking = pkgs.callPackage ./pkgs/notracking { };

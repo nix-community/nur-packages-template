@@ -17,6 +17,8 @@ Some nixos packages automatically updated.
 
 **[kubeone](pkgs/kubeone)** automates cluster operations on cloud environments.
 
+**[livebox-cli](pkgs/livebox-cli)** orange livebox cli.
+
 **[nix-direnv](pkgs/nix-direnv)** an alternative to direnv's use_nix directive.
 
 **[networkmanager-ssh](pkgs/networkmanager-ssh)** is an SSH VPN integration for NetworkManager.
