@@ -1,28 +1,28 @@
 {
   "owner": "kubermatic",
   "repo": "kubeone",
-  "ref": "v1.7.0",
+  "ref": "v1.7.1",
   "check_cmd": "sha256sum --check kubeone_*_checksums.txt",
   "assets": {
-    "kubeone_1.7.0_checksums.txt": {
-      "url": "https://github.com/kubermatic/kubeone/releases/download/v1.7.0/kubeone_1.7.0_checksums.txt",
-      "hash": "sha256:1q0ffniaw57sryxvnqvi97dh0gn10crsyhsa4zgbya5c9xviw8sm"
+    "kubeone_1.7.1_checksums.txt": {
+      "url": "https://github.com/kubermatic/kubeone/releases/download/v1.7.1/kubeone_1.7.1_checksums.txt",
+      "hash": "sha256:0p5w1l7ldy30gnv28s11jcmwr4l18d6xdnxw5xc8zas0lsl5yplz"
     },
-    "kubeone_1.7.0_darwin_amd64.zip": {
-      "url": "https://github.com/kubermatic/kubeone/releases/download/v1.7.0/kubeone_1.7.0_darwin_amd64.zip",
-      "hash": "sha256:0jl91wjhcd8ixswz68jy114j3ws8ikjr74xh240v5y1rkx1jwq8f"
+    "kubeone_1.7.1_darwin_amd64.zip": {
+      "url": "https://github.com/kubermatic/kubeone/releases/download/v1.7.1/kubeone_1.7.1_darwin_amd64.zip",
+      "hash": "sha256:0fgrnlkn0lnwlb959dx5487bysba7nzgsza3jc9hdbbldpn4drny"
     },
-    "kubeone_1.7.0_darwin_arm64.zip": {
-      "url": "https://github.com/kubermatic/kubeone/releases/download/v1.7.0/kubeone_1.7.0_darwin_arm64.zip",
-      "hash": "sha256:0d1whwflbc10pmgksipbqa9ay1lw49kh92p2k9k6k1i7bh59daix"
+    "kubeone_1.7.1_darwin_arm64.zip": {
+      "url": "https://github.com/kubermatic/kubeone/releases/download/v1.7.1/kubeone_1.7.1_darwin_arm64.zip",
+      "hash": "sha256:18vhs3lr3xfp8a3k8gldg4s91dqx46sf9a96vp5wp9fl5cil4p4z"
     },
-    "kubeone_1.7.0_linux_amd64.zip": {
-      "url": "https://github.com/kubermatic/kubeone/releases/download/v1.7.0/kubeone_1.7.0_linux_amd64.zip",
-      "hash": "sha256:0h41mg6hmfd7apvzqbb4h41g516gm96k0pf6yizf0770d3gsakyl"
+    "kubeone_1.7.1_linux_amd64.zip": {
+      "url": "https://github.com/kubermatic/kubeone/releases/download/v1.7.1/kubeone_1.7.1_linux_amd64.zip",
+      "hash": "sha256:0zanj9zqwwggzwdzr4x1698nzds911l4vy33m1lky99w0bw79q5m"
     },
-    "kubeone_1.7.0_linux_arm64.zip": {
-      "url": "https://github.com/kubermatic/kubeone/releases/download/v1.7.0/kubeone_1.7.0_linux_arm64.zip",
-      "hash": "sha256:0jskb57j7l8q239jn4pjkc77sj8qwxnm8mqn4iw9s7qvmj5ysz2i"
+    "kubeone_1.7.1_linux_arm64.zip": {
+      "url": "https://github.com/kubermatic/kubeone/releases/download/v1.7.1/kubeone_1.7.1_linux_arm64.zip",
+      "hash": "sha256:0srydq0z9xkcpm79nnxnbasrypsm77jp2lvmm7smiyxw35iqp634"
     }
   }
 }
