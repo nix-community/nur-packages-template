@@ -8,7 +8,8 @@
 
 { pkgs ? import <nixpkgs> { } }:
 
-{
+let aiosysbus = pkgs.callPackage ./pkgs/python-packages/aiosysbus { };
+in {
   # The `lib`, `modules`, and `overlay` names are special
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
@@ -18,7 +19,7 @@
   ccat = pkgs.callPackage ./pkgs/ccat { };
   dbvisualizer = pkgs.callPackage ./pkgs/dbvisualizer { };
   gitmoji-cli = pkgs.callPackage ./pkgs/node-packages/gitmoji-cli/fixed.nix { };
-  hass-livebox-component = pkgs.callPackage pkgs/hass-livebox-component/default.nix { };
+  hass-livebox-component = pkgs.callPackage pkgs/hass-livebox-component/default.nix { inherit aiosysbus; };
   kubeone = pkgs.callPackage ./pkgs/kubeone { };
   livebox-cli = pkgs.callPackage ./pkgs/livebox-cli { };
   nix-direnv = pkgs.callPackage ./pkgs/nix-direnv { };
@@ -33,7 +34,4 @@
   webtorrent-cli =
     pkgs.callPackage ./pkgs/node-packages/webtorrent-cli/fixed.nix { };
   yaml2json = pkgs.callPackage ./pkgs/yaml2json { };
-
-  # python packages
-  aiosysbus = pkgs.callPackage ./pkgs/python-packages/aiosysbus { };
 }
