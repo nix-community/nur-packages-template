@@ -13,6 +13,8 @@ Some nixos packages automatically updated.
 
 **[gitmoji-cli](pkgs/node-packages/gitmoji-cli)** provides an easy solution for using gitmoji from your command line.
 
+**[hass-livebox-component](pkgs/hass-livebox-component)** Livebox Component for Home assistant.
+
 **[jfrog-cli](pkgs/jfrog-cli)** provides a way to work with artifactory.
 
 **[kubeone](pkgs/kubeone)** automates cluster operations on cloud environments.
