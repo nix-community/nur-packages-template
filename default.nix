@@ -33,4 +33,7 @@
   webtorrent-cli =
     pkgs.callPackage ./pkgs/node-packages/webtorrent-cli/fixed.nix { };
   yaml2json = pkgs.callPackage ./pkgs/yaml2json { };
+
+  # python packages
+  aiosysbus = pkgs.callPackage ./pkgs/python-packages/aiosysbus { };
 }
