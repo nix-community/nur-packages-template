@@ -24,7 +24,6 @@
   networkmanager-ssh = pkgs.callPackage ./pkgs/networkmanager-ssh { };
   notracking = pkgs.callPackage ./pkgs/notracking { };
   now = pkgs.callPackage ./pkgs/node-packages/now/fixed.nix { };
-  openjdk-11 = pkgs.callPackage ./pkgs/openjdk-11 { };
   pyrandr = pkgs.callPackage ./pkgs/pyrandr { };
   reg = pkgs.callPackage ./pkgs/reg { };
   rofi-bookmarks = pkgs.callPackage ./pkgs/rofi-bookmarks { };
