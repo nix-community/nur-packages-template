@@ -102,7 +102,11 @@
                     path = lib.dropEnd 1 path;
                     value =
                       _:
-                      lib.callPackageWith (lib.recursiveUpdate pkgs (lib.mapAttrs (_: f: f { }) nurPkgs)) (lib.concatStringsSep "/" ([ pkgsDir ] ++ path)) { };
+                      lib.callPackageWith (lib.recursiveUpdate pkgs (lib.mapAttrs (_: f: f { }) nurPkgs)) (
+                        lib.concatStringsSep
+                        "/"
+                        ([ pkgsDir ] ++ path)
+                      ) { };
                   }) (readDirRecursive pkgsDir)
               )
             );
@@ -126,6 +130,7 @@
                 nixfmt-rfc-style
                 black
                 yamlfmt
+                markdownlint-cli2
               ];
 
               settings = {
@@ -144,6 +149,11 @@
                   yamlfmt = {
                     command = "yamlfmt";
                     includes = [ "*.yml" ];
+                  };
+                  markdownlint = {
+                    command = "markdownlint-cli2";
+                    options = [ "--fix" ];
+                    includes = [ "*.md" ];
                   };
                 };
               };
