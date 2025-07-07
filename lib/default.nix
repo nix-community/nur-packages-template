@@ -1,7 +1,12 @@
-{ pkgs }:
+{
+  pkgs,
+}:
 
-with pkgs.lib; {
+let
+  inherit (pkgs) lib;
+in
+{
   # Add your library functions here
   #
-  # hexint = x: hexvals.${toLower x};
+  # hexint = x: hexvals.${lib.toLower x};
 }
