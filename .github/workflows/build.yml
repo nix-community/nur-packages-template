@@ -23,7 +23,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Install nix
         uses: cachix/install-nix-action@v31
         with:
@@ -31,7 +30,6 @@ jobs:
           extra_nix_config: |
             experimental-features = nix-command flakes
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
-      
       - name: Get config.yml
         id: config
         shell: python
@@ -44,10 +42,8 @@ jobs:
           with open(os.environ["GITHUB_OUTPUT"], "a") as out:
             out.write(f"cachixName={data.get('cachixName', '')}\n")
             out.write(f"nurRepo={data.get('nurRepo', '')}\n")
-
       - name: Show nixpkgs version
         run: nix-instantiate --eval -E '(import <nixpkgs> {}).lib.version'
-
       - name: Setup cachix
         uses: cachix/cachix-action@v16
         if: ${{ steps.config.outputs.cachixName != '<YOUR_CACHIX_NAME>' }}
@@ -55,7 +51,6 @@ jobs:
           name: ${{ steps.config.outputs.cachixName }}
           signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
-
       - name: Check evaluation
         run: |
           nix-env -f . -qa \* --meta --xml \
@@ -64,10 +59,8 @@ jobs:
             --drv-path --show-trace \
             -I nixpkgs=$(nix-instantiate --find-file nixpkgs) \
             -I $PWD
-
       - name: Build nix packages
         run: nix shell -f '<nixpkgs>' nix-build-uncached -c nix-build-uncached maintainers/ci.nix -A cacheOutputs
-
       - name: Trigger NUR update
         if: ${{ steps.config.outputs.nurRepo != '<YOUR_REPO_NAME>' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') }}
         run: curl -XPOST "https://nur-update.nix-community.org/update?repo=${{ matrix.nurRepo }}"

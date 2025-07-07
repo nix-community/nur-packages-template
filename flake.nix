@@ -19,52 +19,7 @@
       pkgsDir = "${self}/pkgs";
       libDir = "${self}/lib";
       overlaysDir = "${self}/overlays";
-      modulesDir = "${self}/overlays";
-      # TODO: Consider upstreaming to nixpkgs.lib
-      readDirRecursive =
-        path:
-        lib.mapAttrs (
-          path': type:
-          (if (type == "directory" || type == "symlink") then readDirRecursive "${path}/${path'}" else type)
-        ) (builtins.readDir path);
-      initValueAtPath =
-        path: value:
-        if lib.length path == 0 then
-          value
-        else
-          { ${lib.head path} = initValueAtPath (lib.tail path) value; };
-      attrNamesRecursive = lib.mapAttrsToList (
-        name: value:
-        if lib.isAttrs value then lib.map (path: [ name ] ++ path) (attrNamesRecursive value) else [ name ]
-      );
-      filterAttrsRecursive' =
-        filter: attrs:
-        lib.mapAttrs (
-          name: value:
-          if lib.isAttrs value then
-            filterAttrsRecursive' (path: value': filter ([ name ] ++ path) value') value
-          else
-            value
-        ) (lib.filterAttrs (name: value: (lib.isAttrs value) || (filter [ name ] value)) attrs);
-      mapAttrsRecursive' =
-        mapping: attrs:
-        lib.foldlAttrs (
-          acc: name: value:
-          let
-            result =
-              if lib.isAttrs value then
-                mapAttrsRecursive' (path': value': mapping ([ name ] ++ path') value') value
-              else
-                let
-                  mapped = mapping [ name ] value;
-                in
-                initValueAtPath mapped.path mapped.value;
-          in
-          lib.recursiveUpdate acc result
-        ) { } attrs;
-      filterAndMapAttrsRecursive' =
-        filter: mapping: attrs:
-        mapAttrsRecursive' mapping (filterAttrsRecursive' filter attrs);
+      modulesDir = "${self}/modules";
     in
     flake-parts.lib.mkFlake { inherit inputs; } (
       top@{
@@ -73,43 +28,15 @@
         moduleWithSystem,
         ...
       }:
+      let
+        ourLib = (import libDir { inherit lib; });
+        lib' = lib.recursiveUpdate lib ourLib;
+      in
       {
         flake = {
-          lib = (import libDir { pkgs.lib = lib; });
-          overlays =
-            filterAndMapAttrsRecursive'
-              (path: value: (lib.hasSuffix ".nix" (lib.last path)) && value == "regular")
-              (path: _: {
-                path = (lib.dropEnd 1 path) ++ [ (lib.removeSuffix ".nix" (lib.last path)) ];
-                value = (import (lib.concatStringsSep "/" ([ overlaysDir ] ++ path)));
-              })
-              (readDirRecursive overlaysDir);
-          modules =
-            filterAndMapAttrsRecursive'
-              (path: value: (lib.hasSuffix ".nix" (lib.last path)) && value == "regular")
-              (path: _: {
-                path = (lib.dropEnd 1 path) ++ [ (lib.removeSuffix ".nix" (lib.last path)) ];
-                value = (import (lib.concatStringsSep "/" ([ modulesDir ] ++ path)));
-              })
-              (readDirRecursive modulesDir);
-          fromPkgs =
-            pkgs:
-            lib.mapAttrs (_: f: f { }) (
-              lib.fix (
-                nurPkgs:
-                filterAndMapAttrsRecursive' (path: value: (lib.last path == "package.nix") && value == "regular") (
-                  path: _: {
-                    path = lib.dropEnd 1 path;
-                    value =
-                      _:
-                      lib.callPackageWith (lib.recursiveUpdate pkgs (lib.mapAttrs (_: f: f { }) nurPkgs)) (
-                        lib.concatStringsSep
-                        "/"
-                        ([ pkgsDir ] ++ path)
-                      ) { };
-                  }) (readDirRecursive pkgsDir)
-              )
-            );
+          lib = ourLib;
+          overlays = lib'.importDirRecursive overlaysDir;
+          modules = lib'.importDirRecursive modulesDir;
         };
         systems = lib.systems.flakeExposed;
         perSystem =
@@ -119,31 +46,16 @@
             pkgs,
             ...
           }:
+          let
+            pkgs' = lib.recursiveUpdate pkgs { lib = lib'; };
+            ourPackages = lib'.callDirPackageWithRecursive pkgs' pkgsDir;
+          in
           {
-            legacyPackages = (self.fromPkgs pkgs) // {
+            legacyPackages = ourPackages // {
               inherit (self) lib overlays modules;
-
-              # Maintenance scripts
-              # TODO: Move this out of the flake
-              maintainers.render_templates = pkgs.stdenvNoCC.mkDerivation {
-                name = "render_templates";
-
-                src = self;
-
-                nativeBuildInputs = [ pkgs.makeWrapper ];
-
-                installPhase = ''
-                  runHook preInstall
-
-                  mkdir -p $out/bin
-                  makeWrapper ${pkgs.python3.interpreter} $out/bin/render_templates \
-                    --add-flags "${self}/maintainers/scripts/render_templates.py"
-
-                  runHook postInstall
-                '';
-              };
+              maintainers = pkgs.callPackage "${self}/maintainers" { };
             };
-            packages = lib.filterAttrs (_: lib.isDerivation) self'.legacyPackages;
+            packages = lib.filterAttrs (_: lib.isDerivation) ourPackages;
 
             formatter = pkgs.treefmt.withConfig {
               runtimeInputs = with pkgs; [

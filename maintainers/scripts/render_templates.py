@@ -1,9 +1,11 @@
 from jinja2 import Environment, FileSystemLoader
 import os, yaml
 
+
 def load_config(config_path="config.yml"):
     with open(config_path, "r") as f:
         return yaml.safe_load(f)
+
 
 def render_all_templates(src_dir=".", config_path="config.yml"):
     context = load_config(config_path)
@@ -21,6 +23,7 @@ def render_all_templates(src_dir=".", config_path="config.yml"):
 
                 with open(output_path, "w") as f:
                     f.write(rendered)
+
 
 if __name__ == "__main__":
     render_all_templates()
