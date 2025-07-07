@@ -1,4 +1,4 @@
-# nur-packages-template
+{% if not setupComplete %}# nur-packages-template
 
 An opinionated template for [NUR](https://github.com/nix-community/NUR) repositories
 
@@ -11,16 +11,17 @@ An opinionated template for [NUR](https://github.com/nix-community/NUR) reposito
    * Remember to mark the broken packages as `broken = true;` in the `meta`
      attribute, or CI (and consequently caching) will fail!
    * Library functions, modules and overlays go in the respective directories
-3. Configure CI: Change your NUR repo name and optionally add a cachix name in
-   [CMakeLists.txt](./CMakeLists.txt).
-4. Change your cachix name on the README template section and delete the rest
+3. Configure: Change your NUR repo name, fill in your GitHub username, and
+   optionally add a cachix name in [CMakeLists.txt](./CMakeLists.txt).
+4. Run `nix run .#maintainers.render_templates` to regenerate the README
 5. [Add yourself to NUR](https://github.com/nix-community/NUR#how-to-add-your-own-repository) <!-- markdownlint-disable-line MD013 -->
 
-<!-- markdownlint-disable-next-line MD025 -->
+<!-- markdownlint-disable-next-line MD025 -->{% endif %}
 # nur-packages
 
 My personal [NUR](https://github.com/nix-community/NUR) repository
 
-![Build and populate cache](https://github.com/<YOUR-GITHUB-USER>/nur-packages/workflows/Build%20and%20populate%20cache/badge.svg)
+![Build and populate cache](https://github.com/{{ githubUser }}/nur-packages/workflows/Build%20and%20populate%20cache/badge.svg)
 
-[![Cachix Cache](https://img.shields.io/badge/cachix-<YOUR_CACHIX_NAME>-blue.svg)](https://<YOUR_CACHIX_NAME>.cachix.org)
+[![Cachix Cache](https://img.shields.io/badge/cachix-{{ cachixName }}-blue.svg)](https://{{ cachixName }}.cachix.org)
+
