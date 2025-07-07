@@ -50,7 +50,7 @@ let
 
   outputsOf = p: map (o: p.${o}) p.outputs;
 
-  nurAttrs = import ./default.nix { inherit pkgs; };
+  nurAttrs = import ../default.nix { inherit pkgs; };
 
   nurPkgs = flattenPkgs (
     listToAttrs (

@@ -122,6 +122,26 @@
           {
             legacyPackages = (self.fromPkgs pkgs) // {
               inherit (self) lib overlays modules;
+
+              # Maintenance scripts
+              # TODO: Move this out of the flake
+              maintainers.render_templates = pkgs.stdenvNoCC.mkDerivation {
+                name = "render_templates";
+
+                src = self;
+
+                nativeBuildInputs = [ pkgs.makeWrapper ];
+
+                installPhase = ''
+                  runHook preInstall
+
+                  mkdir -p $out/bin
+                  makeWrapper ${pkgs.python3.interpreter} $out/bin/render_templates \
+                    --add-flags "${self}/maintainers/scripts/render_templates.py"
+
+                  runHook postInstall
+                '';
+              };
             };
             packages = lib.filterAttrs (_: lib.isDerivation) self'.legacyPackages;
 
