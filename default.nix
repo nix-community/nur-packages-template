@@ -1,6 +1,6 @@
 {
   pkgs ? import <nixpkgs> { },
-  self ? ./.,
+  self ? toString ./.,
 }:
 
 let
